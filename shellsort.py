@@ -31,3 +31,5 @@ print("input array:",arr2)
 shell_sort1(arr2)
 print("sorted array",arr2)
  
+# This code is contributed by Shubham Prashar (SirPrashar)  
+# https://www.geeksforgeeks.org/shellsort/
