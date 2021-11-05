@@ -1,4 +1,4 @@
-
+## shell_sort1 ##
 def shell_sort1(arr):
     gap = len(arr) // 2 # initialize the gap
  
@@ -33,3 +33,30 @@ print("sorted array",arr2)
  
 # This code is contributed by Shubham Prashar (SirPrashar)  
 # https://www.geeksforgeeks.org/shellsort/
+
+
+## shell_sort2 ##
+
+def gapInsertionSort(x, start, gap):
+    for target in range(start+gap, len(x), gap):
+        val = x[target]
+        i = target
+        while i > start:
+            if x[i-gap]> val:
+                x[i] = x[i-gap]
+            else:
+                break
+            i -= gap
+        x[i] = val
+        
+def shellSort(x):
+    gap = len(x) // 2
+    while gap > 0:
+        for start in range(gap):
+            gapInsertionSort(x, start, gap)
+        gap = gap // 2
+    return x
+
+# https://elrion018.tistory.com/29
+
+## shell_sort3 ##
