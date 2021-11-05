@@ -57,6 +57,6 @@ def shellSort(x):
         gap = gap // 2
     return x
 
-# https://elrion018.tistory.com/29
+# from -> https://elrion018.tistory.com/29
 
 ## shell_sort3 ##
