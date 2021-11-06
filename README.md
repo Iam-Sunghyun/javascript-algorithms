@@ -5,7 +5,8 @@
  2. 선택 정렬 (select sort)
  3. 삽입 정렬 (insertion sort)
  4. [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
- 5. 퀵 정렬 (quick sort)
+ 5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
+ 6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
 
 ## 4. 셸 정렬 (shell sort)
 
@@ -50,7 +51,7 @@
 ```
 
 ### 셸 정렬 코드 (python)
-
+파일 참조
 ```
 # Python3 program for implementation of Shell Sort
  
@@ -91,19 +92,191 @@ shellSort(arr2)
 print("sorted array",arr2)
  
 # This code is contributed by Shubham Prashar (SirPrashar)
+# https://www.geeksforgeeks.org/shellsort/
 ```
 
 ### 셸 정렬 분석
-+ 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 더 큰 거리를 이동한다. 따라서 교환되는 요소들이 삽입 정렬보다는 최종 위치에 있을 가능성이 높아진다 (큰 들은 어느정도 뒤에 몰리고 작은 값들은 앞쪽에 몰리게 됨)
++ 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 더 큰 거리를 이동한다. 따라서 교환되는 요소들이 삽입 정렬보다는 최종 위치에 있을 가능성이 높아진다 (오름차순이므로 큰 값들은 어느정도 뒤에 몰리고 작은 값들은 앞쪽에 몰리게 됨)
 + 부분 리스트가 하나가 되면 셸 정렬은 전체 리스트를 정렬해야 한다. 그러나 그 시점엔 거의 정렬된 상태에서 삽입 정렬이므로 매우 효율적으로 수행된다
 + 알고리즘이 간단하여 쉽게 구현할 수 있다
++ **불안정 정렬**이다
 
 ### 셸 정렬 시간 복잡도
+
++ 최악 : O(n^2)
++ 평균 : O(n^1.5) 
++ 최선 : O(n)  
++ 메모리 공간 : O(1)
+
+### 참고자료
+ https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
+ https://ko.wikipedia.org/wiki/%EC%85%B8_%EC%A0%95%EB%A0%AC    
+ https://www.geeksforgeeks.org/shellsort/    
+
+
+
+## 5. 퀵 정렬 (quick sort)
+
+ 
+### 퀵 정렬 알고리즘 요약
+
+
+### 퀵 정렬 알고리즘 예제  
+
+
+```
+입력 배열 : [5,3,8,4,9,1,6,2,7]   
+
+간격 k=5의 부분 리스트 정렬 전 : [5,1] [3,6] [8,2] [4,7] [9]
+간격 k=5의 부분 리스트 정렬 후 : [1,5] [3,6] [2,8] [4,7] [9]
+1단계 완료 : [1,3,2,4,9,5,6,8,7]
+
+간격 k=3의 부분 리스트 정렬 전 : [1,4,6] [3,9,8] [2,5,7] 
+간격 k=3의 부분 리스트 정렬 후 : [1,4,6] [3,8,9] [2,5,7] 
+2단계 완료 : [1,3,2,4,8,5,6,9,7]
+
+간격 k=1의 부분 리스트 정렬 전 : [1,3,2,4,8,5,6,9,7]
+간격 k=1의 부분 리스트 정렬 후 : [1,2,3,4,5,6,7,8,9]
+3단계 완료 : [1,2,3,4,5,6,7,8,9]
+```
+
+### 퀵 정렬 코드 (python)
+
+```
+
+```
+
+### 퀵 정렬 분석
+
+
+### 퀵 정렬 시간 복잡도
 
 + 최악의 경우 : O(n^2)
 + 평균 : O(n^1.5)   
 
 ### 참고자료
- https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
- https://ko.wikipedia.org/wiki/%EC%85%B8_%EC%A0%95%EB%A0%AC    
- https://www.geeksforgeeks.org/shellsort/ 
+
+
+
+## 6. 합병 정렬 (merge sort)
+
++ '존 폰 노이만(John von Neumann)'이 1945년에 개발한 알고리즘
++ **분할 정복(devide and conquer)** 기법을 사용한다
+   + 하나의 문제를 두 개의 균등한 크기로 분할하고 분할된 부분을 해결한 다음, 결과를 모아서 원래 문제를 해결하는 방법
+   + 분할된 문제가 충분히 작지 않아 해결이 어렵다면, 분할을 반복한다 -> 일반적으로 **재귀**를 이용해 구현한다 
+ 
+### 합병 정렬 알고리즘 요약
+1. 배열의 길이가 1이하 이면 정렬된 것으로 간주한다. 그렇지 않은 경우 아래와 같다
+2. **분할(divide)** : 입력 배열을 같은 크기의 2개의 부분 배열로 분할한다 
+3. **정복(conquer)** : 부분 배열을 재귀적으로 합병 정렬을 이용해 정렬한다  
+4. **결합(mcombine)** : 정렬된 부분 배열들을 하나의 배열에 통합한다. 이때 정렬 결과가 임시배열에 저장된다
+5. 복사(copy) : 임시배열에 저장된 결과를 원래 배열에 복사한다
+
+### 합병 정렬 알고리즘 예제  
++ 합병 정렬에서 실제로 정렬이 이루어지는 시점은 **2개의  합병(merge)하는 단계**이다 
++ 2개의 부분 배열의 요소들을 처음부터 하나씩 비교하여 두 요소 중에서 더 작은 요소를 새로운 임시배열에 옮기는 과정을 반복한다
++ 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
+
+```
+
+입력 배열 : [5,3,8,4,9,1,6,2,7]   
+
+간격 k=5의 부분 리스트 정렬 전 : [5,1] [3,6] [8,2] [4,7] [9]
+간격 k=5의 부분 리스트 정렬 후 : [1,5] [3,6] [2,8] [4,7] [9]
+1단계 완료 : [1,3,2,4,9,5,6,8,7]
+
+간격 k=3의 부분 리스트 정렬 전 : [1,4,6] [3,9,8] [2,5,7] 
+간격 k=3의 부분 리스트 정렬 후 : [1,4,6] [3,8,9] [2,5,7] 
+2단계 완료 : [1,3,2,4,8,5,6,9,7]
+
+간격 k=1의 부분 리스트 정렬 전 : [1,3,2,4,8,5,6,9,7]
+간격 k=1의 부분 리스트 정렬 후 : [1,2,3,4,5,6,7,8,9]
+3단계 완료 : [1,2,3,4,5,6,7,8,9]
+```
+
+### 합병 정렬 코드 (python)
+파일 참조
+```
+# Python program for implementation of MergeSort
+def mergeSort(arr):
+    if len(arr) > 1:
+  
+         # Finding the mid of the array
+        mid = len(arr)//2
+  
+        # Dividing the array elements
+        L = arr[:mid]
+  
+        # into 2 halves
+        R = arr[mid:]
+  
+        # Sorting the first half
+        mergeSort(L)
+  
+        # Sorting the second half
+        mergeSort(R)
+  
+        i = j = k = 0
+  
+        # Copy data to temp arrays L[] and R[]
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+  
+        # Checking if any element was left
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+  
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+  
+# Code to print the list
+  
+  
+def printList(arr):
+    for i in range(len(arr)):
+        print(arr[i], end=" ")
+    print()
+  
+  
+# Driver Code
+if __name__ == '__main__':
+    arr = [12, 11, 13, 5, 6, 7]
+    print("Given array is", end="\n")
+    printList(arr)
+    mergeSort(arr)
+    print("Sorted array is: ", end="\n")
+    printList(arr)
+  
+# This code is contributed by Mayank Khanna
+# https://www.geeksforgeeks.org/merge-sort/?ref=lbp
+```
+
+### 합병 정렬 분석
+
++ **안정 정렬**이다
++ 입력 데이터의 정렬 정도에 상관 없이 동일한 시간이 소요된다
++ 정렬 결과를 저장할 임시 배열이 필요하므로 **추가적인 메모리 공간이 소요**된다 -> 제자리 정렬이 아니다
+
+### 합병 정렬 시간 복잡도
+합병 정렬은 재귀 호출 구조로 되어있다. 입력 배열의 크기가 2^3이라 가정 할 때 분할되는 부분 배열의 크기는 입력 배열의 1/2씩 2^3 -> 2^2 -> 2^1 -> 2^0 순으로 3번의 재귀 호출이 발생하게 된다. 따라서 입력 배열의 크기가 k=2^n 일 때 logn번의 재귀 호출이 발생하게 되는 것을 알 수 있다 
+하지만 합병 정렬이 실제로 정렬 연산을 수행하는 시점은 분할이 아닌 합병 단계이다. 합병 단계는 분할과 마찬가지로 logn번 수행하게 되며 각 단계마다 최대 n번의 비교 연산 + 2n번의 이동 연산이 수행되므로 T(n) = nlogn(비교 연산) + 2nlogn(이동 연산) = 3nlogn -> O(nlogn)  ->..헷갈
+
++ 최악 : O(nlogn)
++ 평균 : O(nlogn)
++ 최선 : O(nlogn)      
++ 메모리 공간 : O(n)
+
+### 참고자료
+
+https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC
+https://gmlwjd9405.github.io/2018/05/08/algorithm-merge-sort.html
