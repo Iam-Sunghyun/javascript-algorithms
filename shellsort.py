@@ -36,7 +36,6 @@ print("sorted array",arr2)
 
 
 ## shell_sort2 ##
-
 def gapInsertionSort(x, start, gap):
     for target in range(start+gap, len(x), gap):
         val = x[target]
@@ -57,6 +56,30 @@ def shellSort(x):
         gap = gap // 2
     return x
 
-# from -> https://elrion018.tistory.com/29
+# shell_sort2 출처 -> https://elrion018.tistory.com/29
+
 
 ## shell_sort3 ##
+def gapInsertionSort(alist, interval, startposition): 
+    # the 'nth' element in sublist is alist[startposition + gap*n] 
+    for index in range(startposition, len(alist), interval): 
+        position = index 
+        currentValue = alist[index] 
+        while position >= interval and alist[position-interval] > currentValue: 
+            alist[position] = alist[position - interval] 
+            position -= interval 
+        alist[position] = currentValue 
+        
+def shellSort(alist): 
+    interval = len(alist) // 2 
+    while interval > 0: 
+        for i in range(interval): 
+            gapInsertionSort(alist, interval, i) 
+            print(alist) 
+        interval = interval // 2 
+        
+alist = [8,6,5,3,2,4,7,1] 
+shellSort(alist)
+print(alist)
+
+# 출처: https://blog.tomclansys.com/60 [톰 클란시의 IT 블로그]
