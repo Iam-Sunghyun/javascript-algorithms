@@ -1,14 +1,19 @@
-## shell_sort1 ##
-def shell_sort1(arr):
+import random
+import time
+
+def shell_sort(arr):
     gap = len(arr) // 2 # initialize the gap
  
     while gap > 0:
+        
         i = 0
-        j = gap         
+        # gap이 홀수면 그대로 양수면 +1
+        j = gap if gap % 2 != 0 else gap + 1    
+             
         # check the array in from left to right
         # till the last possible index of j
         while j < len(arr):
-     
+         
             if arr[i] >arr[j]:
                 arr[i],arr[j] = arr[j],arr[i]      
             i += 1
@@ -21,65 +26,36 @@ def shell_sort1(arr):
                 if arr[k - gap] > arr[k]:
                     arr[k-gap],arr[k] = arr[k],arr[k-gap]
                 k -= 1
-                print(arr)
+              
         gap //= 2
  
-# driver to check the code
-arr2 = [12, 34, 54, 2, 3]
-print("input array:",arr2)
- 
-shell_sort1(arr2)
-print("sorted array",arr2)
- 
+
+def checksort(a):
+    Sorted = True
+    n = len(a)
+    for i in range(n-1):
+        if a[i] > a[i+1]:
+            Sorted = False
+        if not Sorted:
+            break
+    if Sorted: print('정렬 완료.')
+    else: print('정렬 오류 발생.')
+
+
+num_list = []
+# 20개 정수 데이터 생성
+for i in range(20):
+  num_list.append(random.randint(0, 100)) 
+
+print("before shellsort = ",num_list)
+start_time = time.time()
+shell_sort(num_list)
+
+finish_time = time.time()
+print("after shellsort = ",num_list)
+checksort(num_list)
+print("time = {:.10f}".format(finish_time-start_time))
+
+    
 # This code is contributed by Shubham Prashar (SirPrashar)  
 # https://www.geeksforgeeks.org/shellsort/
-
-
-## shell_sort2 ##
-def gapInsertionSort(x, start, gap):
-    for target in range(start+gap, len(x), gap):
-        val = x[target]
-        i = target
-        while i > start:
-            if x[i-gap]> val:
-                x[i] = x[i-gap]
-            else:
-                break
-            i -= gap
-        x[i] = val
-        
-def shellSort(x):
-    gap = len(x) // 2
-    while gap > 0:
-        for start in range(gap):
-            gapInsertionSort(x, start, gap)
-        gap = gap // 2
-    return x
-
-# shell_sort2 출처 -> https://elrion018.tistory.com/29
-
-
-## shell_sort3 ##
-def gapInsertionSort(alist, interval, startposition): 
-    # the 'nth' element in sublist is alist[startposition + gap*n] 
-    for index in range(startposition, len(alist), interval): 
-        position = index 
-        currentValue = alist[index] 
-        while position >= interval and alist[position-interval] > currentValue: 
-            alist[position] = alist[position - interval] 
-            position -= interval 
-        alist[position] = currentValue 
-        
-def shellSort(alist): 
-    interval = len(alist) // 2 
-    while interval > 0: 
-        for i in range(interval): 
-            gapInsertionSort(alist, interval, i) 
-            print(alist) 
-        interval = interval // 2 
-        
-alist = [8,6,5,3,2,4,7,1] 
-shellSort(alist)
-print(alist)
-
-# 출처: https://blog.tomclansys.com/60 [톰 클란시의 IT 블로그]
