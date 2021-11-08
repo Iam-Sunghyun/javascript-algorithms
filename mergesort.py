@@ -1,65 +1,66 @@
-# Python program for implementation of MergeSort
-def mergeSort(arr):
+import random
+import time
+
+def mergesort(arr):
     if len(arr) > 1:
   
-         # Finding the mid of the array
         mid = len(arr)//2
   
-        # Dividing the array elements
-        L = arr[:mid]
-  
-        # into 2 halves
-        R = arr[mid:]
+        # Dividing the array elements into 2 halves
+        left = arr[:mid]
+        right = arr[mid:]
   
         # Sorting the first half
-        mergeSort(L)
-  
-        # Sorting the second half
-        mergeSort(R)
+        mergesort(left)
+        mergesort(right)
   
         i = j = k = 0
   
         # Copy data to temp arrays L[] and R[]
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                arr[k] = L[i]
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
                 i += 1
             else:
-                arr[k] = R[j]
+                arr[k] = right[j]
                 j += 1
             k += 1
   
         # Checking if any element was left
-        while i < len(L):
-            arr[k] = L[i]
+        while i < len(left):
+            arr[k] = left[i]
             i += 1
             k += 1
   
-        while j < len(R):
-            arr[k] = R[j]
+        while j < len(right):
+            arr[k] = right[j]
             j += 1
             k += 1
-  
-# Code to print the list
-  
-  
-def printList(arr):
-    for i in range(len(arr)):
-        print(arr[i], end=" ")
-    print()
-  
-  
-# Driver Code
-if __name__ == '__main__':
-    arr = [12, 11, 13, 5, 6, 7]
-    print("Given array is", end="\n")
-    printList(arr)
-    mergeSort(arr)
-    print("Sorted array is: ", end="\n")
-    printList(arr)
-  
-# This code is contributed by Mayank Khanna
-# https://www.geeksforgeeks.org/merge-sort/?ref=lbp
+   
+# 정렬 여부 
+def checksort(a):
+    Sorted = True
+    n = len(a)
+    for i in range(n-1):
+        if a[i] > a[i+1]:
+            Sorted = False
+        if not Sorted:
+            break
+    if Sorted: print('정렬 완료.')
+    else: print('정렬 오류 발생.')
+        
+        
+num_list = []
 
+# 20개 정수 데이터 생성
+for i in range(20):
+  num_list.append(random.randint(0, 100)) 
 
-#2
+print("before mergesort = ",num_list)
+start_time = time.time()
+mergesort(num_list)
+
+finish_time = time.time()
+print("after mergesort = ",num_list)
+checksort(num_list)
+print("time = {}".format(finish_time-start_time))
