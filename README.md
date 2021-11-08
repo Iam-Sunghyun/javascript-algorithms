@@ -60,7 +60,8 @@ def shellSort(arr):
  
     while gap > 0:
         i = 0
-        j = gap
+        # gap이 홀수면 그대로 양수면 +1 -> gap의 값이 홀수인 것이 더 효율적이라 알려져 있음.
+        j = gap if gap % 2 != 0 else gap + 1    
          
         # check the array in from left to right
         # till the last possible index of j
