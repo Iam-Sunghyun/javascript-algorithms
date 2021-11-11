@@ -182,7 +182,7 @@ https://freedeveloper.tistory.com/377
 + 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
 
 
-![합병 정렬](C:/Users/Administrator/Desktop/mergesort.png)
+![합병 정렬](./img/mergesort.png)
 
 
 ### 합병 정렬 코드 (python)
