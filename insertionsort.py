@@ -1,5 +1,4 @@
 # 어느정도 정렬 되어있는 데이터에 효율적
-# O(n2)
 import random
 
 def insertion_sort1(a):
