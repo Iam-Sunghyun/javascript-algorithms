@@ -7,7 +7,8 @@
  4. [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
-
+ 7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
+ 
 ## 4. 셸 정렬 (shell sort)
 
 + 가장 오래된 정렬 알고리즘 중 하나로, 1959년 'Donald L. Shell'이 **삽입 정렬의 성질을 이용, 보완하여 만든 알고리즘**
@@ -129,10 +130,10 @@ print("sorted array",arr2)
 3. 피벗을 제외한 나머지 왼쪽, 오른쪽 리스트에 재귀를 이용해 다시 정렬한다
 4. 부분 리스트들이 더 이상 분할 할 수 없을때까지 반복한다
 
-### 퀵 정렬 알고리즘 예제  
-
-<img src="./img/quick-sort(1).png" width="600" height="800">
-![퀵 정렬](./img/quick-sort(1).png)      
+### 퀵 정렬 알고리즘 예제     
+     
+     
+<img src="./img/quick-sort(1).png" width="750" height="900">    
 출처:https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 
 ### 퀵 정렬 코드 (python)
@@ -272,3 +273,37 @@ if __name__ == '__main__':
 
 https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC
 https://gmlwjd9405.github.io/2018/05/08/algorithm-merge-sort.html
+
+
+## 7. 힙 정렬 (heap sort)
+
++ 자료구조 **힙**을 사용하는 정렬 알고리즘
++ 
+
+### 힙 정렬 알고리즘 요약
+1. 
+
+### 힙 정렬 알고리즘 예제  
+
+<img src="./img/quick-sort(1).png" width="600" height="800">
+![퀵 정렬](./img/quick-sort(1).png)      
+출처:https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
+
+### 힙 정렬 코드 (python)
+파일 참조
+```
+```
+
+### 힙 정렬 분석
+
++ 
+
+### 힙 정렬 시간 복잡도
+
+
++ 최악 : O() -> 이미 정렬되어 있는 경우
++ 평균 : O()
++ 최선 : O()      
++ 메모리 공간 : O() ~ O()   
+
+### 참고자료
