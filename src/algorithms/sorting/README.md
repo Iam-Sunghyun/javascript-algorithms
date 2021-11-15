@@ -1,13 +1,55 @@
 # [Algorithm] 정렬 (Sort)
 
- 1. 버블 정렬 (bubble sort)
- 2. 선택 정렬 (selection sort)
- 3. 삽입 정렬 (insertion sort)
+ 1. [버블 정렬 (bubble sort)](#1-버블-정렬-bubble-sort)
+ 2. [선택 정렬 (selection sort)](#2-선택-정렬-selection-sort)
+ 3. [삽입 정렬 (insertion sort)](#3-삽입-정렬-insertion-sort)
  4. [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
  7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
+
+ ## 1. 버블 정렬 (bubble sort)
  
++ **인접한 2개의 요소를 비교**하여 크기가 순서대로 되어 있지 않으면 서로 교환하여 정렬하는 알고리즘  
++ 이러한 **비교-교환** 과정은 리스트 시작부터 끝까지 진행 한다
++ 비교-교환 과정이 한번 완료되면 가장 큰 값이 리스트 맨 오른쪽 끝으로 이동 된다 (오름차순)
++ 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
++ 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
+
+### 버블 정렬 코드 (python)
+  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
+
+### 버블 정렬 분석
++ **안정 정렬**이다
++ 구현이 간단하지만 비효율적이다
+
+### 버블 정렬 시간 복잡도
+
++ 최악 : O(n^2)
++ 평균 : O(n^2) 
++ 최선 : O(n) -> 정렬되어 있는 경우 
++ 메모리 공간 : O(1)
+
+ ## 2. 선택 정렬 (selection sort)
+ 
++ 맨 앞의 요소를 선택한 후 전체 값과 비교해서 가장 작은 값을 반복적으로 맨 앞쪽으로 옮기는 방법을 사용
+
+### 선택 정렬 코드 (python)
+  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
+
+### 선택 정렬 분석
++ **불안정 정렬**이다
++ 버블 정렬과 마찬가지로 구현이 간단하지만 비효율적이다
++ 자료 이동 횟수가 미리 결정된다는 장점이 있다 (이동 횟수가 적다)
+
+### 선택 정렬 시간 복잡도
+
++ 최악 : O(n^2)
++ 평균 : O(n^2) 
++ 최선 : O(n^2)
++ 메모리 공간 : O(1)
+
+
 ## 4. 셸 정렬 (shell sort)
 
 + 가장 오래된 정렬 알고리즘 중 하나로, 1959년 'Donald L. Shell'이 **삽입 정렬의 성질을 이용, 보완하여 만든 알고리즘**
