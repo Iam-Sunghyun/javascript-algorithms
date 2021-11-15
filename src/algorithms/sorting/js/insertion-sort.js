@@ -14,7 +14,6 @@ function insertionSort(arr, n)
     } 
 } 
    
-
 function printArray(arr, n) 
 { 
     let i; 
@@ -23,7 +22,7 @@ function printArray(arr, n)
     document.write("<br>");
 } 
    
-// Driver program to test above functions
+// 난수 생성 후 
 let arr = [];
 for (i = 0; i < 15; i++)
   arr.push(Math.floor(Math.random() * 100));
