@@ -133,7 +133,7 @@ print("sorted array",arr2)
 ### 퀵 정렬 알고리즘 예제     
      
      
-<img src="./img/quick-sort(1).png" width="750" height="900">    
+<img src="./img/quick-sort.png" width="750" height="900">    
 출처:https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 
 ### 퀵 정렬 코드 (python)
