@@ -11,4 +11,4 @@
 
 
 
- ?. [정렬 (sort)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
+ ?. [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
