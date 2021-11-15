@@ -1,38 +1,38 @@
-function swap(arr, xp, yp)
+function swap(arr, a, b)
 {
-  /* var temp = arr[xp];
-     arr[xp] = arr[yp];
-     arr[yp] = temp;   */
-   [arr[xp],arr[yp]] = [arr[yp],arr[xp]];                  
+  /* let temp = arr[a];
+     arr[a] = arr[b];
+     arr[b] = temp;   */
+  [arr[a],arr[b]] = [arr[b],arr[a]];                  
 }
  
-// An optimized version of Bubble Sort
 function bubbleSort( arr, n)
 {
-var i, j;
+let i, j, changed;
 for (i = 0; i < n-1; i++)
 {
+    changed = false;
     for (j = 0; j < n-i-1; j++)
     {
         if (arr[j] > arr[j+1])
         {
         swap(arr,j,j+1);
-         
-        }
+        changed = true;
+        }     
     }
+    if(!changed) break;
 }
 }
  
-/* Function to print an array */
 function printArray(arr, size)
 {
-    var i;
+    let i;
     for (i=0; i < size; i++)
         document.write(arr[i]+ " ");
-    document.write("\n");
+    document.write(" <br>");
 }
  
-// Driver program to test above functions
+// 난수 배열 생성 후 테스트
     let arr = [];
     for (i = 0; i < 15; i++)
       arr.push(Math.floor(Math.random() * 100));
