@@ -1,8 +1,4 @@
 # datastructure
-
-
-[힙 (heap)](힙-heap)
- 
  
  ## 힙 (heap)
 
