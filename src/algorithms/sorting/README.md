@@ -1,7 +1,7 @@
 # [Algorithm] 정렬 (Sort)
 
  1. 버블 정렬 (bubble sort)
- 2. 선택 정렬 (select sort)
+ 2. 선택 정렬 (selection sort)
  3. 삽입 정렬 (insertion sort)
  4. [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
