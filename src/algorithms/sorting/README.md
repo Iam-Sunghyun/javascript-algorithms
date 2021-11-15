@@ -16,7 +16,7 @@
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
 
-### 버블 정렬 코드 (python)
+### 버블 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
 
 ### 버블 정렬 분석
@@ -34,7 +34,7 @@
  
 + 맨 앞의 요소를 선택한 후 전체 값과 비교해서 가장 작은 값을 반복적으로 맨 앞쪽으로 옮기는 방법을 사용
 
-### 선택 정렬 코드 (python)
+### 선택 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
 
 ### 선택 정렬 분석
@@ -92,51 +92,9 @@
 3단계 완료 : [1,2,3,4,5,6,7,8,9]
 ```
 
-### 셸 정렬 코드 (python)
+### 셸 정렬 코드 (javascript)
 파일 참조
-```
-# Python3 program for implementation of Shell Sort
- 
-def shellSort(arr):
-    gap = len(arr) // 2 # initialize the gap
- 
-    while gap > 0:
-        i = 0
-        # gap이 홀수면 그대로 양수면 +1 -> gap의 값이 홀수인 것이 더 효율적이라 알려져 있음.
-        j = gap if gap % 2 != 0 else gap + 1    
-         
-        # check the array in from left to right
-        # till the last possible index of j
-        while j < len(arr):
-     
-            if arr[i] >arr[j]:
-                arr[i],arr[j] = arr[j],arr[i]
-             
-            i += 1
-            j += 1
-         
-            # now, we look back from ith index to the left
-            # we swap the values which are not in the right order.
-            k = i
-            while k - gap > -1:
- 
-                if arr[k - gap] > arr[k]:
-                    arr[k-gap],arr[k] = arr[k],arr[k-gap]
-                k -= 1
- 
-        gap //= 2
- 
- 
-# driver to check the code
-arr2 = [12, 34, 54, 2, 3]
-print("input array:",arr2)
- 
-shellSort(arr2)
-print("sorted array",arr2)
- 
-# This code is contributed by Shubham Prashar (SirPrashar)
-# https://www.geeksforgeeks.org/shellsort/
-```
+
 
 ### 셸 정렬 분석
 + **불안정 정렬**이다
@@ -177,10 +135,8 @@ print("sorted array",arr2)
 <img src="./img/quick-sort.png" width="750" height="900">    
 출처:https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 
-### 퀵 정렬 코드 (python)
+### 퀵 정렬 코드 (javascript)
 파일 참조
-```
-```
 
 ### 퀵 정렬 분석
 
@@ -228,7 +184,7 @@ https://freedeveloper.tistory.com/377
 출처:https://wonjayk.tistory.com/221 
 
 
-### 합병 정렬 코드 (python)
+### 합병 정렬 코드 (javascript)
 파일 참조
 ```
 # Python program for implementation of MergeSort
@@ -325,8 +281,8 @@ https://gmlwjd9405.github.io/2018/05/08/algorithm-merge-sort.html
 1. n개의 요소를 힙에 삽입한다 (insert()로 힙 트리로 만든다)
 2. n번에 걸쳐 삭제 연산하여 배열에 저장한다(delete())
  
-### 힙 정렬 코드 (python)
-[자료구조 힙](https://github.com/Iam-Sunghyun/datastructure#5-%ED%9E%99-heap) 참조
+### 힙 정렬 코드 (javascript)
+[자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)참조
 + 최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
 ```
 if __name__ == "__main__":
