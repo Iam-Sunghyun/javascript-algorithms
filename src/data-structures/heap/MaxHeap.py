@@ -28,7 +28,7 @@ class MaxHeap1(object):
       self.max_heapify(1) # 힙 트리 성질에 맞게 재 정렬
       return max
 
-
+  #재 정렬 
   def max_heapify(self,i):
     left = i * 2
     right = (i * 2) + 1
