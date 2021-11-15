@@ -22,7 +22,7 @@
 + 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진트리
    + 루트 노드는 **최소 값**을 갖는다
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/MinHeapAndMaxHeap.png" width="600" height="350">    
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/heap/img/MinHeapAndMaxHeap.png" width="600" height="350">    
 출처:https://www.geeksforgeeks.org/heap-data-structure/
 
 
