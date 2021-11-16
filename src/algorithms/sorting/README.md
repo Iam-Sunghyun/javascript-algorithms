@@ -16,38 +16,88 @@
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/bubble-sort.gif" width="400" height="150">    
+
+
 ### 버블 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
 
 ### 버블 정렬 분석
-+ **안정 정렬**이다
-+ 구현이 간단하지만 비효율적이다
 
-### 버블 정렬 시간 복잡도
++ 구현이 간단하지만 **비효율적**이다
 
-+ 최악 : O(n^2)
-+ 평균 : O(n^2) 
-+ 최선 : O(n) -> 정렬되어 있는 경우 
-+ 메모리 공간 : O(1)
+### 버블 정렬 복잡도
+
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+버블 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
++ 정렬되어 있는 데이터의 경우 최선 
+
+### 사진 출처 및 내용 참조
+
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
 
  ## 2. 선택 정렬 (selection sort)
  
 + 맨 앞의 요소를 선택한 후 전체 값과 비교해서 가장 작은 값을 반복적으로 맨 앞쪽으로 옮기는 방법을 사용
 
+
+
+
 ### 선택 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
 
 ### 선택 정렬 분석
-+ **불안정 정렬**이다
-+ 버블 정렬과 마찬가지로 구현이 간단하지만 비효율적이다
-+ 자료 이동 횟수가 미리 결정된다는 장점이 있다 (이동 횟수가 적다)
 
-### 선택 정렬 시간 복잡도
++ 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다
++ 자료 이동 횟수가 미리 결정된다는 장점이 있다 (교환 횟수가 적다)
 
-+ 최악 : O(n^2)
-+ 평균 : O(n^2) 
-+ 최선 : O(n^2)
-+ 메모리 공간 : O(1)
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/selection-sort.gif" width="300" height="450">   
+
+### 선택 정렬 복잡도
+
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+선택 정렬|O(n2)|O(n2)|O(n2)|O(1)|X||
+
+
+### 사진 출처 및 내용 참조
+ 
+ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
+ 
+ 
+
+
+
+ ## 3. 삽입 정렬 (insertion sort)
+ 
++ 새로 들어오는 요소의 값을 삽입되어있는 데이터들과 비교하여 적절한 자리를 찾아가는 정렬 방법
++ 손 안에 있는 카드 패 정렬과 유사한 방법
+   + 손 안에 정렬된 카드가 있고, 새로운 카드를 한 장씩 더 받을 때 마다 그 카드를 올바른 자리에 넣는 것
+   + 삽입 후엔 정렬된 상태가 되어 있어야 하고 새로 받는 모든 카드에 대해 수행한다!
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/insertion-sort.gif" width="500" height="350"> 
+
+
+### 삽입 정렬 코드 (javascript)
+  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/insertion-sort.js)
+
+### 삽입 정렬 분석
++ **이미 정렬 되어 있는 경우** 매우 빠르다
++ 자료가 **역**으로 정렬 되어 있는 경우 **최악의 효율**을 보여준다
++ 비교적 많은 요소 이동이 필요하기 때문에 레코드 양이 많고 크기가 클 경우 적합하지 
+
+### 삽입 정렬 복잡도
+
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+선택 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
+
+### 사진 출처 및 내용 참조
+
+ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
+
+
 
 
 ## 4. 셸 정렬 (shell sort)
@@ -58,20 +108,22 @@
    + 요소들이 삽입될 때, 이웃한 위치로만 이동
    + 삽입되어야 할 위치가 현재 위치에서 매우 먼 곳이라면 많은 이동을 해야만 한다
    + 삽입 정렬은 한 번에 한 요소의 위치만 결정되기 때문에 비효율적이다
-   + 삽입 정렬과 달리 셸 정렬은 전체의 리스트를 한 번에 정렬하지 않는다   
++ 삽입 정렬과 달리 셸 정렬은 전체의 리스트를 한 번에 정렬하지 않는다 (여러번 나눠서 정렬)
++ 여러 개의 부분 리스트를 만들어 삽입 정렬을 수행한다
++ 각 단계마다 부분 리스트의 수를 줄여 가며 전체 리스트를 정렬한다 
+
  
 ### 셸 정렬 알고리즘 요약
-1. 먼저 정렬해야 할 리스트를 일정한 기준(gap)에 따라 분류
-2. 연속적이지 않은 여러 개의 부분 리스트를 생성 
-3. 각 부분 리스트를 삽입 정렬을 이용하여 정렬
-4. 모든 부분 리스트가 정렬되면 다시 전체 리스트를 더 적은 개수의 부분 리스트로 만든 후에 삽입 정렬
-5. 부분 리스트의 개수가 1이 될 때까지 반복
+1. 먼저 정렬해야 할 리스트를 일정한 **기준(gap)** 에 따라 분류하여 연속적이지 않은 여러 개의 부분 리스트를 생성 
+2. 각 부분 리스트를 삽입 정렬을 이용하여 정렬
+3. 모든 부분 리스트가 정렬되면 다시 전체 리스트를 더 적은 개수의 부분 리스트로 만든 후에 삽입 정렬
+4. 부분 리스트의 개수가 1이 될 때까지 반복
 
 ### 셸 정렬 알고리즘 예제  
 + 각 부분 리스트는 전체 리스트에서 거리가 k만큼 떨어진 요소들로 이루어짐. k를 **간격(gap)** 이라 한다
-   + 초기 간격은 배열 크기의 절반으로 시작한다
+   + 초기 간격은 배열 크기의 **절반으로 시작**한다
    + 생성된 부분 리스트의 개수는 k(gap)와 같다
-+ 큰 간격으로 시작해서 각 단계마다 간격 k를 절반으로 줄인다. 
++ 큰 간격으로 시작해서 **각 단계마다 간격 k를 절반으로 줄인다.** 
    + 간격이 짝수이면 1을 더하여 **홀수**로 하는 것이 좋은 것으로 알려져 있다 
 + 단계가 진행 될수록 하나의 부분 리스트에 속하는 요소의 개수는 증가하고 전체 부분 리스트의 수는 감소한다
 + 마지막 단계 즉, k = 1이 될 때까지 반복한다 
@@ -91,29 +143,30 @@
 간격 k=1의 부분 리스트 정렬 후 : [1,2,3,4,5,6,7,8,9]
 3단계 완료 : [1,2,3,4,5,6,7,8,9]
 ```
+[예제 참조](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
 
 ### 셸 정렬 코드 (javascript)
-파일 참조
-
+[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/shell-sort.js)
 
 ### 셸 정렬 분석
-+ **불안정 정렬**이다
-+ 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 더 큰 거리를 이동한다. 따라서 교환되는 요소들이 삽입 정렬보다는 최종 위치에 있을 가능성이 높아진다 (오름차순이므로 큰 값들은 어느정도 뒤에 몰리고 작은 값들은 앞쪽에 몰리게 됨)
-+ 부분 리스트가 하나가 되면 셸 정렬은 전체 리스트를 정렬해야 한다. 그러나 그 시점엔 거의 정렬된 상태에서 삽입 정렬이므로 매우 효율적으로 수행된다
+
++ 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 **더 큰 거리를 이동**한다. 따라서 교환되는 요소들이 삽입 정렬보다는 최종 위치에 있을 가능성이 높아진다 (오름차순이므로 큰 값들은 어느정도 뒤에 몰리고 작은 값들은 앞쪽에 몰리게 됨)
++ 부분 리스트가 **하나가 될 때 셸 정렬은 전체 리스트를 정렬**해야 한다. 그러나 그 시점엔 거의 정렬된 상태에서 삽입 정렬이므로 매우 효율적으로 수행된다
 + 알고리즘이 간단하여 쉽게 구현할 수 있다
 
 
 ### 셸 정렬 시간 복잡도
 
-+ 최악 : O(n^2)
-+ 평균 : O(n^1.5) 
-+ 최선 : O(n)  
-+ 메모리 공간 : O(1)
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+셸 정렬|O(nlogn)|O(n1.5)|O(n2)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
 
-### 참고자료
+### 사진 출처 및 내용 참조
  https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
  https://ko.wikipedia.org/wiki/%EC%85%B8_%EC%A0%95%EB%A0%AC    
  https://www.geeksforgeeks.org/shellsort/    
+
+
 
 
 
@@ -133,31 +186,41 @@
      
      
 <img src="./img/quick-sort.png" width="750" height="900">    
-출처:https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
+
 
 ### 퀵 정렬 코드 (javascript)
-파일 참조
+[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js)
 
 ### 퀵 정렬 분석
 
-+ **불안정 정렬**이다
-+ 이미 정렬되어 있는 데이터와 같은 경우 부분 리스트가 불균등하게 나누어져 최악의 효율(O(n2))을 보여 준다
-+ 평균 O(nlogn)인 다른 정렬과 비교했을 때 가장 빠르다
++ **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250"> 
++ 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="200" height="50"> 
+
+
++ **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
    + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다 
 
 ### 퀵 정렬 시간 복잡도
-퀵 정렬에서 리스트 분할이 항상 리스트의 가운데에서 이루어진다고 가정하면 합병 정렬의 복잡도 분석과 마찬가지로 각 단계마다 1/2씩 리스트 크기가 1이 될 때까지 줄어들어
-logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 O(nlogn)이 된다.
+퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 합병 정렬의 복잡도 분석과 마찬가지로 각 단계마다 1/2씩 리스트 크기가 1이 될 때까지 줄어들어
+logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
 레코드의 이동 횟수는 비교 횟수보다 적으므로 무시할 수 있다. 
 
-+ 최악 : O(n2) -> 이미 정렬되어 있는 경우
-+ 평균 : O(nlogn)
-+ 최선 : O(nlogn)      
-+ 메모리 공간 : O(logn) ~ O(n)  -> 추가 공간 필요 없음......?
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(1)|X|구현 방법에 따라 O(logn)의 스택 메모리를 사용하는 듯|
 
-### 참고자료
 
-https://freedeveloper.tistory.com/377
+### 사진 출처 및 내용 참조
+
+https://github.com/trekhleb/javascript-algorithms
+https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
+https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
+
+
+
+
+
 
 ## 6. 합병 정렬 (merge sort)
 
@@ -180,96 +243,37 @@ https://freedeveloper.tistory.com/377
 + 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
 
 
-![합병 정렬](./img/mergesort.png)      
-출처:https://wonjayk.tistory.com/221 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.gif" width="400" height="150">       
+입력 데이터 홀수인 경우 ↓
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.jpg" width="400" height="450">  
 
 
 ### 합병 정렬 코드 (javascript)
-파일 참조
-```
-# Python program for implementation of MergeSort
-def mergeSort(arr):
-    if len(arr) > 1:
-  
-         # Finding the mid of the array
-        mid = len(arr)//2
-  
-        # Dividing the array elements
-        L = arr[:mid]
-  
-        # into 2 halves
-        R = arr[mid:]
-  
-        # Sorting the first half
-        mergeSort(L)
-  
-        # Sorting the second half
-        mergeSort(R)
-  
-        i = j = k = 0
-  
-        # Copy data to temp arrays L[] and R[]
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                arr[k] = L[i]
-                i += 1
-            else:
-                arr[k] = R[j]
-                j += 1
-            k += 1
-  
-        # Checking if any element was left
-        while i < len(L):
-            arr[k] = L[i]
-            i += 1
-            k += 1
-  
-        while j < len(R):
-            arr[k] = R[j]
-            j += 1
-            k += 1
-  
-# Code to print the list
-  
-  
-def printList(arr):
-    for i in range(len(arr)):
-        print(arr[i], end=" ")
-    print()
-  
-  
-# Driver Code
-if __name__ == '__main__':
-    arr = [12, 11, 13, 5, 6, 7]
-    print("Given array is", end="\n")
-    printList(arr)
-    mergeSort(arr)
-    print("Sorted array is: ", end="\n")
-    printList(arr)
-  
-# This code is contributed by Mayank Khanna
-# https://www.geeksforgeeks.org/merge-sort/?ref=lbp
-```
+[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort.js)
+
 
 ### 합병 정렬 분석
 
-+ **안정 정렬**이다
 + 입력 데이터의 정렬 정도에 상관 없이 동일한 시간이 소요된다
 + 정렬 결과를 저장할 임시 배열이 필요하므로 **추가적인 메모리 공간이 소요**된다 -> 제자리 정렬이 아니다 (연결 리스트로 구성하면 제자리 정렬 가능하다함)
 
 ### 합병 정렬 시간 복잡도
 합병 정렬은 재귀 호출 구조로 되어있다. 입력 배열의 크기가 2^3이라 가정 할 때 분할되는 부분 배열의 크기는 입력 배열의 1/2씩 줄어듦으로 3번의 재귀 호출이 발생하게 된다. 따라서 입력 배열의 크기가 k=2^n 일 때 logn번의 재귀 호출이 발생하게 되는 것을 알 수 있다.    
-하지만 합병 정렬이 실제로 정렬 연산을 수행하는 시점은 분할이 아닌 합병 단계이다. 합병 단계는 분할과 마찬가지로 logn번 수행하게 되며 각 단계마다 최대 n번의 비교 연산 + 2n번의 이동 연산이 수행되므로 T(n) = nlogn(비교 연산) + 2nlogn(이동 연산) = 3nlogn -> O(nlogn)  ->..헷갈
+하지만 합병 정렬이 실제로 정렬 연산을 수행하는 시점은 분할이 아닌 합병 단계이다. 합병 단계는 분할과 마찬가지로 logn번 수행하게 되며 각 단계마다 최대 n번의 비교 연산 + 2n번의 이동 연산이 수행되므로 T(n) = nlogn(비교 연산) + 2nlogn(이동 연산) = 3nlogn -> O(nlogn) 
 
-+ 최악 : O(nlogn)
-+ 평균 : O(nlogn)
-+ 최선 : O(nlogn)      
-+ 메모리 공간 : O(n) n만큼 추가 공간 필요
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+합병 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(n)|O| |
 
-### 참고자료
+### 사진 출처 및 내용 참조
 
 https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC
-https://gmlwjd9405.github.io/2018/05/08/algorithm-merge-sort.html
+https://github.com/trekhleb/javascript-algorithms
+https://wonjayk.tistory.com/221
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&logNo=140163896337
+
+
+
 
 
 ## 7. 힙 정렬 (heap sort)
