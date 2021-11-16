@@ -8,7 +8,6 @@
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
  7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
  
- <br>
 
  ## 1. 버블 정렬 (bubble sort)
  
@@ -18,7 +17,7 @@
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/bubble-sort.gif" width="400" height="150">    
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="400" height="150">    
 
 
 ### 버블 정렬 코드 (javascript)
@@ -54,7 +53,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다
 + 자료 이동 횟수가 미리 결정된다는 장점이 있다 (교환 횟수가 적다)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/selection-sort.gif" width="300" height="450">   
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="300" height="450">   
 
 ### 선택 정렬 복잡도
 
@@ -78,7 +77,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
    + 손 안에 정렬된 카드가 있고, 새로운 카드를 한 장씩 더 받을 때 마다 그 카드를 올바른 자리에 넣는 것
    + 삽입 후엔 정렬된 상태가 되어 있어야 하고 새로 받는 모든 카드에 대해 수행한다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/insertion-sort.gif" width="500" height="350"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/insertion-sort.gif" width="500" height="350"> 
 
 
 ### 삽입 정렬 코드 (javascript)
@@ -198,10 +197,10 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 ### 퀵 정렬 분석
 
 + **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250">
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250">
 
 + 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="300" height="100"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="300" height="100"> 
 
 
 + **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
@@ -251,9 +250,9 @@ https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 + 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
 
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.gif" width="400" height="150">       
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.gif" width="400" height="150">       
 입력 데이터 홀수인 경우 ↓
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.svg" width="400" height="450">  
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.svg" width="400" height="450">  
 
 
 ### 합병 정렬 코드 (javascript)
