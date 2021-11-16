@@ -17,7 +17,7 @@
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="400" height="150">    
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="300" height="150">    
 
 
 ### 버블 정렬 코드 (javascript)
@@ -53,7 +53,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다
 + 자료 이동 횟수가 미리 결정된다는 장점이 있다 (교환 횟수가 적다)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="300" height="450">   
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="150" height="450">   
 
 ### 선택 정렬 복잡도
 
@@ -77,7 +77,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
    + 손 안에 정렬된 카드가 있고, 새로운 카드를 한 장씩 더 받을 때 마다 그 카드를 올바른 자리에 넣는 것
    + 삽입 후엔 정렬된 상태가 되어 있어야 하고 새로 받는 모든 카드에 대해 수행한다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/insertion-sort.gif" width="500" height="350"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/insertion-sort.gif" width="300" height="150"> 
 
 
 ### 삽입 정렬 코드 (javascript)
@@ -197,10 +197,10 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 ### 퀵 정렬 분석
 
 + **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.png" width="200" height="250">
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.jpg" width="700" height="300">
 
-+ 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="300" height="100"> 
++ 위 그림처럼 정렬되어 있는 데이터의 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번의 비교가 이루어진다. 결론적으로 </br>
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="500" height="50">
 
 
 + **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
@@ -208,8 +208,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
  </br>
 
 ### 퀵 정렬 복잡도
-퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 합병 정렬의 복잡도 분석과 마찬가지로 각 단계마다 1/2씩 리스트 크기가 1이 될 때까지 줄어들어
-logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
+퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
 레코드의 이동 횟수는 비교 횟수보다 적으므로 무시할 수 있다. 
 </br>
 
@@ -222,7 +221,7 @@ logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비�
 
 https://github.com/trekhleb/javascript-algorithms
 https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
-https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
+
 
 
 
@@ -250,7 +249,7 @@ https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 + 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
 
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.gif" width="400" height="150">       
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.gif" width="300" height="150">       
 입력 데이터 홀수인 경우 ↓
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.svg" width="400" height="450">  
 
