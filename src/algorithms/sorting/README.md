@@ -7,6 +7,8 @@
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
  7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
+ 
+ <br>
 
  ## 1. 버블 정렬 (bubble sort)
  
@@ -33,16 +35,16 @@
 버블 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
 + 정렬되어 있는 데이터의 경우 최선 
 
-### 사진 출처 및 내용 참조
+### Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
 
+<br>
+
  ## 2. 선택 정렬 (selection sort)
  
-+ 맨 앞의 요소를 선택한 후 전체 값과 비교해서 가장 작은 값을 반복적으로 맨 앞쪽으로 옮기는 방법을 사용
-
-
-
++ 맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용
++ 각 단계 마다 맨 앞 요소를 제외한  리스트에서 반복적으로 실행한다
 
 ### 선택 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
@@ -61,12 +63,12 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 선택 정렬|O(n2)|O(n2)|O(n2)|O(1)|X||
 
 
-### 사진 출처 및 내용 참조
+### Reference
  
  https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
  
  
-
+<br>
 
 
  ## 3. 삽입 정렬 (insertion sort)
@@ -93,11 +95,11 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 선택 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
 
-### 사진 출처 및 내용 참조
+### Reference
 
  https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
 
-
+<br>
 
 
 ## 4. 셸 정렬 (shell sort)
@@ -146,7 +148,8 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 [예제 참조](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
 
 ### 셸 정렬 코드 (javascript)
-[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/shell-sort.js)
+[파일 참조1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/shell-sort.js) </br>
+[파일 참조2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/shell-sort.js) </br>
 
 ### 셸 정렬 분석
 
@@ -155,19 +158,19 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + 알고리즘이 간단하여 쉽게 구현할 수 있다
 
 
-### 셸 정렬 시간 복잡도
+### 셸 정렬 복잡도
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-셸 정렬|O(nlogn)|O(n1.5)|O(n2)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
+셸 정렬|O(nlogn)|O(n1.5)|O(n2),(n(logn)2)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
 
-### 사진 출처 및 내용 참조
+### Reference
  https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
  https://ko.wikipedia.org/wiki/%EC%85%B8_%EC%A0%95%EB%A0%AC    
  https://www.geeksforgeeks.org/shellsort/    
 
 
-
+<br>
 
 
 ## 5. 퀵 정렬 (quick sort)
@@ -189,29 +192,34 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 
 ### 퀵 정렬 코드 (javascript)
+</br>
 [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js)
 
 ### 퀵 정렬 분석
 
-+ **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250"> 
-+ 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="200" height="50"> 
++ **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다 </br>
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250">
+
++ 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 </br>
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="300" height="100"> 
 
 
 + **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
    + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다 
+ </br>
 
-### 퀵 정렬 시간 복잡도
+### 퀵 정렬 복잡도
 퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 합병 정렬의 복잡도 분석과 마찬가지로 각 단계마다 1/2씩 리스트 크기가 1이 될 때까지 줄어들어
 logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
 레코드의 이동 횟수는 비교 횟수보다 적으므로 무시할 수 있다. 
+</br>
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(1)|X|구현 방법에 따라 O(logn)의 스택 메모리를 사용하는 듯|
 
 
-### 사진 출처 및 내용 참조
+### Reference
 
 https://github.com/trekhleb/javascript-algorithms
 https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
@@ -219,7 +227,7 @@ https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 
 
 
-
+<br>
 
 
 ## 6. 합병 정렬 (merge sort)
@@ -245,12 +253,12 @@ https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.gif" width="400" height="150">       
 입력 데이터 홀수인 경우 ↓
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.jpg" width="400" height="450">  
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting/img/merge-sort.svg" width="400" height="450">  
 
 
 ### 합병 정렬 코드 (javascript)
-[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort.js)
-
+[파일 참조1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort.js)
+[파일 참조2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort2.js)
 
 ### 합병 정렬 분석
 
@@ -265,7 +273,7 @@ https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 합병 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(n)|O| |
 
-### 사진 출처 및 내용 참조
+### Reference
 
 https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC
 https://github.com/trekhleb/javascript-algorithms
@@ -273,7 +281,7 @@ https://wonjayk.tistory.com/221
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&logNo=140163896337
 
 
-
+<br>
 
 
 ## 7. 힙 정렬 (heap sort)
@@ -283,7 +291,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 
 ### 힙 정렬 알고리즘 요약
 1. n개의 요소를 힙에 삽입한다 (insert()로 힙 트리로 만든다)
-2. n번에 걸쳐 삭제 연산하여 배열에 저장한다(delete())
+2. n번에 걸쳐 삭제 연산하여 배열에 저장한다 delete()
  
 ### 힙 정렬 코드 (javascript)
 [자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)참조
