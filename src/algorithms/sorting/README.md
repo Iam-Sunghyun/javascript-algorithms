@@ -197,10 +197,10 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 ### 퀵 정렬 분석
 
 + **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.gif" width="200" height="250">
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.png" width="200" height="250">
 
 + 위 그림같은 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번(요소의 개수 만큼)의 비교가 이루어진다 -> 요소가 1개일 때는 비교가 발생하지 않는다 결론적으로 </br>
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity" width="300" height="100"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="300" height="100"> 
 
 
 + **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
