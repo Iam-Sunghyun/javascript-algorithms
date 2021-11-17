@@ -34,7 +34,7 @@
 버블 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
 + 정렬되어 있는 데이터의 경우 최선 
 
-### Reference
+## Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
 
@@ -53,7 +53,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다
 + 자료 이동 횟수가 미리 결정된다는 장점이 있다 (교환 횟수가 적다)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="150" height="450">   
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="100" height="350">   
 
 ### 선택 정렬 복잡도
 
@@ -62,13 +62,12 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 선택 정렬|O(n2)|O(n2)|O(n2)|O(1)|X||
 
 
-### Reference
+## Reference
  
  https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
  
  
-<br>
-
+<br><br>
 
  ## 3. 삽입 정렬 (insertion sort)
  
@@ -94,11 +93,11 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 선택 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
 
-### Reference
+## Reference
 
  https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting
 
-<br>
+<br><br>
 
 
 ## 4. 셸 정렬 (shell sort)
@@ -120,7 +119,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 3. 모든 부분 리스트가 정렬되면 다시 전체 리스트를 더 적은 개수의 부분 리스트로 만든 후에 삽입 정렬
 4. 부분 리스트의 개수가 1이 될 때까지 반복
 
-### 셸 정렬 알고리즘 예제  
+### 셸 정렬 예제  
 + 각 부분 리스트는 전체 리스트에서 거리가 k만큼 떨어진 요소들로 이루어짐. k를 **간격(gap)** 이라 한다
    + 초기 간격은 배열 크기의 **절반으로 시작**한다
    + 생성된 부분 리스트의 개수는 k(gap)와 같다
@@ -163,13 +162,13 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 셸 정렬|O(nlogn)|O(n1.5)|O(n2),(n(logn)2)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
 
-### Reference
+## Reference
  https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
  https://ko.wikipedia.org/wiki/%EC%85%B8_%EC%A0%95%EB%A0%AC    
  https://www.geeksforgeeks.org/shellsort/    
 
 
-<br>
+<br><br>
 
 
 ## 5. 퀵 정렬 (quick sort)
@@ -184,7 +183,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 3. 피벗을 제외한 나머지 왼쪽, 오른쪽 리스트에 재귀를 이용해 다시 정렬한다
 4. 부분 리스트들이 더 이상 분할 할 수 없을때까지 반복한다
 
-### 퀵 정렬 알고리즘 예제     
+### 퀵 정렬 예제     
      
      
 <img src="./img/quick-sort.png" width="750" height="900">    
@@ -217,7 +216,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(1)|X|구현 방법에 따라 O(logn)의 스택 메모리를 사용하는 듯|
 
 
-### Reference
+## Reference
 
 https://github.com/trekhleb/javascript-algorithms
 https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
@@ -225,7 +224,7 @@ https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
 
 
 
-<br>
+<br><br>
 
 
 ## 6. 합병 정렬 (merge sort)
@@ -243,19 +242,19 @@ https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
 4. **결합(mcombine)** : 정렬된 부분 배열들을 하나의 배열에 통합한다. 이때 정렬 결과가 임시배열에 저장된다
 5. 복사(copy) : 임시배열에 저장된 결과를 원래 배열에 복사한다
 
-### 합병 정렬 알고리즘 예제  
+### 합병 정렬 예제  
 + 합병 정렬에서 실제로 정렬이 이루어지는 시점은 **2개의  합병(merge)하는 단계**이다 
 + 2개의 부분 배열의 요소들을 처음부터 하나씩 비교하여 두 요소 중에서 더 작은 요소를 새로운 임시배열에 옮기는 과정을 반복한다
 + 이것을 하나의 부분 배열이 끝날 때 까지 반복하고, 다른 배열의 남은 요소들을 전부 임시배열에 복사하면 합병이 종료된다
 
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.gif" width="300" height="150">       
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.gif" width="350" height="200">       
 입력 데이터 홀수인 경우 ↓
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/merge-sort.svg" width="400" height="450">  
 
 
 ### 합병 정렬 코드 (javascript)
-[파일 참조1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort.js)
+[파일 참조1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort.js) <br>
 [파일 참조2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/merge-sort2.js)
 
 ### 합병 정렬 분석
@@ -263,7 +262,7 @@ https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
 + 입력 데이터의 정렬 정도에 상관 없이 동일한 시간이 소요된다
 + 정렬 결과를 저장할 임시 배열이 필요하므로 **추가적인 메모리 공간이 소요**된다 -> 제자리 정렬이 아니다 (연결 리스트로 구성하면 제자리 정렬 가능하다함)
 
-### 합병 정렬 시간 복잡도
+### 합병 정렬 복잡도
 합병 정렬은 재귀 호출 구조로 되어있다. 입력 배열의 크기가 2^3이라 가정 할 때 분할되는 부분 배열의 크기는 입력 배열의 1/2씩 줄어듦으로 3번의 재귀 호출이 발생하게 된다. 따라서 입력 배열의 크기가 k=2^n 일 때 logn번의 재귀 호출이 발생하게 되는 것을 알 수 있다.    
 하지만 합병 정렬이 실제로 정렬 연산을 수행하는 시점은 분할이 아닌 합병 단계이다. 합병 단계는 분할과 마찬가지로 logn번 수행하게 되며 각 단계마다 최대 n번의 비교 연산 + 2n번의 이동 연산이 수행되므로 T(n) = nlogn(비교 연산) + 2nlogn(이동 연산) = 3nlogn -> O(nlogn) 
 
@@ -271,7 +270,7 @@ https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 합병 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(n)|O| |
 
-### Reference
+## Reference
 
 https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC
 https://github.com/trekhleb/javascript-algorithms
@@ -279,7 +278,7 @@ https://wonjayk.tistory.com/221
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&logNo=140163896337
 
 
-<br>
+<br><br>
 
 
 ## 7. 힙 정렬 (heap sort)
@@ -289,7 +288,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 
 ### 힙 정렬 알고리즘 요약
 1. n개의 요소를 힙에 삽입한다 (insert()로 힙 트리로 만든다)
-2. n번에 걸쳐 삭제 연산하여 배열에 저장한다 delete()
+2. n번에 걸쳐 삭제 연산하여 얻은 값을 배열에 저장한다 delete()
  
 ### 힙 정렬 코드 (javascript)
 [자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)참조
@@ -322,12 +321,49 @@ if __name__ == "__main__":
 + **불안정 정렬**이다
 
 
-### 힙 정렬 시간 복잡도
+### 힙 정렬 복잡도
 
 힙은 삽입 삭제 연산 모두 O(nlogn)이 소요된다. 크기가 n인 데이터의 경우 n번의 삽입과(힙 트리 생성하면서) n번의 삭제를 통해 정렬하므로 전체 시간은 nlogn + nlogn = 2nlogn 결론적으로 O(nlogn)이 된다 
 + 최악 : O(nlogn) 
 + 평균 : O(nlogn)
 + 최선 : O(nlogn)      
-+ 메모리 공간 : O()
++ 메모리 공간 : O(1)
 
-### 참고자료
+## Reference
+
+
+<br><br>
+
+
+## 8. 기수 정렬 (radix sort)
+
++ 
+ 
+### 기수 정렬 알고리즘 요약
+1. 
+
+### 기수 정렬 예제  
++ 
+      
+<img src="" width="400" height="450">  
+
+
+### 기수 정렬 코드 (javascript)
+[파일 참조1]()
+
+
+### 기수 정렬 분석
+
++ 
+
+### 기수 정렬 복잡도
+
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+기수 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(n)|O| |
+
+## Reference
+
+
+
+<br>
