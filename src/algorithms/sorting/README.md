@@ -294,25 +294,41 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 [자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)참조
 + 최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
 ```
-if __name__ == "__main__":
-  maxheap = MaxHeap1()
-  arr = []
+function printArray(arr)
+{
+    let n = arr.length;
+        for (let i = 0; i < n; ++i)
+          process.stdout.write(`${arr[i]}`+ ` `); //nodejs에서 콘솔창에 줄 바꿈 없이 출력하는 법 
+        console.log("\n");
+}
   
-  for i in range(10):
-    arr.append(random.randint(0,100))
+// 약간 지저분함
+let maxheap = new MaxHeap();
+let arr = [];
 
-  print(arr)
+for (i = 0; i < 10; i++)
+  arr.push(Math.floor(Math.random() * 100));
 
-  for j in range(len(arr)):
-    maxheap.insert(arr[j])
-  
-  for x in range(len(arr)-1,-1,-1):
-    arr[x] = maxheap.delete()
-  
-  print(arr)
-  
-결과 -[32, 55, 70, 44, 69, 32, 90, 20, 73, 7]
-      [7, 20, 32, 32, 44, 55, 69, 70, 73, 90]
+let n = arr.length;
+console.log("UnSorted array: ");
+printArray(arr)
+
+for(let i = 0; i < arr.length; i++)
+  maxheap.insert(arr[i]);
+
+for(let i = arr.length - 1; i >= 0; i--)
+  arr[i] = maxheap.delete();
+
+console.log("Sorted array: ");
+printArray(arr)
+
+
+출력
+UnSorted array: 
+77 22 94 54 75 45 80 8 3 37 
+
+Sorted array: 
+3 8 22 37 45 54 75 77 80 94 
 ```
 
 ### 힙 정렬 분석
