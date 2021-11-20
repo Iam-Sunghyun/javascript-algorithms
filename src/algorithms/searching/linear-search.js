@@ -6,13 +6,11 @@ function randomArrayMaker() {
 }
 
 function printArray(arr) {
-  
   for(let i = 0; i < arr.length; i++)
     process.stdout.write(arr[i]+' ');
-
 }
 
-function linearSearch(arr) {
+function linearSearch(arr,key) {
   key = 5
   for(let i = 0; i < arr.length; i++){
     if(arr[i] === key){
@@ -20,14 +18,8 @@ function linearSearch(arr) {
     }
   }
   return '\nno key value';
-  
 }
 
 let arr = randomArrayMaker();
 printArray(arr);
-console.log(linearSearch(arr));
-
-
-
-
-
+console.log(linearSearch(arr,5));
