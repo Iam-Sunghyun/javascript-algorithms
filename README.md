@@ -2,7 +2,7 @@
 
  
  5. [힙(heap)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)
- 
+ 6. [해시 테이블(hash table)]()
 
 # 알고리즘 (Algorithms)
 
