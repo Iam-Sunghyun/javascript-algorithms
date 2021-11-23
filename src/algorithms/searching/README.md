@@ -2,7 +2,7 @@
 
  1. [순차 탐색 (sequential search), 선형 탐색 (linear search)](#1-순차-탐색-sequential-search-선형-탐색-linear-search)
  2. [이진 탐색 (binary search)](#2-이진-탐색-binary-search)
- 
+ 3. [해시 탐색 (hash search)](#3-해시-탐색-hash-search)
 
  ## 1. 순차 탐색 (sequential search), 선형 탐색 (linear search)
  
@@ -11,10 +11,8 @@
 + 구현이 간단하지만 **비효율적**이다
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/linear-search.gif" width="400" height="150">    
 
-
 ### 순차 탐색 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/linear-search.js)
-
 
 
 ### 순차 탐색 복잡도
@@ -22,7 +20,6 @@
 이름|시간복잡도|비고
 :---:|:---:|:---:|
 순차 탐색|O(n)||
-
 
 ### Reference
 
@@ -40,22 +37,41 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sea
 + 비교가 일어날 때마다 탐색 범위가 급격하게 줄어들어 **효율적**이다
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/binary-search1.jpg" width="400" height="300">    
 
-
 ### 이진 탐색 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js)
-
 
 
 ### 이진 탐색 복잡도
 
 이름|시간복잡도|비고
 :---:|:---:|:---:|
-순차 탐색|O(logn)||
-
+이진 탐색|O(logn)||
 
 ### Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search
+
+<br>
+
+
+## 3. 해시 탐색 (hash search)
+ 
++ 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/binary-search1.jpg" width="400" height="300">    
+
+### 이진 탐색 코드 (javascript)
+  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js)
+
+
+### 이진 탐색 복잡도
+
+이름|시간복잡도|비고
+:---:|:---:|:---:|
+이진 탐색|O(logn)||
+
+### Reference
+
+https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/
 
 <br>
  
