@@ -13,7 +13,7 @@
 ## 해시 테이블 (hash table) 구조
 + 해시 테이블은 M개의 **버킷(bucket)** 으로 이루어져있고, 하나의 버킷은 여러 개의 **슬롯(slot)** 을 가지는데 하나의 슬롯에 하나의 데이터가 저장 된다.
 + 아래 그림은 **하나의 슬롯**을 가진 **16개의 버킷(0~15)** 으로 이루어진 해시 테이블이다.
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table/img/hash-table1.png" width="450" height="350"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/img/hash-table1.png" width="450" height="350"> 
 
 + 버킷의 수가 고정되어 있으므로 경우에 따라 서로 다른 키가 해시 함수에 의해 해시 값으로 매핑되는 상황이 발생하기도 하는데 이것을 **충돌(collision)** 이라고 한다.
    + 충돌을 일으키는 키들, 즉 동일한 해시 값을 발생시키는 키들을 **동의어(synonym)** 라 한다.
@@ -64,7 +64,7 @@
 
 <br>
 
-## 충돌에 따른 오버플로 처리 방법
+# 충돌에 따른 오버플로 처리 방법
 
 ## 열린 주소법(Open Addressing Method)
 
@@ -74,7 +74,7 @@
    + 만약 ht[k]에서 충돌이 발생했다면, ht[k+1]부터 마지막 버킷까지 비어있는 곳을 조사한다.
    + 테이블의 끝에 도달하여 처음으로 돌아온다면 테이블이 가득 찬 상태이다.
    
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table/img/linear-probing.jpg" width="400" height="300">    
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table/img/linear-probing.JPG" width="400" height="300">    
 
 + 위 그림을 보면 한번 충돌이 발생한 위치에서 데이터들이 집중되는 현상을 볼 수 있는데, 이것을 **군집화(clustering)** 라고 한다.
 
