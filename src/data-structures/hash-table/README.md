@@ -74,7 +74,7 @@
    + 만약 ht[k]에서 충돌이 발생했다면, ht[k+1]부터 마지막 버킷까지 비어있는 곳을 조사한다.
    + 테이블의 끝에 도달하여 처음으로 돌아온다면 테이블이 가득 찬 상태이다.
    
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table/img/linear-probing.JPG" width="400" height="300">    
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/img/linear-probing.JPG" width="400" height="300">    
 
 + 위 그림을 보면 한번 충돌이 발생한 위치에서 데이터들이 집중되는 현상을 볼 수 있는데, 이것을 **군집화(clustering)** 라고 한다.
 
