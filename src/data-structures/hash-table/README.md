@@ -70,7 +70,6 @@ _hash(key) {
 }
 ```
 
-<br>
 
 # 충돌에 따른 오버플로 처리 방법
 
@@ -99,7 +98,7 @@ _hash(key) {
 
 [체이닝](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/hash-table-chaining.js) 참조 
 
-### 해시 테이블 복잡도
+## 해시 테이블 복잡도
 
 + **최선**의 경우 <br>
 
