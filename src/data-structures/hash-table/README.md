@@ -18,7 +18,6 @@
 + 버킷의 수가 고정되어 있으므로 경우에 따라 서로 다른 키가 해시 함수에 의해 해시 값으로 매핑되는 상황이 발생하기도 하는데 이것을 **충돌(collision)** 이라고 한다.
    + 충돌을 일으키는 키들, 즉 동일한 해시 값을 발생시키는 키들을 **동의어(synonym)** 라 한다.
  
-
 ### 충돌이 발생하면?
 
 + 만약 버킷에 여러 개의 슬롯이 있다면 데이터를 각각 다른 슬롯에 저장 하면 된다.
@@ -58,9 +57,18 @@
                  (203)       (112)
 ```
 
-
 ### 탐색키가 문자열인 경우?
 + 탐색키가 문자열인 경우 보통 각 문자에 정수를 대응시켜 바꿔 사용한다.
+```
+// 입력 받은 키의 각 자리 문자를 유니 코드로 반환하여 더한 다음 나머지 연산 (제산 함수)
+_hash(key) {
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash += key.charCodeAt(i); 
+  }
+  return hash % this.table.length;
+}
+```
 
 <br>
 
@@ -77,10 +85,11 @@
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/img/linear-probing.JPG" width="400" height="300">    
 
 + 위 그림을 보면 한번 충돌이 발생한 위치에서 데이터들이 집중되는 현상을 볼 수 있는데, 이것을 **군집화(clustering)** 라고 한다.
++ 오버플로에 따른 군집화 현상이 계속되면 탐색의 효율이 크게 저하될 수 있다.
 
 ### 선형 조사법(linear probing)에 의한 해시 구현
 
-[선형 조사법]()
+[선형 조사법]() 참조 
 
 
 ## 닫힌 주소법(closed Addressing Method)
@@ -88,15 +97,25 @@
 ### 2. 체이닝(chainning)
 + 해시 테이블의 하나의 위치에서 여러 개의 데이터를 저장할 수 있도록 해시 테이블의 구조를 변경한다.
 
+[체이닝](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/hash-table-chaining.js) 참조 
 
 ### 해시 테이블 복잡도
 
-삽입|삭제|
-:---:|:---:|
-O(logn)|O(logn)|
++ **최선**의 경우 <br>
+
+삽입|삭제|검색
+:---:|:---:|:---:|
+O(1)|O(1)|O(1)|
+
++ **최악**의 경우(모든 데이터가 하나의 버킷에 집중되는 경우) <br>
+
+삽입|삭제|검색
+:---:|:---:|:---:|
+O(n)|O(n)|O(n)|
 
 ## Reference
 
+https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/
 https://velog.io/@taeha7b/datastructure-hashtable
 https://ko.wikipedia.org/wiki/%ED%95%B4%EC%8B%9C_%ED%95%A8%EC%88%98
-https://blog.naver.com/PostView.nhn?blogId=beaqon&logNo=221300352778
+
