@@ -88,7 +88,7 @@ _hash(key) {
 
 ### 선형 조사법(linear probing)에 의한 해시 구현
 
-[선형 조사법]() 참조 
+[선형 조사법](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/hash-table-linearProbing.js) 참조 
 
 
 ## 닫힌 주소법(closed Addressing Method)
