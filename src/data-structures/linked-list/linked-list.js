@@ -80,7 +80,8 @@ class LinkedList{
   getNode(index){
     let current = this.head;
     if(index < 0 || index > this.size - 1){
-      return '값이 없습니다.';
+      console.log(`${index}의 값이 없습니다`);
+      return;
     }
     if(index === 0){
       return current.data;
@@ -110,6 +111,7 @@ linkedList.insertHead(10);
 linkedList.insertHead(20);
 linkedList.append(30);
 linkedList.deleteAt(0);
+linkedList.getNode(-1);
 console.log(`0번 인덱스 값: ${linkedList.getNode(0)}`);
 console.log(`1번 인덱스 값: ${linkedList.getNode(1)}`);
 console.log(`2번 인덱스 값: ${linkedList.getNode(2)}`);
