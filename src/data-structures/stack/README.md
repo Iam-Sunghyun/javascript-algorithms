@@ -22,7 +22,12 @@
 [스택-배열2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack.js) 참조
 
 ## 연결리스트를 이용한 구현
-[스택-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack-linkedlist.js) 참조
++ 연결 리스트의 구현을 대부분 가져와 사용한다.
+   + 연결 리스트의 특성 상 isFull() 연산은 불필요하다!
++ **top을 헤드 포인터**로 하여 데이터를 삽입할 때 마다 top에 값을 집어 넣는다.
+
+[스택-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack-linkedlist.js) 참조 <br>
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/img/stack-linkedlist.png" width="550" height="350"> 
 
 ## 스택의 활용
 
