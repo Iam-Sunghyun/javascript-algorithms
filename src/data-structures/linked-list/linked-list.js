@@ -1,13 +1,12 @@
-// 단순 연결 리스트
+// 노드
 class Node{
   constructor(data,next = null){
     this.data = data;
     this.next = next;
   }
 }
-
+// 단순 연결 리스트
 class LinkedList{
-
   constructor(){
     this.head = null;   // 헤드 포인터
     this.size = 0;
@@ -18,7 +17,7 @@ class LinkedList{
     this.head = node; // 삽입 데이터는 새 헤드로
     this.size++;
   }
-
+  
   // 맨 뒤 삽입
   append(data){ 
     const node = new Node(data)
@@ -57,7 +56,7 @@ class LinkedList{
     node.next = current;
     this.size++;
   }
-
+  // 특정 노드 삭제
   deleteAt(index){
     if(index < 0 || index > this.size - 1){
       return '허용 인덱스가 아닙니다';
@@ -77,7 +76,7 @@ class LinkedList{
       this.size--;
     }
   }
-
+ // 특정 노드 데이터 조회
   getNode(index){
     let current = this.head;
     if(index < 0 || index > this.size - 1){
@@ -92,6 +91,7 @@ class LinkedList{
       return current.data;
     }
   }
+  
   /*
   isAllowedIndex(index){
     if(index < 0 && index > this.size)
@@ -99,6 +99,7 @@ class LinkedList{
     return true;
   }
   */
+  
   returnSize(){
     return this.size;
   }
