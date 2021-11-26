@@ -18,11 +18,11 @@
 
 ## 배열을 이용한 구현
 
-[스택1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack-built-in.js) <br>
-[스택2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack.js)
+[스택-배열1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack-built-in.js) 참조 <br>
+[스택-배열2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack.js) 참조
 
 ## 연결리스트를 이용한 구현
-
+[스택-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/stack-linkedlist.js) 참조
 
 ## 스택의 활용
 
