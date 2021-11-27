@@ -25,18 +25,17 @@ class LinkedList{
     // 헤드 노드가 없다면(빈 연결 리스트)?
     if(!this.head){
       this.head = node;
-      this.size++
+      this.size++;
       return;
     }else{
-      current = this.head; 
+      current = this.head; // 헤드 참조 
       while(current.next){
         current = current.next;
       }
+      current.next = node;
+      this.size++;
     }
-    current.next = node;
-    this.size++;
   }
-
   // 특정 위치 삽입
   insertAt(data,index){
     if(index < 0 || index > this.size){
