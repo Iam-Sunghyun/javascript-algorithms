@@ -26,14 +26,13 @@ class LinkedList{
 
   // 맨 뒤 삽입
   append(data){ 
-    const node = new Node(data);
-    let current;
     // 헤드 노드가 없다면(빈 연결 리스트 경우)
     if(!this.head){
-      this.head = node;
-      this.size++;
+      this.insertHead(data);
       return;
     }else{
+      const node = new Node(data);
+      let current;
       current = this.head; 
       while(current.next){
         current = current.next;
@@ -50,7 +49,6 @@ class LinkedList{
     }
     if(index === 0){
       this.insertHead(data);
-      size++;
       return;
     }
     if(index === this.size){
@@ -72,7 +70,7 @@ class LinkedList{
   }
 
   deleteAt(index){
-    if(index < 0 || index > this.size - 1){
+    if(index < 0 || index > this.size-1){
       return '허용 인덱스가 아닙니다';
     }
     if(index === 0){
@@ -88,12 +86,11 @@ class LinkedList{
       }
       previous.next = current.next;
       current.next.prev = previous;
-      current.next = null;
-      current.prev = null;
+      current = null;
       this.size--;
     }
   }
-
+  
   getNode(index){
     let current = this.head;
     if(index < 0 || index > this.size - 1){
