@@ -24,13 +24,15 @@ class LinkedList{
     this.size++;
   }
 
- // 맨 뒤 삽입
+  // 맨 뒤 삽입
   append(data){ 
     const node = new Node(data);
     let current;
     // 헤드 노드가 없다면(빈 연결 리스트 경우)
     if(!this.head){
       this.head = node;
+      this.size++;
+      return;
     }else{
       current = this.head; 
       while(current.next){
@@ -38,10 +40,9 @@ class LinkedList{
       }
       node.prev = current;
       current.next = node;
+      this.size++;
     }
-    this.size++;
   }
-
   // 특정 위치 삽입
   insertAt(index,data){
     if(index < 0 || index > this.size){  
