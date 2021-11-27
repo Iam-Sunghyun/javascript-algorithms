@@ -25,8 +25,10 @@ class LinkedList{
     // 헤드 노드가 없다면(빈 연결 리스트)?
     if(!this.head){
       this.head = node;
+      this.size++
+      return;
     }else{
-      current = this.head; // 헤드 참조 
+      current = this.head; 
       while(current.next){
         current = current.next;
       }
@@ -42,7 +44,10 @@ class LinkedList{
     }
     if(index === 0){
       this.insertHead(data);
-      size++;
+      return;
+    }
+    if(index === this.size){
+      this.append(data);
       return;
     }
     const node = new Node(data)
@@ -92,15 +97,7 @@ class LinkedList{
       return current.data;
     }
   }
-  
-  /*
-  isAllowedIndex(index){
-    if(index < 0 && index > this.size)
-      return false;
-    return true;
-  }
-  */
-  
+   
   returnSize(){
     return this.size;
   }
