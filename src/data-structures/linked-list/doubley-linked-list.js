@@ -7,7 +7,6 @@ class Node{
   }
 }
 class LinkedList{
-
   constructor(){
     this.head = null;   // 헤드 포인터
     this.size = 0;
@@ -25,7 +24,7 @@ class LinkedList{
     this.size++;
   }
 
-  // 맨 뒤 삽입
+ // 맨 뒤 삽입
   append(data){ 
     const node = new Node(data);
     let current;
@@ -33,13 +32,13 @@ class LinkedList{
     if(!this.head){
       this.head = node;
     }else{
-      current = this.head; // 헤드 참조 
+      current = this.head; 
       while(current.next){
         current = current.next;
       }
+      node.prev = current;
+      current.next = node;
     }
-    node.prev = current;
-    current.next = node;
     this.size++;
   }
 
