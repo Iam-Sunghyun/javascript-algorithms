@@ -2,7 +2,7 @@
 
 +
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/img/linked-list.png" width="550" height="250"> 
+<img src="" width="550" height="250"> 
 
 ## 큐(queue) 구현
 
