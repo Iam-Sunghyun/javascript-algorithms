@@ -5,7 +5,7 @@
 + 삽입이 일어나는 부분을 **후단(rear)**, 삭제(출력)이 일어나는 부분을 **전단(front)** 이라고 한다!
    + 삽입 시 rear의 인덱스를 +1 한 후 삽입해주고, 삭제 시 front의 인덱스 +1 한 위치의 값을 삭제한다.
 
-<img src="" width="550" height="250"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/queue.png" width="450" height="250"> 
 
 ## 큐(queue) 연산/구현
 
@@ -34,3 +34,7 @@
 + 컴퓨터 장치끼리 데이터를 주고 받을 때 발생하는 속도, 시간차를 극복하기 위한 임시 기억 장치인 **버퍼(buffer)**에도 사용 된다.
    + 실시간 스트리밍에도 데이터를 충분히 모아서 전송하기 위해 큐를 사용한다.
 + 그 밖에 많은 대기열을 표현하는 데 큐가 사용된다!
+
+## Reference
+
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue
