@@ -91,7 +91,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-선택 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
+삽입 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
 
 ## Reference
 
@@ -293,7 +293,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 2. n번에 걸쳐 삭제 연산하여 얻은 값을 배열에 저장한다 delete()
  
 ### 힙 정렬 코드 (javascript)
-[자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)참조
+[자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap) 참조
 + 최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
 ```
 function printArray(arr)
@@ -304,7 +304,7 @@ function printArray(arr)
         console.log("\n");
 }
   
-// 약간 지저분함
+// 자료구조 힙 참조!!!
 let maxheap = new MaxHeap();
 let arr = [];
 
@@ -342,18 +342,19 @@ Sorted array:
 ### 힙 정렬 복잡도
 
 힙은 삽입 삭제 연산 모두 O(nlogn)이 소요된다. 크기가 n인 데이터의 경우 n번의 삽입과(힙 트리 생성하면서) n번의 삭제를 통해 정렬하므로 전체 시간은 nlogn + nlogn = 2nlogn 결론적으로 O(nlogn)이 된다 
-+ 최악 : O(nlogn) 
-+ 평균 : O(nlogn)
-+ 최선 : O(nlogn)      
-+ 메모리 공간 : O(1)
+
+이름|최선|평균|최악|메모리|안정|비고
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+버블 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(1)|O||
+
 
 ## Reference
-
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort
 
 <br><br>
 
 
-## 8. 기수 정렬 (radix sort)
+## 8. 기수 정렬 (radix sort) (미완)
 
 + 지금까지의 정렬 방법들은 모두 값들을 비교하여 정렬한 것과 달리 **어떤 비교 연산도 없이** 데이터를 정렬하는 방법
 + O(nlogn)이라는 이론적 하한선을 깬 정렬 기법. 기수 정렬은 O(kn)의 복잡도를 갖는데 보통 k는 크지 않은 값이다
