@@ -7,7 +7,7 @@
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
  7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
- 8. [기수 정렬 (radix sort)](#8-기수-정렬-radix-sort)
+ 8. [기수 정렬 (radix sort)](#8-기수-정렬-radix-sort-미완)
 
  ## 1. 버블 정렬 (bubble sort)
  
@@ -21,7 +21,7 @@
 
 
 ### 버블 정렬 코드 (javascript)
-  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
+ [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
 
 ### 버블 정렬 분석
 
@@ -190,8 +190,8 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 
 ### 퀵 정렬 코드 (javascript)
-</br>
-[퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
+
+ [퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
 
 ### 퀵 정렬 분석
 
