@@ -191,24 +191,24 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 퀵 정렬 코드 (javascript)
 </br>
-[파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js)
+[퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
 
 ### 퀵 정렬 분석
 
-+ **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다. </br>
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.JPG" width="650" height="300">
 
++ **이미 정렬되어 있는 데이터의 경우** 부분 리스트가 **불균등**하게 나누어져 **최악의 효율** O(n2)을 보여 준다. </br>
 + 위 그림처럼 정렬되어 있는 데이터의 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번의 비교가 이루어진다. 결론적으로 </br>
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="500" height="40">
-
 
 + **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
    + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다. 
  </br>
 
 ### 퀵 정렬 복잡도
-퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
++ 퀵 정렬에서 리스트 분할이 항상 리스트의 **가운데에서 이루어진다고 가정**하면 logn번 수행 된다. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
 레코드의 이동 횟수는 비교 횟수보다 적으므로 무시할 수 있다. 
++ **최악의 경우** O(n2) 복잡도를 갖는다.
 </br>
 
 이름|최선|평균|최악|메모리|안정|비고
@@ -218,7 +218,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ## Reference
 
-https://github.com/trekhleb/javascript-algorithms
+https://github.com/trekhleb/javascript-algorithms </br>
 https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
 
 
