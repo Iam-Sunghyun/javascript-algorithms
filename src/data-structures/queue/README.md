@@ -23,7 +23,18 @@
 + front, rear을 사용해서 구현 할 경우 삽입/삭제를 거듭하게 되면 front, rear는 계속 증가하여 언젠가 배열 끝에 도달하게 되어 값을 삽입 할 수 없게 된다. 그럴때마다 모든 요소들을 맨 앞까지 당겨줘야 하기 때문에 비효율적이다.
 + 자바스크립트의 경우 front, rear을 둘 필요도 없이 배열 객체의 shift(), push()만으로 아주 간단하게 큐를 구현할 수 있다. 하지만 삭제 시 내부적으로 모든 요소를 옮겨줘야 되는 것은 똑같다.
 + 이러한 단점은 **원형 큐(circular queue)** 를 구현하여 해결할 수 있다.
- 
+
+## 원형 큐(circular queue)
+
++ 원형 큐에서는 front, rear의 시작 위치가 어디든 상관 없다.(동일하기만 하면)
++ 포화, 공백 상태를 구분하기 위해 한 자리는 반드시 비워둬야 한다.
++ 데이터 삽입, 삭제에 따른 front, rear 인덱스 변화와, 요소 개수 계산 식은 다음과 같다.
+   + front = (front + 1) % 큐의 크기
+   + rear = (rear + 1) & 큐의 크기 
+   + size = (rear-front + 큐의 크기) % 큐의 크기
+   
+[큐-원형 큐](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-circular.js) 참조
+
 ## 연결 리스트로 구현한 큐
   
 [큐-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-linked-list.js) 참조
