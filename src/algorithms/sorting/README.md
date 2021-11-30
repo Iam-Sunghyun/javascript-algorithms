@@ -15,7 +15,7 @@
 + 이러한 **비교-교환** 과정은 리스트 시작부터 끝까지 진행 한다
 + 비교-교환 과정이 한번 완료되면 가장 큰 값이 리스트 맨 오른쪽 끝으로 이동 된다 (오름차순)
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다 (정렬 완료 됐다는 의미)
-+ 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블정렬이라 부른다
++ 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블 정렬이라 부른다
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="300" height="150">    
 
