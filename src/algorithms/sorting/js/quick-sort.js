@@ -15,7 +15,7 @@ function quickSort(arr,start,end) {
       while(left <= end && arr[left] <= arr[pivot]){
         left++;
       }
-      while(right >= left && arr[right] >= arr[pivot]){
+      while(right >= start && arr[right] >= arr[pivot]){
         right--;
       }
       if(left > right){
