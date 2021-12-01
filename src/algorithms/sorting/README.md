@@ -348,7 +348,7 @@ Sorted array:
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-버블 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(1)|O||
+힙 정렬|O(nlogn)|O(nlogn)|O(nlogn)|O(1)|O||
 
 
 ## Reference
