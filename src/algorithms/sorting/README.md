@@ -16,6 +16,7 @@
 + 비교-교환 과정이 한번 완료되면 가장 큰 값이 리스트 맨 오른쪽 끝으로 이동 된다. (오름차순)
 + 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다. (정렬 완료 됐다는 의미)
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블 정렬이라 부른다.
++ 구현이 간단하지만 **비효율적**이다.
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="300" height="150">    
 
@@ -23,9 +24,7 @@
 ### 버블 정렬 코드 (javascript)
  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/bubble-sort.js)
 
-### 버블 정렬 분석
 
-+ 구현이 간단하지만 **비효율적**이다.
 
 ### 버블 정렬 복잡도
 
@@ -44,14 +43,12 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
  
 + 맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용.
 + 각 단계 마다 맨 앞 요소를 제외한  리스트에서 반복적으로 실행한다.
++ 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다.
++ 자료 이동 횟수가 미리 결정된다는 장점이 있다. (교환 횟수가 적다)
 
 ### 선택 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
 
-### 선택 정렬 분석
-
-+ 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다.
-+ 자료 이동 횟수가 미리 결정된다는 장점이 있다. (교환 횟수가 적다)
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/selection-sort.gif" width="100" height="350">   
 
