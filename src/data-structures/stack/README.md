@@ -5,7 +5,7 @@
    + 중간에 있는 것들을 사용할 수도 있지만 번거로운 작업이 필요할 것이다
 + **후입선출(LIFO: Last-In First-Out)** 형태의 자료구조이다
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/img/stack.png" width="450" height="350"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/stack/img/stack.png" width="550" height="350"> 
 
 ## 스택 (stack) 연산/구현
 
