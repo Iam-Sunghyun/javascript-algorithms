@@ -1,6 +1,4 @@
-
 class HashTable{
-  
   constructor(){
     const bucket = 127;
     this.table = new Array(bucket);
@@ -25,12 +23,6 @@ class HashTable{
       if(this.table[index][0] === key){
         this.table[index][1] = value;
         return;
-      }
-      if(this.table[index][0].length){  // 빈 배열이라면(사용한적 있지만 지금 값이 없는 버킷) 값 삽입
-        this.table[index] = [];
-        this.table[index].push(key,value);
-        this.size++;
-       return;
       }
       index = (index+1) % this.table.length;
       if(index === i){
@@ -85,7 +77,7 @@ class HashTable{
   }
 }
 }
-  
+ 
   const ht = new HashTable();
   ht.set('Canada', 300);
   ht.set('Canada', 400);
@@ -96,11 +88,4 @@ class HashTable{
   ht.get('231');
   ht.get('232312');
   ht.remove('231');
-  
   ht.display()
-  
-
-
-  
-  
-  
