@@ -213,10 +213,16 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(1)|X|구현 방법에 따라 O(logn)의 스택 메모리를 사용하는 듯|
 
 
+### 퀵 정렬 개선 Median-Of-3 method
++ 불균등 분할을 방지하기 위해 리스트의 맨 왼쪽, 오른쪽, 중간, 이 3개의 데이터 중 중간값을 피벗으로 선택하는 방법이 많이 사용 된다.
++ 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할할 것이라는 보장은 없지만, 최소한 이 값이 전체 값 중 최대 / 최소값에는 해당하지 않기 때문에 평균적으로 O(nlogn)의 시간복잡도를 유지할 수 있게 된다.
+
+
 ## Reference
 
 https://github.com/trekhleb/javascript-algorithms </br>
 https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
+https://hongjw1938.tistory.com/31
 
 
 
