@@ -44,7 +44,7 @@
 
 
 ## 힙(heap)으로 구현
-[힙(heap)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap) 참조
+[힙(heap) 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting#7-%ED%9E%99-%EC%A0%95%EB%A0%AC-heap-sort) 참조
 
 |삽입|삭제|
 |:---:|:---:|
