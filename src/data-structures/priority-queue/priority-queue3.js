@@ -1,3 +1,4 @@
+// 정렬 안 된 연결 리스트 우선순위 큐
 class Node{
   constructor(priority,data,next=null){
     this.priority = priority;
