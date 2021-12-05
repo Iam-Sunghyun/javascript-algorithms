@@ -1,6 +1,6 @@
+// 정렬된 배열 우선순위 
 class PriorityQueue2{
-
-  constructor(){
+ constructor(){
     this.queue = [];
   }
 
