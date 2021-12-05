@@ -80,7 +80,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/insertion-sort.js)
 
 ### 삽입 정렬 분석
-+ **이미 정렬 되어 있는 경우** 매우 빠르다
++ **어느정도 정렬 되어 있는 경우** 매우 빠르다
 + 자료가 **역**으로 정렬 되어 있는 경우 **최악의 효율**을 보여준다.
 + 비교적 많은 요소 이동이 필요하기 때문에 레코드 양이 많고 크기가 클 경우 적합하지 않다.
 
