@@ -24,7 +24,9 @@
 + 자바스크립트의 경우 front, rear을 둘 필요도 없이 배열 객체의 shift(), push()만으로 아주 간단하게 큐를 구현할 수 있다. 하지만 삭제 시 내부적으로 모든 요소를 옮겨줘야 되는 것은 똑같다.
 + 이러한 단점은 **원형 큐(circular queue)** 를 구현하여 해결할 수 있다.
 
-## 원형 큐(circular queue)
+### 원형 큐(circular queue)
+
+[큐-원형 큐](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-circular.js) 참조
 
 + 원형 큐에서는 front, rear의 시작 위치가 어디든 상관 없다.(-1이 아니면서, 동일하기만 하면)
 + 포화, 공백 상태를 구분하기 위해 한 자리는 반드시 비워둬야 한다.
@@ -33,7 +35,6 @@
    + rear = (rear + 1) & 큐의 크기 
    + size = (rear-front + 큐의 크기) % 큐의 크기
    
-[큐-원형 큐](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-circular.js) 참조
 
 ## 연결 리스트로 구현한 큐
   
