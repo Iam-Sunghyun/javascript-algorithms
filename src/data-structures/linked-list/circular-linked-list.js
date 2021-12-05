@@ -5,14 +5,13 @@ class Node{
     this.next = next;
   }
 }
-
 class LinkedList{
-
   constructor(){
     this.head = null;   // 헤드 포인터
     this.tail = null; 
     this.size = 0;
   }
+  
   // 맨 앞 삽입
   insertHead(data){
     const node = new Node(data,this.head); // 헤드 노드가 있었다면 기존 헤드는 next로
@@ -23,7 +22,7 @@ class LinkedList{
     this.tail.next = this.head;
     this.size++;
   }
-
+  
   // 맨 뒤 삽입
   append(data){ 
     // 헤드 노드가 없다면(빈 연결 리스트)?
@@ -38,7 +37,6 @@ class LinkedList{
       this.size++;
     }
   }
-
   // 특정 위치 삽입
   insertAt(data,index){
     if(index < 0 || index > this.size){
@@ -63,7 +61,7 @@ class LinkedList{
     node.next = current;
     this.size++;
   }
-
+  
   deleteAt(index){
     if(index < 0 || index > this.size-1){
       return '허용 인덱스가 아닙니다';
@@ -141,4 +139,3 @@ linkedList.getNode(2);
 console.log('===========');
 linkedList.printList();
 console.log(linkedList.tail);
-
