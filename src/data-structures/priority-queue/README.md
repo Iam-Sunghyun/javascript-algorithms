@@ -6,7 +6,7 @@
 
 ## 배열로 구현
 ### 정렬되지 않은 배열
-[우선순위 큐-배열1]()
+[우선순위 큐-배열1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/priority-queue/priority-queue1.js)
 + 삽입은 매우 간단하다 -> 맨 뒤에 삽입하기만 하면 된다. O(1)
 + 삭제의 경우 가장 우선순위가 높은 요소를 삭제하기 위해 매번 배열을 스캔해줘야 한다. O(n)
    + 추가로 맨 앞 요소 삭제 후 다른 요소들을 당겨줘야 한다.
@@ -16,7 +16,7 @@
 |O(1)|O(n)|
 
 ### 정렬된 배열
-[우선순위 큐-배열2]()
+[우선순위 큐-배열2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/priority-queue/priority-queue2.js)
 + 간단한 삭제, 하지만 삽입 시 데이터를 우선순위에 맞게 정렬해줘야 함.
 
 |삽입|삭제|
@@ -25,7 +25,7 @@
 
 ## 연결리스트로 구현
 ### 정렬되지 않은 연결리스트
-[우선순위 큐-연결 리스트1]()
+[우선순위 큐-연결 리스트1](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/priority-queue/priority-queue3.js)
 + 맨 앞에 요소를 삽입하는 것으로 간단하게 삽입.
 + 삭제 시에는 모든 노드를 방문하여 우선순위를 체크해줘야 한다.
 
