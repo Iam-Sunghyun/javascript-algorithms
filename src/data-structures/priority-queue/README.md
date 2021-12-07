@@ -34,7 +34,7 @@
 |O(1)|O(n)|
 
 ### 정렬된 연결리스트
-[우선순위 큐-연결 리스트2]()
+[우선순위 큐-연결 리스트2](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/priority-queue/priority-queue4.js)
 + 우선순위가 가장 높은 것을 맨 앞에 두어 간단히 삭제.
 + 삽입 시 우선순위를 비교하여 이동해줘야 한다.
 
