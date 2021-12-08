@@ -6,6 +6,7 @@
  4. [연결 리스트(linked list)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/linked-list)
  5. [힙(heap)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)
  6. [해시 테이블(hash table)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table)
+ 7. [트리(tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree)
 
 # 알고리즘 (Algorithms)
 
