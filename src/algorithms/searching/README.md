@@ -35,11 +35,13 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sea
    + 삽입, 삭제가 빈번한 데이터의 경우 매번 정렬해줘야 하기 때문에 적합하지 않을 수 있다
 + 중앙 값을 기준으로 찾고자 하는 값이 왼쪽에 있는지 오른쪽에 있는지 판단하여 범위를 줄여나가며 탐색한다 
 + 비교가 일어날 때마다 탐색 범위가 급격하게 줄어들어 **효율적**이다
++ 재귀(recursion)나 반복(loop)을 이용해 구현할 수 있다.
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/binary-search1.jpg" width="400" height="300">    
 
 ### 이진 탐색 코드 (javascript)
-  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js)
 
+  [이진 탐색](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js) 참조 
+ 
 
 ### 이진 탐색 복잡도
 
