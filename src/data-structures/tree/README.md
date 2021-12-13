@@ -25,32 +25,50 @@
 + 트리의 **레벨(level)** 은 트리의 각 층에 번호를 매기는 것으로, 루트 부터 1, 한 층씩 내려 갈수록 1씩 상승한다. 
 + 트리 최대 레벨을 **높이(height)** 라 한다. (그림 속 트리의 높이는 5)
 
-<br>
 
 # 이진 트리(binary tree)
 
-+ **모든 노드가 2개의 서브 트리를 갖고(서브 트리는 공집합일 수 있음), 모든 노드의 차수가 2이하인 트리**.
-+ **n**개의 노드를 갖는 이진 트리는 **n-1**개의 간선을 갖는다.
-+ 높이가 **h**인 이진 트리는 **h**개 이상 **(2^h)-1**개 이하의 노드를 갖는다. 
-+ 레벨 i에서의 최대 노드 수는 **2^(i-1)** 개 이다.
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/BinaryTree.png" width="350" height="250"> 
 
-## 이진 트리 종류
++ **모든 노드가 2개의 서브 트리를 갖고(서브 트리는 모두 이진 트리이며, 공집합일 수 있음), 모든 노드의 차수가 2이하인 트리**.
++ **전체 트리와 서브 트리의 구조는 동일하다.**
+   + **n**개의 노드를 갖는 이진 트리는 **n-1**개의 간선을 갖는다.
+   + 높이가 **h**인 이진 트리는 **h**개 이상 **(2^h)-1**개 이하의 노드를 갖는다. 
+   + 레벨 i에서의 최대 노드 수는 **2^(i-1)** 개 이다.
+
+### 이진 트리 종류
 
 + **포화 이진 트리(full binary tree)** : 각 레벨에 노드가 꽉 차있는 트리.
 + **완전 이진 트리(complete binary tree)** : 높이-1 까지 노드가 꽉 차있고, 마지막 레벨은 왼쪽 부터 공백 없이 노드가 차 있는 트리.
    + 대표적으로 **힙(heap)** 이 있다.
 + **기타** : 경사 이진 트리 등등
 
-## 이진 트리(binary tree) 연산/구현
+# 이진 트리(binary tree) 연산/구현
+### 기본 ADT
++ setvalue(value)
++ setLeft(node)
++ setRight(node)
++ replaceChild(targetNode, newNode)
++ removeChild(node)
++ getRoot()
 
-+ create_tree(root,left,right)
-+ get_root()
-+ get_count()
-+ get_leaf_count()
-+ get_height()
-+ isEmpty()
+### 이진 트리의 순회(traversal)
 
-### 배열로 구현
++ **순회(traversal)** 란 트리의 모든 노드를 한번씩 방문하는 것을 말한다. 트리를 화면에 출력하기 위해서도 필요하다!
+   + **전위 순회(preorder traversal)** : VLR
+   + **중위 순회(inorder traversal)** : LVR
+   + **후위 순회(postorder traversal)** : LRV
+
+### **레벨 순회**
+
+
+## 연결 리스트로 구현
+
++ 각 노드는 **부모 노드, 왼쪽 자식, 오른쪽 자식의 링크**와 **데이터 필드**를 갖는다.
++ 하나의 트리에 접근하기 위한 유일한 데이터는 **루트 노드**이다.(각 노드가 서브트리의 루트 노드가 됨)
+
+
+## 배열로 구현
 
 + 배열을 통한 구현은 **포화 이진 트리**나, **완전 이진 트리**에 **적합하다.**
 + 그 외에도 구현할 순 있지만, 경사 이진 트리와 같은 경우 메모리 낭비가 커진다.
@@ -61,17 +79,14 @@
 오른쪽 자식: i*2 + 1
 ```
 
-### 연결 리스트로 구현
-
-+ 각 노드는 **왼쪽 자식, 오른쪽 자식의 링크**와 **데이터 필드**를 갖는다.
-+ 하나의 트리에 접근하기 위한 유일한 데이터는 **루트 노드의 주소**이다.
-
-## 이진 트리의 순회(traversal)
-+ 전위 순회
-+ 중위 순회
-+ 후위 
 
 # 이진 탐색 트리(binary-search-tree)
 
 # AVL 트리(-tree)
 # Red-Black 트리
+
+
+# Reference
+
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree
+https://m.blog.naver.com/supergrammer/221288693192
