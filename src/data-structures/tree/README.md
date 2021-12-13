@@ -4,20 +4,20 @@
 + 나무를 거꾸로 엎어 놓은 듯한 모양을 하고 있어서 트리라고 부른다!
 + 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
-1. [이진 트리(binary tree)]()
+1. [이진 트리(binary tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%ACbinary-tree)
 2. [이진 탐색 트리(binary search tree)]()
-3. [AVL 트리]()
-4. [Red-Black 트리]()
+3. [AVL 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#avl-%ED%8A%B8%EB%A6%AC-tree)
+4. [Red-Black 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#red-black-%ED%8A%B8%EB%A6%AC)
 
 ## 트리의 용어(terms)
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/tree-terms.png" width="650" height="350"> 
 
-+ 트리는 한개 이상의 **노드**로 구성되며 노드를 연결 하는 선을 **간선(edge)** 이라고 한다.
++ 트리는 한개 이상의 **노드(node)**로 구성되며 노드를 연결 하는 선을 **간선(edge)** 이라고 한다.
 + 가장 높은 곳의 노드를 **루트(root) 노드**라 하며 나머지 노드들을 **서브 트리(subtree)** 라고 한다.
-   + 루트 노드 다음 레벨에 있는 노드들은 더 밑에 있는 서브 트리의 루트 노드가 되는 **재귀적인 성질을 띄고 있다.**  
+   + **루트 노드 다음 레벨에 있는 노드들은 더 밑에 있는 서브 트리의 루트 노드가 되는 재귀적인 성질을 띄고 있다.**  
 + 그림에서 **Q**와 **R**은 루트 노드 **P**의 **자식 노드(child node)** 이며 **P**는 **Q**와 **R**의 **부모 노드(parent node)** 이다. 
-+ **Q**와 **R**은 **형제(sibling)** 이다.
++ 노드 **Q**와 **R**은 **형제(sibling)** 이다.
 + **조상 노드(ancestor node)** 는 임의의 노드에서 루트 노드까지 경로 상의 모든 노드를 말하고 **자손 노드(descendent node)** 는 임의의 노드 하위에 연결된 모든 노드를 말한다.
 + 자식 노드가 없는 노드를 **단말 노드(terminal node, leaf node)** 라 하고, 반대는 **비단말 노드(nonterminal node)** 가 된다.
 + 어떤 노드의 자식 수를 **차수(degree)** 라 한다.
@@ -64,12 +64,14 @@
 ### 연결 리스트로 구현
 
 + 각 노드는 **왼쪽 자식, 오른쪽 자식의 링크**와 **데이터 필드**를 갖는다.
-+ 트리에 접근하기 위한 유일한 데이터는 **루트 노드의 주소**이다.
++ 하나의 트리에 접근하기 위한 유일한 데이터는 **루트 노드의 주소**이다.
 
 ## 이진 트리의 순회(traversal)
 + 전위 순회
 + 중위 순회
 + 후위 
 
-## AVL 트리(-tree)
-## Red-Black 트리
+# 이진 탐색 트리(binary-search-tree)
+
+# AVL 트리(-tree)
+# Red-Black 트리
