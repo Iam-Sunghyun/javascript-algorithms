@@ -55,9 +55,10 @@
 ### 이진 트리의 순회(traversal)
 
 + **순회(traversal)** 란 트리의 모든 노드를 한번씩 방문하는 것을 말한다. 트리를 화면에 출력하기 위해서도 필요하다!
-   + **전위 순회(preorder traversal)** : VLR
-   + **중위 순회(inorder traversal)** : LVR
-   + **후위 순회(postorder traversal)** : LRV
++ 이진 트리의 표준 순회에는 다음과 같은 3가지 방법이 있다.
+   + **전위 순회(preorder traversal)** : V->L->R
+   + **중위 순회(inorder traversal)** : L->V->R
+   + **후위 순회(postorder traversal)** : L->R->V
 
 ### **레벨 순회**
 
