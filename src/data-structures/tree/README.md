@@ -4,7 +4,7 @@
 + 나무를 거꾸로 엎어 놓은 듯한 모양을 하고 있어서 트리라고 부른다!
 + 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
-1. [이진 트리(binary tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%ACbinary-tree)
+1. [이진 트리(binary tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/README.md#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%ACbinary-tree)
 2. [이진 탐색 트리(binary search tree)]()
 3. [AVL 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#avl-%ED%8A%B8%EB%A6%AC-tree)
 4. [Red-Black 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#red-black-%ED%8A%B8%EB%A6%AC)
