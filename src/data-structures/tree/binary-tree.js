@@ -120,6 +120,22 @@ class BinaryTreeNode{
     }
   }
   
+  countNode(node = this){
+    if(!node) return 0;
+    return 1 + this.countNode(node.left) + this.countNode(node.right);
+  }
+
+  countLeaf(node = this){
+    if(!node) return 0;
+    if(!node.left && !node.right) return 1;
+    return this.countLeaf(node.left) + this.countNode(node.right);
+  }
+
+  getHeight(node = this){
+    if(!node) return 0;
+    return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
+  }
+
   isNode(node){
     return node.constructor !== BinaryTreeNode ? true : false;
   }
@@ -147,3 +163,10 @@ tree.postOrder();
 console.log(' ');
 
 root.levelOrder();
+console.log(' ');
+
+console.log(root.countNode());
+
+console.log(root.countLeaf());
+
+console.log(root.getHeight());
