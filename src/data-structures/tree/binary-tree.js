@@ -82,6 +82,7 @@ class BinaryTreeNode{
     console.log(`최상단 루트 노드: `,parent);
   }
 
+  // V -> L -> R
   preOrder(node = this){
     if(node === null)return;
     process.stdout.write(node.value + ' ');
@@ -89,6 +90,7 @@ class BinaryTreeNode{
     this.preOrder(node.right);
   }
 
+  // L -> V -> R
   inOrder(node = this){
     if(node === null)return;
     this.inOrder(node.left);
@@ -97,6 +99,7 @@ class BinaryTreeNode{
     
   }
 
+  // L -> R -> V
   postOrder(node = this){
     if(node === null)return;
     this.postOrder(node.left);
