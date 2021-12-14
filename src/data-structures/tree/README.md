@@ -28,7 +28,7 @@
 
 # 이진 트리(binary tree)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/BinaryTree.png" width="350" height="250"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binaryTree.JPG" width="320" height="250"> 
 
 + **모든 노드가 2개의 서브 트리를 갖고(서브 트리는 모두 이진 트리이며, 공집합일 수 있음), 모든 노드의 차수가 2이하인 트리**.
 + **전체 트리와 서브 트리의 구조는 동일하다.**
@@ -52,19 +52,55 @@
 + removeChild(node)
 + getRoot()
 
-### 이진 트리의 순회(traversal)
+## 이진 트리의 순회(traversal)
 
-+ **순회(traversal)** 란 트리의 모든 노드를 한번씩 방문하는 것을 말한다. 트리를 화면에 출력하기 위해서도 필요하다!
++ **순회(traversal)** 란 **트리의 모든 노드를 한번씩 방문하는 것**을 말한다. 트리를 화면에 출력하기 위해서도 필요하다!
 + 이진 트리의 표준 순회에는 다음과 같은 3가지 방법이 있다.
    + **전위 순회(preorder traversal)** : V->L->R
    + **중위 순회(inorder traversal)** : L->V->R
    + **후위 순회(postorder traversal)** : L->R->V
 
-### **레벨 순회**
+### **레벨 순회(level order travelsal)**
++ 각 노드를 **레벨(level)순으로 검사하는 방법**. 같은 레벨에선 왼쪽부터 오른쪽으로 순회 한다.
++ 큐(queue)를 이용하여 순회 한다.
 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/level-order-travelsal.png" width="500" height="320"> 
+
+### 노드 개수 구하기
+
++ 어떤 노드를 루트 노드로 하는 이진 트리의 노드 개수는, 왼쪽, 오른쪽 서브 트리 노드 개수에 루트 노트 수를 더해주면 된다.
++ 재귀(recursion)을 이용해 구한다.
+
+```
+countNode(node = this){
+    if(!node) return 0;
+    return 1 + this.countNode(node.left) + this.countNode(node.right);
+  }
+```
+### 단말 노드 개수 구하기
++ 왼쪽 자식과 오른쪽 자식이 모두 null일 경우 단말 노드가 되며 +1 해주면 된다.
++ 아닐 경우 자식 노드에 대해서 재귀적으로 함수를 호출한다.
+```
+countLeaf(node = this){
+    if(!node) return 0; 
+    if(!node.left && !node.right) return 1;
+    return this.countLeaf(node.left) + this.countNode(node.right);
+  }
+```
+
+### 트리 높이(height) 구하기
++ 후위 순회를 사용한다. 재귀를 통해 왼쪽, 오른쪽 서브 트리 중 더 높은 트리를 찾아 +1(루트 노드 레벨) 해준다.
++ 서브 트리 return 값을 서로 더하는 것이 아닌 것에 주의!
+```
+ getHeight(node = this){
+    if(!node) return 0;
+    return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
+  }
+```
 
 ## 연결 리스트로 구현
 
+[이진 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/binary-tree.js) 참조   
 + 각 노드는 **부모 노드, 왼쪽 자식, 오른쪽 자식의 링크**와 **데이터 필드**를 갖는다.
 + 하나의 트리에 접근하기 위한 유일한 데이터는 **루트 노드**이다.(각 노드가 서브트리의 루트 노드가 됨)
 
