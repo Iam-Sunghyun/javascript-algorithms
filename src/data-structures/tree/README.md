@@ -115,9 +115,10 @@ countLeaf(node = this){
 왼쪽 자식 : i*2
 오른쪽 자식: i*2 + 1
 ```
-
+<br>
 
 # 이진 탐색 트리(binary-search-tree)
++
 
 # AVL 트리(-tree)
 # Red-Black 트리
