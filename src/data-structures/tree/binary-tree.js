@@ -107,11 +107,22 @@ class BinaryTreeNode{
     process.stdout.write(node.value + ' ');
   }
 
-
+  levelOrder(){
+    let queue = [this];
+    let node;
+    while(queue.length){
+      node = queue.shift();
+      if(node){
+        process.stdout.write(node.value + ' ');
+        queue.push(node.left);
+        queue.push(node.right);
+      }
+    }
+  }
+  
   isNode(node){
     return node.constructor !== BinaryTreeNode ? true : false;
   }
-
 }
 
 const tree = new BinaryTreeNode(1);
@@ -119,7 +130,7 @@ const tree1 = new BinaryTreeNode(2);
 const tree2 = new BinaryTreeNode(3);
 const tree3 = new BinaryTreeNode(4);
 const tree4 = new BinaryTreeNode(5);
-let root = tree;
+const root = tree;
 
 tree.setLeft(tree1);
 tree.setRight(tree2);
@@ -128,6 +139,11 @@ tree1.replaceChild(tree3,tree4);
 
 tree.preOrder();
 console.log(' ');
+
 tree.inOrder();
 console.log(' ');
+
 tree.postOrder();
+console.log(' ');
+
+root.levelOrder();
