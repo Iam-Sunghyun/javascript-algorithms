@@ -1,4 +1,4 @@
-class BinaryTreeNode{
+export default class BinaryTreeNode{
   constructor(value = null){
     this.value = value;
     this.left = null;
