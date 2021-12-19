@@ -5,7 +5,7 @@
 + 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
 1. [이진 트리(binary tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%ACbinary-tree)
-2. [이진 탐색 트리(binary search tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%ED%8A%B8%EB%A6%ACbinary-search-tree)
+2. [이진 탐색 트리(BST,binary search tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%ED%8A%B8%EB%A6%ACbinary-search-tree)
 3. [AVL 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#avl-%ED%8A%B8%EB%A6%AC-tree)
 4. [Red-Black 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#red-black-%ED%8A%B8%EB%A6%AC)
 
@@ -44,7 +44,7 @@
    + 대표적으로 **힙(heap)** 이 있다.
 + **기타** : 경사 이진 트리 등등
 
-# 이진 트리(binary tree) 연산/구현
+# 이진 트리 연산/구현
 ### 기본 ADT
 + setvalue(value)
 + setLeft(node)
@@ -78,7 +78,7 @@ countNode(node = this){
     return 1 + this.countNode(node.left) + this.countNode(node.right);
   }
 ```
-### 단말 노드 개수 구하기
+### 단말 노드(leaf node) 개수 구하기
 + 왼쪽 자식과 오른쪽 자식이 모두 null일 경우 단말 노드가 되며 +1 해주면 된다.
 + 아닐 경우 자식 노드에 대해서 재귀적으로 함수를 호출한다.
 ```
@@ -118,8 +118,28 @@ countLeaf(node = this){
 ```
 <br>
 
-# 이진 탐색 트리(binary-search-tree)
-+
+# 이진 탐색 트리(BST,binary-search-tree)
++ 이진 탐색 트리는 효율적인 탐색을 위한 이진 트리 기반의 자료구조 이다.
++ 모든 노드는 **유일한 키**를 갖는다.
++ **왼쪽** 서브 트리 키들은 루트 노드 키보다 **작고**, **오른쪽** 서브 트리 키들은 루트 노드 키보다 **크다.**
++ 왼쪽, 오른쪽 서브 트리도 이진 탐색 트리이다!
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binarySearchTree.png" width="520" height="250"> 
+
+# 이진 탐색 트리 연산/구현
++ 이진 탐색 트리도 이진 트리 이므로, 기본적인 연산은 이진 트리와 같고, 동일하게 사용할 수 있다. 
++ 다만, 삽입, 삭제, 탐색의 경우 이진 탐색 트리의 성질에 맞게 일정한 연산을 거쳐 이루어져야 한다!
+
+## 탐색(search) 연산
++ 찾고자 하는 키 값을 매개변수로 받아 **루트 노드부터 값을 검색**한다.
++ 키와 노드의 값을 비교하여 일치하는 경우 해당 노드를 return 하고, 작을 경우 왼쪽 노드, 클 경우 오른쪽 노드에 대해 동일하게 다시 탐색한다.
++ 재귀/반복을 이용해 구현한다.
+
+## 삽입(insert) 연산
++ 먼저 루트 노드부터 탐색을 시작한다. 키와 노드의 value가 일치하는 경우(중복) 삽입이 불가능하다.
++ 일치하지 않는 경우 비교 결과에 따라 왼쪽, 오른쪽 서브 트리로 이동해 값 삽입을 반복적으로 시도한다.
+
+## 삭제(delete) 연산
 
 # AVL 트리(-tree)
 # Red-Black 트리
@@ -129,3 +149,4 @@ countLeaf(node = this){
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree
 https://m.blog.naver.com/supergrammer/221288693192
+https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/
