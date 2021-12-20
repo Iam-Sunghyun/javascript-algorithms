@@ -9,6 +9,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode{
    
     if(!this.value){
       this.value = value;
+      return true;
     }
 
     if(value === this.value){
@@ -58,15 +59,15 @@ export default class BinarySearchTreeNode extends BinaryTreeNode{
   // 반복 이용 탐색
   searchLoop(value){
     let node = this;
-    while(n){
+    while(node){
       if(node.value === value){
         return node;
       }
       if(node.left && node.left > value){
-        n = node.left;
+        node = node.left;
       }
       if(node.right && node.right < value){
-        n = node.left;
+        node = node.left;
       }
     }
     console.log('값이 없습니다.');
@@ -118,6 +119,5 @@ export default class BinarySearchTreeNode extends BinaryTreeNode{
     }
     return true;
   }
-  
   
 }
