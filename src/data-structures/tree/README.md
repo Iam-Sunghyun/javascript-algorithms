@@ -5,7 +5,7 @@
 + 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
 1. [이진 트리(binary tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%ACbinary-tree)
-2. [이진 탐색 트리(BST,binary search tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%ED%8A%B8%EB%A6%ACbinary-search-tree)
+2. [이진 탐색 트리(BST,binary search tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%ED%8A%B8%EB%A6%ACbstbinary-search-tree)
 3. [AVL 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#avl-%ED%8A%B8%EB%A6%AC-tree)
 4. [Red-Black 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree#red-black-%ED%8A%B8%EB%A6%AC)
 
@@ -119,7 +119,7 @@ countLeaf(node = this){
 <br>
 
 # 이진 탐색 트리(BST,binary-search-tree)
-+ 이진 탐색 트리는 효율적인 탐색을 위한 이진 트리 기반의 자료구조 이다.
++ 이진 탐색 트리는 효율적인 탐색을 위한 **이진 트리 기반의 자료구조** 이다.
 + 모든 노드는 **유일한 키**를 갖는다.
 + **왼쪽** 서브 트리 키들은 루트 노드 키보다 **작고**, **오른쪽** 서브 트리 키들은 루트 노드 키보다 **크다.**
 + 왼쪽, 오른쪽 서브 트리도 이진 탐색 트리이다!
@@ -136,10 +136,22 @@ countLeaf(node = this){
 + 재귀/반복을 이용해 구현한다.
 
 ## 삽입(insert) 연산
-+ 먼저 루트 노드부터 탐색을 시작한다. 키와 노드의 value가 일치하는 경우(중복) 삽입이 불가능하다.
++ 먼저 루트 노드부터 탐색을 시작한다. 삽입하려는 값과 노드의 value가 일치하는 경우(중복) 삽입이 불가능하다.
 + 일치하지 않는 경우 비교 결과에 따라 왼쪽, 오른쪽 서브 트리로 이동해 값 삽입을 반복적으로 시도한다.
 
 ## 삭제(delete) 연산
++ 이진 탐색 트리에서 가장 복잡한 연산! 3가지 경우를 고려하여 구현한다.
+   + 단말 노드 삭제
+   + 자식이 하나 있는 노드 삭제
+   + **자식이 둘 있는 노드 삭제 - 가장 복잡**
+
+### 자식이 둘 있는 노드 삭제 
++
+
+## 이진 탐색 트리의 성능 
+
+
+
 
 # AVL 트리(-tree)
 # Red-Black 트리
