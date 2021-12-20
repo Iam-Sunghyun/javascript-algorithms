@@ -1,4 +1,4 @@
-import BinaryTreeNode from "./binary-tree";
+import BinaryTreeNode from "./binary-tree.js";
 
 export default class BinarySearchTreeNode extends BinaryTreeNode{
   constructor(value = null){
