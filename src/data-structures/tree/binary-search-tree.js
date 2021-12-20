@@ -39,18 +39,10 @@ BST.insert(35);
 BST.insert(18);
 BST.insert(68);
 BST.insert(7);
-
-console.log(BST.search(7));
-console.log(BST.delete(18));
+BST.insert(28);
 
 BST.inOrder();
-
-
-
-
-
-
-
-
-
+BST.delete(18);
+console.log('=========')
+console.log(BST.search(28));
 
