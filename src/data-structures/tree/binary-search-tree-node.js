@@ -74,89 +74,50 @@ export default class BinarySearchTreeNode extends BinaryTreeNode{
   }
 
 
-  delete(){
+  delete(value){
+    let node = this.search(value);
+    if(!node){
+      throw new Error('해당 값이 없습니다');
+    }
+    // 단말 노드의 경우
+    if(!node.left && !node.right){
+      if(!node.parent){
+        node = null;
+      }else{
+        node.parent.removeChild(node);
+      }
 
+      // 자식 노드 하나인 경우
+    }else if(!node.left || !node.right){
+      const childNode = node.left || node.right;
+      if(!node.parent){
+        childNode.parent = node.parent;
+      }
+      if(node.parent.left === node){
+        node.parent.left = childNode;
+      }
+      if(node.parent.right === node){
+        node.parent.right = childNode;
+      }
+      node = null;
+     
+      // 자식 노드 둘인 경우
+    }else if(node.left && node.right){
+      let nextNode = node.right;
+      while(nextNode.left){
+        nextNode = nextNode.left;
+      }
+      node.value = nextNode.value;
+      if(nextNode.parent.left === nextNode){
+        nextNode.parent.left = nextNode.right;
+      
+      }else{
+        node.right = nextNode.right;
+      }
+      nextNode = null;
+    }
+    return true;
   }
   
-  /* 이하 binaryTreeNode와 동일
-  getRoot(){
-    let parent = this.parent;
-    while(parent.parent){
-      parent = parent.parent;
-    }
-    console.log(`최상단 루트 노드: `,parent);
-  }
-
-  preOrder(){
-    if(this === null)return;
-
-    process.stdout.write(this.value + ' ');
-    if(this.left){
-      this.left.preOrder();
-    }
-    if(this.right){
-    this.right.preOrder();
-    }
-    return;
-  }
-
-  inOrder(){
-    if(this === null)return;
-
-    if(this.left){
-    this.left.inOrder();
-    }
-    process.stdout.write(this.value + ' ');
-    if(this.right){
-    this.right.inOrder();
-    }
-    return;
-  }
-
-  postOrder(){
-    if(this === null)return;
-
-    if(this.left){
-    this.left.postOrder();
-    }
-    if(this.right){
-    this.right.postOrder();
-    }
-    process.stdout.write(this.value + ' ');
-    return;
-  }
-
-  levelOrder(){
-    let queue = [this];
-    let node;
-    while(queue.length){
-      node = queue.shift();
-      if(node){
-        process.stdout.write(node.value + ' ');
-        queue.push(node.left);
-        queue.push(node.right);
-      }
-    }
-  }
-
-  countNode(node = this){
-    if(!node) return 0;
-    return 1 + this.countNode(node.left) + this.countNode(node.right);
-  }
-
-  countLeaf(node = this){
-    if(!node) return 0;
-    if(!node.left && !node.right) return 1;
-    return this.countLeaf(node.left) + this.countNode(node.right);
-  }
-
-  getHeight(node = this){
-    if(!node) return 0;
-    return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
-  }
-
-  isNode(node){
-    return node.constructor !== BinaryTreeNode ? true : false;
-  }
-  */
+  
 }
