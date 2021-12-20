@@ -137,7 +137,7 @@ export default class BinaryTreeNode{
     return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
   }
 
-   isNode(node){
+  isNode(node){
     return (node.constructor !== BinaryTreeNode) ? true : false;
   }
   
