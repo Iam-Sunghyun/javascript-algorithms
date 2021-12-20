@@ -75,11 +75,12 @@ export default class BinaryTreeNode{
   }
 
   getRoot(){
-    let parent = this.parent;
-    while(parent.parent){
-      parent = parent.parent;
+    let node = this;
+    while(node.parent){
+      node = node.parent;
     }
-    console.log(`최상단 루트 노드: `,parent);
+    console.log(`최상단 루트 노드: `, node);
+    return node;
   }
 
   // V -> L -> R
@@ -170,3 +171,5 @@ console.log(root.countNode());
 console.log(root.countLeaf());
 
 console.log(root.getHeight());
+
+tree4.getroot();
