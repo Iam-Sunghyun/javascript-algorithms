@@ -11,7 +11,7 @@ export default class BinaryTreeNode{
   }
 
   setLeft(node){
-    if(this.isNode(node)){
+    if(!this.isNode(node) && !this.isBSTNode(node)){
       console.log('노드가 아닙니다.');
       return;
     }
@@ -25,7 +25,7 @@ export default class BinaryTreeNode{
   }
 
   setRight(node){
-    if(this.isNode(node)){
+    if(!this.isNode(node) && !this.isBSTNode(node)){
       console.log('노드가 아닙니다.');
       return;
     }
@@ -38,7 +38,7 @@ export default class BinaryTreeNode{
   }
 
   replaceChild(targetNode,newNode){
-    if(this.isNode(newNode)){
+    if(!this.isNode(node) && !this.isBSTNode(node)){
       console.log('노드가 아닙니다.');
       return;
     }
@@ -137,8 +137,12 @@ export default class BinaryTreeNode{
     return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
   }
 
-  isNode(node){
-    return node.constructor !== BinaryTreeNode ? true : false;
+   isNode(node){
+    return (node.constructor !== BinaryTreeNode) ? true : false;
+  }
+  
+  isBSTNode(node){
+    return (node.constructor !== BinarySearchTreeNode) ? true : false;
   }
 }
 
