@@ -102,17 +102,17 @@ export default class BinarySearchTreeNode extends BinaryTreeNode{
       }
       node = null;
      
-      // 자식 노드 둘인 경우
+     // 자식 노드 둘인 경우 (오른쪽 서브 트리에서 후계자 탐색)
     }else if(node.left && node.right){
       let nextNode = node.right;
       while(nextNode.left){
         nextNode = nextNode.left;
       }
       node.value = nextNode.value;
-      if(nextNode.parent.left === nextNode){
+      if(nextNode.parent.left === nextNode){ // 오른쪽 서브 트리의 노드가 하나의 노드가 아닌 경우
         nextNode.parent.left = nextNode.right;
       
-      }else{
+      }else{  // 삭제 하려는 노드 오른쪽 서브 트리가 노드 하나인 경우
         node.right = nextNode.right;
       }
       nextNode = null;
