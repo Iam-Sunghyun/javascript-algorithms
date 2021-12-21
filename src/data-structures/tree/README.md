@@ -101,7 +101,7 @@ countLeaf(node = this){
 
 ## 연결 리스트로 구현
 
-[이진 트리](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/binary-tree.js) 참조   
+[**이진 트리**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/binary-tree.js) 참조   
 + 각 노드는 **부모 노드, 왼쪽 자식, 오른쪽 자식의 링크**와 **데이터 필드**를 갖는다.
 + 하나의 트리에 접근하기 위한 유일한 데이터는 **루트 노드**이다.(각 노드가 서브트리의 루트 노드가 됨)
 
@@ -124,34 +124,44 @@ countLeaf(node = this){
 + **왼쪽** 서브 트리 키들은 루트 노드 키보다 **작고**, **오른쪽** 서브 트리 키들은 루트 노드 키보다 **크다.**
 + 왼쪽, 오른쪽 서브 트리도 이진 탐색 트리이다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binarySearchTree.png" width="520" height="250"> 
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binarySearchTree.png" width="500" height="250"> 
 
 # 이진 탐색 트리 연산/구현
+[**이진 탐색 트리**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/binary-search-tree.js) 참조
 + 이진 탐색 트리도 이진 트리 이므로, 기본적인 연산은 이진 트리와 같고, 동일하게 사용할 수 있다. 
 + 다만, 삽입, 삭제, 탐색의 경우 이진 탐색 트리의 성질에 맞게 일정한 연산을 거쳐 이루어져야 한다!
 
 ## 탐색(search) 연산
-+ 찾고자 하는 키 값을 매개변수로 받아 **루트 노드부터 값을 검색**한다.
-+ 키와 노드의 값을 비교하여 일치하는 경우 해당 노드를 return 하고, 작을 경우 왼쪽 노드, 클 경우 오른쪽 노드에 대해 동일하게 다시 탐색한다.
++ 찾고자 하는 키 값을 매개변수로 받아 **루트 노드부터 값을 탐색**한다.
++ 키와 노드의 값을 비교하여 일치하는 경우 해당 노드를 return 하고, 작을 경우 왼쪽 서브 트리, 클 경우 오른쪽 서브 트리에 대해 동일하게 다시 탐색한다.
 + 재귀/반복을 이용해 구현한다.
 
 ## 삽입(insert) 연산
-+ 먼저 루트 노드부터 탐색을 시작한다. 삽입하려는 값과 노드의 value가 일치하는 경우(중복) 삽입이 불가능하다.
-+ 일치하지 않는 경우 비교 결과에 따라 왼쪽, 오른쪽 서브 트리로 이동해 값 삽입을 반복적으로 시도한다.
++ 먼저 루트 노드부터 탐색을 시작한다. 삽입하려는 값과 노드의 value가 일치하는 경우 삽입이 불가능하다(중복이므로).
++ 일치하지 않는 경우 비교 결과에 따라 왼쪽, 오른쪽 서브 트리로 이동해 탐색을 반복적으로 실행한다.
++ 탐색에 실패한 위치가 삽입될 위치이다!
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/insert_search.png" width="500" height="250"> 
 
 ## 삭제(delete) 연산
 + 이진 탐색 트리에서 가장 복잡한 연산! 3가지 경우를 고려하여 구현한다.
-   + 단말 노드 삭제
-   + 자식이 하나 있는 노드 삭제
+   + **단말 노드 삭제** - 해당 노드만 삭제해주면 됨
+   + **자식이 하나 있는 노드 삭제** - 자식 노드를 삭제하려는 노드의 부모 노드에 연결해준다.
    + **자식이 둘 있는 노드 삭제 - 가장 복잡**
++ 삭제 연산을 위해선 해당 노드의 **부모 노드 참조가 필요**하다.
 
 ### 자식이 둘 있는 노드 삭제 
-+
++ 먼저 삭제할 노드의 **후계자 노드**를 찾는다. -> 후계자 노드는 삭제하려는 값과 가장 비슷한 노드가 되어야 이진 탐색 트리의 성질을 유지할 수 있다.
++ 삭제하려는 노드의 **왼쪽 서브 트리에서 가장 큰 값**, 혹은 **오른쪽 서브 트리에서 가장 작은 값**이 해당 노드의 값과 가장 비슷하다!
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binary-search-tree-delete1.jpg" width="550" height="350"> 
 
 ## 이진 탐색 트리의 성능 
 
-
-
++ 이진 탐색 트리의 높이가 **h**라고 했을 때, 삽입, 삭제, 탐색의 시간 복잡도는 **O(h)** 가 된다(트리의 높이를 넘을 순 없으므로). 
++ 따라서 n개의 노드를 갖는 이진 탐색 트리의 경우 연산의 평균적인 시간 복잡도는 **O(logN)** 이 된다! (좌우 서브 트리가 균형을 이룬 경우에 해당)
++ 경사 이진 트리같은 경우 트리의 높이가 n이 되어 선형 탐색과 동일한 복잡도(O(n))를 갖는다. 따라서 이진 탐색 트리의 연산 효율을 높이기 위해선 좌우 균형이 중요하다.
 
 # AVL 트리(-tree)
 # Red-Black 트리
@@ -162,3 +172,5 @@ countLeaf(node = this){
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree
 https://m.blog.naver.com/supergrammer/221288693192   
 https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/
+https://yjg-lab.tistory.com/139
+https://slidesplayer.org/slide/14592903/
