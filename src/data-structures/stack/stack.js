@@ -5,9 +5,9 @@ class Stack{
   }
 
   push(item){
-    if(this.isFull()) 
+    if(this.isFull()){ 
       console.log('스택이 꽉 찼습니다');
-    else{
+    }else{
       this.top++;
       this.arr[this.top] = item;
     }
@@ -16,9 +16,9 @@ class Stack{
   pop(){
     if(this.isEmpty()){
       console.log('저장된 값이 없습니다');
-    }
-    else
+    }else{
       return this.arr.splice(this.top--,1,undefined);
+    }
   }
 
   peek(){
