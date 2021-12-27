@@ -171,7 +171,13 @@ countLeaf(node = this){
 
 # AVL 트리의 연산/구현
 + 우선 **균형 인수(balance factor)** 를 정의한다. 
-+ 균형 인수는 **(왼쪽 서브트리 높이 - 오른쪽 서브 트리의 높이)** 로 정의되며 모든 노드의 균형 인수가 **±1**이면 AVL 트리이다.
++ 균형 인수는 **(왼쪽 서브트리 높이 - 오른쪽 서브 트리의 높이)** 로 정의되며 **모든 노드의 균형 인수가 ±1이면 AVL 트리이다.**
++ AVL 트리의 탐색 연산은 일반 이진 탐색 트리와 동일하다! **균형이 깨질 수 있는 연산은 삽입과 삭제 연산**이다.
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree.png" width="550" height="300"> 
+
+## 삽입 연산
+
 
 
 # Red-Black 트리
@@ -179,8 +185,9 @@ countLeaf(node = this){
 
 # Reference
 
-https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree   
 https://m.blog.naver.com/supergrammer/221288693192   
-https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/
-https://yjg-lab.tistory.com/139
-https://slidesplayer.org/slide/14592903/
+https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/   
+https://yjg-lab.tistory.com/139   
+https://slidesplayer.org/slide/14592903/   
+https://velog.io/@limsh_98/%ED%83%90%EC%83%89-AVL%ED%8A%B8%EB%A6%AC   
