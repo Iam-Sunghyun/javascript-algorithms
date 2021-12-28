@@ -15,13 +15,17 @@ export default class BinaryTreeNode{
       console.log('노드가 아닙니다.');
       return;
     }
-    if(!this.left){
-      node.parent = this;
-      this.left = node; 
-      return;
-    }else{
-      console.log('이미 값이 저장 되어있습니다.');
+    
+     if(this.left){
+      this.left.parent = null;
     }
+
+    this.left = node; 
+
+    if(this.left){
+      node.parent = this;
+    }
+    return this;
   }
 
   setRight(node){
@@ -29,12 +33,17 @@ export default class BinaryTreeNode{
       console.log('노드가 아닙니다.');
       return;
     }
-    if(!this.right){
-      node.parent = this;
-      this.right = node; 
-    }else{
-      console.log('이미 값이 저장 되어있습니다.');
+    
+    if(this.right){
+      this.right.parent = null;
     }
+
+    this.right = node; 
+
+    if(this.right){
+      node.parent = this;
+    }
+    return this;
   }
 
   replaceChild(targetNode,newNode){
