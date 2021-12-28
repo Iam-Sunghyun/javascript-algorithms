@@ -198,16 +198,22 @@ O(logn)|O(logn)|O(logn)|
 ## 단순 회전(single rotation)
 
 + **LL 회전** : A부터 N까지 경로상의 노드들을 오른쪽으로 회전시킨다.
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree-LLrotate.png" width="550" height="250"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateLL.png" width="550" height="300"> 
 
 <br>
 
 + **RR 회전** : A부터 N까지 경로상의 노드들을 왼쪽으로 회전시킨다.
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree-RRrotate.png" width="580" height="320"> 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateRR.png" width="550" height="300"> 
+
 
 ## 이중 회전(double rotation)
-+ **LR 회전** : A부터 N까지 경로상의 노드들을 왼쪽->오른쪽으로 회전시킨다.
-+ **RL 회전** : A부터 N까지 경로상의 노드들을 오른쪽->왼쪽 회전시킨다.
+
++ **LR 회전** : A부터 N까지 경로상의 노드들을 왼쪽->오른쪽으로 회전시킨다. (RR회전 -> LL회전)
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateLR.JPG" width="630" height="280"> 
+
++ **RL 회전** : A부터 N까지 경로상의 노드들을 오른쪽->왼쪽 회전시킨다. (LL회전 -> RR회전)
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateRL.png" width="630" height="280"> 
+
 
 # Red-Black 트리
 
