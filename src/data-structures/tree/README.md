@@ -195,12 +195,17 @@ O(logn)|O(logn)|O(logn)|
 
 다음은 위 4가지 경우에 균형을 맞추기 위해 필요한 연산들이다. 
 
-### 단순 회전(single rotation)
+## 단순 회전(single rotation)
 
 + **LL 회전** : A부터 N까지 경로상의 노드들을 오른쪽으로 회전시킨다.
-+ **RR 회전** : A부터 N까지 경로상의 노드들을 왼쪽으로 회전시킨다.
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree-LLrotate.png" width="550" height="250"> 
 
-### 이중 회전(double rotation)
+<br>
+
++ **RR 회전** : A부터 N까지 경로상의 노드들을 왼쪽으로 회전시킨다.
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree-RRrotate.png" width="580" height="320"> 
+
+## 이중 회전(double rotation)
 + **LR 회전** : A부터 N까지 경로상의 노드들을 왼쪽->오른쪽으로 회전시킨다.
 + **RL 회전** : A부터 N까지 경로상의 노드들을 오른쪽->왼쪽 회전시킨다.
 
