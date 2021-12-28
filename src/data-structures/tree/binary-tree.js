@@ -11,11 +11,7 @@ export default class BinaryTreeNode{
   }
 
   setLeft(node){
-    if(!this.isNode(node)){
-      console.log('노드가 아닙니다.');
-      return;
-    }
-    
+       
      if(this.left){
       this.left.parent = null;
     }
@@ -29,11 +25,7 @@ export default class BinaryTreeNode{
   }
 
   setRight(node){
-    if(!this.isNode(node)){
-      console.log('노드가 아닙니다.');
-      return;
-    }
-    
+   
     if(this.right){
       this.right.parent = null;
     }
