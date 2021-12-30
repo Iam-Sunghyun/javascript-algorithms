@@ -12,8 +12,12 @@ export default class AVLtree extends BinarySearchTree{
     }
   }
   
-  remove(){
+  delete(){
+    // Do standard BST removal.
+    super.delete(value);
 
+    // Balance the tree starting from the root node.
+    this.balance(this.root);
   }
 
   balance(node){
@@ -37,9 +41,7 @@ export default class AVLtree extends BinarySearchTree{
         this.rotateRL(node);
       }
     }
-
   }
-
 
   rotateLL(root){
     const rootLeft = root.left;
