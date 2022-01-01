@@ -14,9 +14,9 @@
 
 ## 연결 리스트(linked list) 구현
 
-[단순 연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/linked-list.js) 참조 <br>
-[이중 연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/doubley-linked-list.js) 참조 <br>
-[원형 연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/circular-linked-list.js) 참조 
+[**단순 연결리스트**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/linked-list.js) 참조 <br>
+[**이중 연결리스트**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/doubley-linked-list.js) 참조 <br>
+[**원형 연결리스트**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/linked-list/circular-linked-list.js) 참조 
 
 ## 연결 리스트 장/단점
 
