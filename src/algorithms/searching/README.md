@@ -8,11 +8,11 @@
  
 + 가장 간단하고 직접적인 탐색 방법
 + 배열의 요소들을 처음부터 마지막까지 하나씩 검사하여 값을 찾는다
-+ 구현이 간단하지만 **비효율적**이다
++ 구현이 **간단하지만 비효율적**이다
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/linear-search.gif" width="400" height="150">    
 
 ### 순차 탐색 코드 (javascript)
-  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/linear-search.js)
+  [**순차 탐색**](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/linear-search.js) 
 
 
 ### 순차 탐색 복잡도
@@ -21,12 +21,8 @@
 :---:|:---:|:---:|
 순차 탐색|O(n)||
 
-### Reference
-
-https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search
 
 <br>
-
 
 
  ## 2. 이진 탐색 (binary search)
@@ -40,7 +36,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sea
 
 ### 이진 탐색 코드 (javascript)
 
-  [이진 탐색](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js) 참조 
+  [**이진 탐색**](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js) 참조 
  
 
 ### 이진 탐색 복잡도
@@ -49,30 +45,28 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sea
 :---:|:---:|:---:|
 이진 탐색|O(logn)||
 
-### Reference
-
-https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search
 
 <br>
 
 
 ## 3. 해시 탐색 (hash search)
  
-+ 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/searching/img/binary-search1.jpg" width="400" height="300">    
 
-### 이진 탐색 코드 (javascript)
-  [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching/binary-search.js)
+<img src="" width="400" height="300">    
+
+### 해시 탐색 코드 (javascript)
+  []()
 
 
-### 이진 탐색 복잡도
+### 해시 탐색 복잡도
 
 이름|시간복잡도|비고
 :---:|:---:|:---:|
-이진 탐색|O(logn)||
+해시 탐색|||
 
-### Reference
-
+# Reference
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search
+https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search
 https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/
 
 <br>
