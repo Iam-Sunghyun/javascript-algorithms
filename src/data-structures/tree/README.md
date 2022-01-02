@@ -13,7 +13,7 @@
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/tree-terms.png" width="650" height="350"> 
 
-+ 트리는 한개 이상의 **노드(node)**로 구성되며 노드를 연결 하는 선을 **간선(edge)** 이라고 한다.
++ 트리는 한개 이상의 **노드(node)** 로 구성되며 노드를 연결 하는 선을 **간선(edge)** 이라고 한다.
 + 가장 높은 곳의 노드를 **루트(root) 노드**라 하며 나머지 노드들을 **서브 트리(subtree)** 라고 한다.
    + **루트 노드 다음 레벨에 있는 노드들은 더 밑에 있는 서브 트리의 루트 노드가 되는 재귀적인 성질을 띄고 있다.**  
 + 그림에서 **Q**와 **R**은 루트 노드 **P**의 **자식 노드(child node)** 이며 **P**는 **Q**와 **R**의 **부모 노드(parent node)** 이다. 
