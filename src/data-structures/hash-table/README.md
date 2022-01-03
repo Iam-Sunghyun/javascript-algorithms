@@ -95,6 +95,7 @@ _hash(key) {
 
 ### 2. 체이닝(chainning)
 + 해시 테이블의 하나의 위치에서 여러 개의 데이터를 저장할 수 있도록 해시 테이블의 구조를 변경한다.
++ 여러 가지 방법이 있겠으나, 연결 리스트로 구현하는 적절할 것이다!
 + 크기가 한정 된 버킷을 효율적으로 사용할 수 있다.
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/img/chaining.png" width="400" height="300">    
 
