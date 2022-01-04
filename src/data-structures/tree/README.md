@@ -217,9 +217,12 @@ O(logn)|O(logn)|O(logn)|
 
 # Red-Black 트리
 
-
++ 레드-블랙 트리(red-black tree)는 자가 균형 이진 탐색 트리(self-balancing binary search tree)로서, 대표적으로는 연관 배열 등을 구현하는 데 쓰이는 자료구조다.
++ 각각의 노드가 레드 나 블랙 인 색상 속성을 가지고 있는 이진 탐색 트리이다.
+https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC 참조
 # Reference
 
+https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree   
 https://m.blog.naver.com/supergrammer/221288693192   
 https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/   
