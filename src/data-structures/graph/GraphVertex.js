@@ -26,3 +26,6 @@ export default class GraphVertex {
     this.edges = new LinkedList(edgeComparator);
   }
 }
+
+
+// https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
