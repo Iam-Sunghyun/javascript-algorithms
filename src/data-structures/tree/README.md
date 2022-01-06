@@ -130,7 +130,7 @@ countLeaf(node = this){
 ## 이진 탐색 트리 연산/구현
 [**이진 탐색 트리**](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/binary-search-tree.js) 참조
 + 이진 탐색 트리도 이진 트리 이므로, 기본적인 연산은 이진 트리와 같고, 동일하게 사용할 수 있다. 
-+ 다만, 삽입, 삭제, 탐색의 경우 이진 탐색 트리의 성질에 맞게 일정한 연산을 거쳐 이루어져야 한다!
++ **다만, 삽입, 삭제, 탐색의 경우 이진 탐색 트리의 성질에 맞게 일정한 연산을 거쳐 이루어져야 한다!**
 
 ## 탐색(search) 연산
 + 찾고자 하는 키 값을 매개변수로 받아 **루트 노드부터 값을 탐색**한다.
@@ -145,7 +145,7 @@ countLeaf(node = this){
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/insert_search.png" width="500" height="250"> 
 
 ## 삭제(delete) 연산
-+ 이진 탐색 트리에서 가장 복잡한 연산! 3가지 경우를 고려하여 구현한다.
++ 이진 탐색 트리에서 가장 복잡한 연산! **3가지 경우를 고려하여 구현한다.**
    + **단말 노드 삭제** - 해당 노드만 삭제해주면 됨
    + **자식이 하나 있는 노드 삭제** - 자식 노드를 삭제하려는 노드의 부모 노드에 연결해준다.
    + **자식이 둘 있는 노드 삭제 - 가장 복잡**
