@@ -124,18 +124,18 @@ export default class BinaryTreeNode{
   
   countNode(node = this){
     if(!node) return 0;
-    return 1 + this.countNode(node.left) + this.countNode(node.right);
+    return 1 + node.countNode(node.left) + node.countNode(node.right);
   }
 
   countLeaf(node = this){
     if(!node) return 0;
     if(!node.left && !node.right) return 1;
-    return this.countLeaf(node.left) + this.countNode(node.right);
+    return node.countLeaf(node.left) + node.countNode(node.right);
   }
 
   getHeight(node = this){
     if(!node) return 0;
-    return 1 + Math.max(this.getHeight(node.left),this.getHeight(node.right));
+    return 1 + Math.max(node.getHeight(node.left),node.getHeight(node.right));
   }
 
   isNode(node){
