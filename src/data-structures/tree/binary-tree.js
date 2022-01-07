@@ -130,7 +130,7 @@ export default class BinaryTreeNode{
   countLeaf(node = this){
     if(!node) return 0;
     if(!node.left && !node.right) return 1;
-    return node.countLeaf(node.left) + node.countNode(node.right);
+    return node.countLeaf(node.left) + node.countLeaf(node.right);
   }
 
   getHeight(node = this){
