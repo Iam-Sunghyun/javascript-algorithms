@@ -14,3 +14,10 @@
  1. [수학 (Math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
  6. [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
  7. [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
+
+
+
+# 위에 있는 것들 중 미완성
+
+정렬 - 기수 정렬(radix sort), 계수 정렬(counting sort)   
+탐색 - 해시 탐색(hash search)
