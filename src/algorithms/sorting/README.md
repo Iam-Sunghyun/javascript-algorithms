@@ -177,7 +177,8 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 ### 퀵 정렬 알고리즘 요약
 1. 리스트의 한 요소를 **피벗(pivot)** 으로 선택한다. (보통 첫번째 요소 선택)
 2. 피벗보다 작은 요소들은 피벗 왼쪽으로, 큰 값들은 피벗 오른쪽으로 모두 옮긴다.
-3. 피벗을 제외한 나머지 왼쪽, 오른쪽 리스트에 재귀를 이용해 다시 정렬한다.
+   + low(코드에선left)는 피벗보다 큰 값, high(right)는 피벗보다 작은 값이 나올 때까지 탐색 후 서로 교환해준다.
+3. 재귀를 이용해 피벗을 제외한 나머지 왼쪽, 오른쪽 부분 리스트에 대해서도 새롭게 피벗을 정하고 정렬한다.
 4. 부분 리스트들이 더 이상 분할 할 수 없을때까지 반복한다.
 
 ### 퀵 정렬 예제     
@@ -194,7 +195,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.JPG" width="650" height="300">
 
-+ **이미 정렬되어 있는 데이터의 경우 부분 리스트가 불균등하게 나누어져 최악의 효율 O(n2)을 보여 준다.** </br>
++ **이미 정렬되어 있는 데이터의 경우(오름차순, 내림차순 둘 다) 부분 리스트가 불균등하게 나누어져 최악의 효율 O(n2)을 보여 준다.** </br>
 + 위 그림처럼 정렬되어 있는 데이터의 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번의 비교가 이루어진다. 결론적으로 </br>
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="500" height="40">
 
@@ -214,7 +215,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 
 ### 퀵 정렬 개선 Median-Of-3 method
-+ 불균등 분할을 방지하기 위해 리스트의 맨 왼쪽, 오른쪽, 중간, 이 3개의 데이터 중 중간값을 피벗으로 선택하는 방법이 많이 사용 된다.
++ 불균등 분할을 방지하기 위해 리스트의 맨 왼쪽, 오른쪽, 중간, 이 3개의 데이터의 값을 비교하여 중간 값을 피벗으로 선택하는 방법이 많이 사용 된다.
 + 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할할 것이라는 보장은 없지만, 최소한 이 값이 전체 값 중 최대 / 최소값에는 해당하지 않기 때문에 평균적으로 O(nlogn)의 시간복잡도를 유지할 수 있게 된다.
 
 
