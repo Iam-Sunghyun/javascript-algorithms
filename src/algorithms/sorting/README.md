@@ -191,7 +191,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
  [퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
 
-### 퀵 정렬 분석
+## 퀵 정렬 분석
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.JPG" width="650" height="300">
 
