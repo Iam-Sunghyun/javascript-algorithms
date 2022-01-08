@@ -211,7 +211,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(n)|X|구현 방법에 따라 O(logn)의 메모리를 사용하는 듯|
+퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(n)|X|구현 방법에 따라 O(logn), O(1)의 메모리를 사용하는 듯|
 
 
 ## 퀵 정렬 개선 Median-Of-3 method
