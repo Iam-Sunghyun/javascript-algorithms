@@ -30,7 +30,7 @@
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-버블 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
+버블 정렬|O(n)|O(n^2)|O(n^2)|O(1)|O||
 + 정렬되어 있는 데이터의 경우 최선 
 
 ## Reference
@@ -56,7 +56,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-선택 정렬|O(n2)|O(n2)|O(n2)|O(1)|X||
+선택 정렬|O(n^2)|O(n^2)|O(n^2)|O(1)|X||
 
 
 ## Reference
@@ -88,7 +88,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-삽입 정렬|O(n)|O(n2)|O(n2)|O(1)|O||
+삽입 정렬|O(n)|O(n^2)|O(n^2)|O(1)|O||
 
 ## Reference
 
@@ -157,7 +157,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-셸 정렬|O(nlogn)|O(n1.5)|O(n2),(n(logn)2)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
+셸 정렬|O(nlogn)|O(n^1.5)|O(n^2),O(n(log^2)n)|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
 
 ## Reference
  https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
@@ -211,7 +211,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-퀵 정렬|O(nlogn)|O(nlogn)|O(n2)|O(n)|X|구현 방법에 따라 O(logn), O(1)의 메모리를 사용하는 듯|
+퀵 정렬|O(nlogn)|O(nlogn)|O(n^2)|O(n)|X|구현 방법에 따라 O(logn), O(1)의 메모리를 사용하는 듯|
 
 
 ## 퀵 정렬 개선 Median-Of-3 method
