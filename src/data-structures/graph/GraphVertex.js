@@ -27,5 +27,15 @@ export default class GraphVertex {
   }
 }
 
+/**
+   * @param {GraphEdge} edge
+   * @returns {GraphVertex}
+   */
+  addEdge(edge) {
+    this.edges.append(edge);
+
+    return this;
+  }
+
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
