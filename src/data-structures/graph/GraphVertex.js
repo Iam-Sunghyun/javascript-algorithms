@@ -37,5 +37,12 @@ export default class GraphVertex {
     return this;
   }
 
+ /**
+   * @param {GraphEdge} edge
+   */
+  deleteEdge(edge) {
+    this.edges.delete(edge);
+  }
+
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
