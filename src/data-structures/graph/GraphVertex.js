@@ -44,5 +44,21 @@ export default class GraphVertex {
     this.edges.delete(edge);
   }
 
+/**
+   * @returns {GraphVertex[]}
+   */
+  getNeighbors() {
+    const edges = this.edges.toArray();
+
+    /** @param {LinkedListNode} node */
+    const neighborsConverter = (node) => {
+      return node.value.startVertex === this ? node.value.endVertex : node.value.startVertex;
+    };
+
+    // Return either start or end vertex.
+    // For undirected graphs it is possible that current vertex will be the end one.
+    return edges.map(neighborsConverter);
+  }
+
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
