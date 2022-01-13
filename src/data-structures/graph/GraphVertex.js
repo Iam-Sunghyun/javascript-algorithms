@@ -60,5 +60,12 @@ export default class GraphVertex {
     return edges.map(neighborsConverter);
   }
 
+/**
+   * @return {GraphEdge[]}
+   */
+  getEdges() {
+    return this.edges.toArray().map((linkedListNode) => linkedListNode.value);
+  }
+
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
