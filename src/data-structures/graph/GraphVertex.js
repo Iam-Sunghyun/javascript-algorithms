@@ -25,9 +25,8 @@ export default class GraphVertex {
     this.value = value;
     this.edges = new LinkedList(edgeComparator);
   }
-}
 
-/**
+  /**
    * @param {GraphEdge} edge
    * @returns {GraphVertex}
    */
@@ -44,7 +43,7 @@ export default class GraphVertex {
     this.edges.delete(edge);
   }
 
-/**
+  /**
    * @returns {GraphVertex[]}
    */
   getNeighbors() {
@@ -60,12 +59,18 @@ export default class GraphVertex {
     return edges.map(neighborsConverter);
   }
 
-/**
+  /**
    * @return {GraphEdge[]}
    */
   getEdges() {
     return this.edges.toArray().map((linkedListNode) => linkedListNode.value);
   }
 
+  /**
+   * @return {number}
+   */
+  getDegree() {
+    return this.edges.toArray().length;
+  }
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
