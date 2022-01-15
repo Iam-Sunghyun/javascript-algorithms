@@ -72,5 +72,17 @@ export default class GraphVertex {
   getDegree() {
     return this.edges.toArray().length;
   }
+  
+  /**
+   * @param {GraphEdge} requiredEdge
+   * @returns {boolean}
+   */
+  hasEdge(requiredEdge) {
+    const edgeNode = this.edges.find({
+      callback: (edge) => edge === requiredEdge,
+    });
+
+    return !!edgeNode;
+  }
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
