@@ -84,5 +84,17 @@ export default class GraphVertex {
 
     return !!edgeNode;
   }
+  
+   /**
+   * @param {GraphVertex} vertex
+   * @returns {boolean}
+   */
+  hasNeighbor(vertex) {
+    const vertexNode = this.edges.find({
+      callback: (edge) => edge.startVertex === vertex || edge.endVertex === vertex,
+    });
+
+    return !!vertexNode;
+  }
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
