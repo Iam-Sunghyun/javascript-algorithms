@@ -96,5 +96,20 @@ export default class GraphVertex {
 
     return !!vertexNode;
   }
+  
+   /**
+   * @param {GraphVertex} vertex
+   * @returns {(GraphEdge|null)}
+   */
+  findEdge(vertex) {
+    const edgeFinder = (edge) => {
+      return edge.startVertex === vertex || edge.endVertex === vertex;
+    };
+
+    const edge = this.edges.find({ callback: edgeFinder });
+
+    return edge ? edge.value : null;
+  }
+
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
