@@ -110,6 +110,13 @@ export default class GraphVertex {
 
     return edge ? edge.value : null;
   }
+  
+  /**
+   * @returns {string}
+   */
+  getKey() {
+    return this.value;
+  }
 
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
