@@ -118,5 +118,13 @@ export default class GraphVertex {
     return this.value;
   }
 
+  /**
+   * @return {GraphVertex}
+   */
+  deleteAllEdges() {
+    this.getEdges().forEach((edge) => this.deleteEdge(edge));
+
+    return this;
+  }
 
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph
