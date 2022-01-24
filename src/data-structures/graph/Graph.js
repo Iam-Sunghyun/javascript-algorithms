@@ -7,4 +7,15 @@ export default class Graph{
     this.edges = {};
     this.isDirected = isDirected;
   }
+   
+     /**
+   * @param {GraphVertex} newVertex
+   * @returns {Graph}
+   */
+  addVertex(newVertex) {
+    this.vertices[newVertex.getKey()] = newVertex;
+
+    return this;
+  }
+   
 }
