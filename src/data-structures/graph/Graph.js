@@ -18,4 +18,13 @@ export default class Graph{
     return this;
   }
    
+  /**
+   * @param {string} vertexKey
+   * @returns GraphVertex
+   */
+  getVertexByKey(vertexKey) {
+    return this.vertices[vertexKey];
+  }
+
+   
 }
