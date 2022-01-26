@@ -26,5 +26,12 @@ export default class Graph{
     return this.vertices[vertexKey];
   }
 
+  /**
+   * @param {GraphVertex} vertex
+   * @returns {GraphVertex[]}
+   */
+  getNeighbors(vertex) {
+    return vertex.getNeighbors();
+  }
    
 }
