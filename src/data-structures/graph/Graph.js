@@ -34,4 +34,10 @@ export default class Graph{
     return vertex.getNeighbors();
   }
    
+  /**
+   * @return {GraphVertex[]}
+   */
+  getAllVertices() {
+    return Object.values(this.vertices);
+  }
 }
