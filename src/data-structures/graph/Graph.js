@@ -40,4 +40,12 @@ export default class Graph{
   getAllVertices() {
     return Object.values(this.vertices);
   }
+   
+  /**
+   * @return {GraphEdge[]}
+   */
+  getAllEdges() {
+    return Object.values(this.edges);
+  }
+   
 }
