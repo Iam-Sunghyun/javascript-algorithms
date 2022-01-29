@@ -48,4 +48,19 @@ export default class Graph{
     return Object.values(this.edges);
   }
    
+  /**
+   * @param {GraphEdge} edge
+   * @returns {Graph}
+   */
+   addEdge(edge) {
+    // 시작 정점 탐색
+    let startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    let endVertex = this.getVertexByKey(edge.endVertex.getKey());
+
+    // 시작 정점 없으면 생성
+    if (!startVertex) {
+      this.addVertex(edge.startVertex);
+      startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    }
+   
 }
