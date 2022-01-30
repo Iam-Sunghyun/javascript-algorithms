@@ -53,14 +53,20 @@ export default class Graph{
    * @returns {Graph}
    */
    addEdge(edge) {
-    // 시작 정점 탐색
+    // 시작, 종료 정점 탐색
     let startVertex = this.getVertexByKey(edge.startVertex.getKey());
     let endVertex = this.getVertexByKey(edge.endVertex.getKey());
 
-    // 시작 정점 없으면 생성
+    // 시작 정점 없으면 삽입
     if (!startVertex) {
       this.addVertex(edge.startVertex);
       startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    }
+      
+    // 종료 정점 없으면 삽입
+    if (!endVertex) {
+      this.addVertex(edge.endVertex);
+      endVertex = this.getVertexByKey(edge.endVertex.getKey());
     }
    
 }
