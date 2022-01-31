@@ -68,5 +68,12 @@ export default class Graph{
       this.addVertex(edge.endVertex);
       endVertex = this.getVertexByKey(edge.endVertex.getKey());
     }
+      
+    // 간선이 이미 있는지 체크
+    if (this.edges[edge.getKey()]) {
+      throw new Error('Edge has already been added before');
+    } else {
+      this.edges[edge.getKey()] = edge;
+    }
    
 }
