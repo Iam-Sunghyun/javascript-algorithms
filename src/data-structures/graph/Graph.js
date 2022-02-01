@@ -75,5 +75,17 @@ export default class Graph{
     } else {
       this.edges[edge.getKey()] = edge;
     }
+     
+    // 정점에 간선 추가
+    if (this.isDirected) {
+      // 방향 그래프라면, 시작 정점에만 간선 추가
+      startVertex.addEdge(edge);
+    } else {
+      // 무방향이라면 시작, 종료 정점 모두 간선 추가
+      startVertex.addEdge(edge);
+      endVertex.addEdge(edge);
+    }
+
+    return this;
    
 }
