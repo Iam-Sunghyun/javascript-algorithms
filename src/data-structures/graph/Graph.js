@@ -99,4 +99,6 @@ export default class Graph{
       throw new Error('Edge not found in graph');
     }
      
+  }
+     
 }
