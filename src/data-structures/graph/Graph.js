@@ -85,7 +85,18 @@ export default class Graph{
       startVertex.addEdge(edge);
       endVertex.addEdge(edge);
     }
-
-    return this;
+    return this;   
+   }
    
+   /**
+   * @param {GraphEdge} edge
+   */
+  deleteEdge(edge) {
+    // 간선 리스트에서 간선 찾아서 삭제
+    if (this.edges[edge.getKey()]) {
+      delete this.edges[edge.getKey()];
+    } else {
+      throw new Error('Edge not found in graph');
+    }
+     
 }
