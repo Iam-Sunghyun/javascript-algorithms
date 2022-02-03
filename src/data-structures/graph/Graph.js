@@ -99,6 +99,15 @@ export default class Graph{
       throw new Error('Edge not found in graph');
     }
      
+    // 시작정점을 찾아 간선 삭제
+    const startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    const endVertex = this.getVertexByKey(edge.endVertex.getKey());
+
+    startVertex.deleteEdge(edge);
+    endVertex.deleteEdge(edge);
+     
   }
      
 }
+
+//https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js
