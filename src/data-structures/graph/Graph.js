@@ -108,6 +108,20 @@ export default class Graph{
      
   }
      
+  /**
+   * @param {GraphVertex} startVertex
+   * @param {GraphVertex} endVertex
+   * @return {(GraphEdge|null)}
+   */
+  findEdge(startVertex, endVertex) {
+    const vertex = this.getVertexByKey(startVertex.getKey());
+
+    if (!vertex) {
+      return null;
+    }
+    return vertex.findEdge(endVertex);
+  }
+   
 }
 
 //https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js
