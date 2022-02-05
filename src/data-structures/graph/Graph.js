@@ -122,6 +122,16 @@ export default class Graph{
     return vertex.findEdge(endVertex);
   }
    
+  /**
+   * @return {number}
+   */
+  getWeight() {
+    return this.getAllEdges().reduce((weight, graphEdge) => {
+      return weight + graphEdge.weight;
+    }, 0);
+  }
+
+   
 }
 
 //https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js
