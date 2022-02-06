@@ -130,6 +130,26 @@ export default class Graph{
       return weight + graphEdge.weight;
     }, 0);
   }
+   
+  /**
+   * Reverse all the edges in directed graph.
+   * @return {Graph}
+   */
+  reverse() {
+    /** @param {GraphEdge} edge */
+    this.getAllEdges().forEach((edge) => {
+      // 정점, 그래프에서 간선 삭제
+      this.deleteEdge(edge);
+
+      // 간선 반전
+      edge.reverse();
+
+      // 반전된 간선을 그래프, 정점에 다시 추가
+      this.addEdge(edge);
+    });
+
+    return this;
+  }
 
    
 }
