@@ -150,7 +150,18 @@ export default class Graph{
 
     return this;
   }
+   
+  /**
+   * @return {object}
+   */
+  getVerticesIndices() {
+    const verticesIndices = {};
+    this.getAllVertices().forEach((vertex, index) => {
+      verticesIndices[vertex.getKey()] = index;
+    });
 
+    return verticesIndices;
+  }
    
 }
 
