@@ -154,7 +154,7 @@ export default class Graph{
   /**
    * @return {object}
    */
-  getVerticesIndices() {
+  getVerticesIndices() {  //정점의 차수 getter
     const verticesIndices = {};
     this.getAllVertices().forEach((vertex, index) => {
       verticesIndices[vertex.getKey()] = index;
@@ -163,6 +163,12 @@ export default class Graph{
     return verticesIndices;
   }
    
+  /**
+   * @return {*[][]}
+   */
+  getAdjacencyMatrix() {
+     
+  }
 }
 
 //https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js
