@@ -167,7 +167,12 @@ export default class Graph{
    * @return {*[][]}
    */
   getAdjacencyMatrix() {
-     
+    const vertices = this.getAllVertices();
+    const verticesIndices = this.getVerticesIndices();
+
+    const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
+      return Array(vertices.length).fill(Infinity);
+    });
   }
 }
 
