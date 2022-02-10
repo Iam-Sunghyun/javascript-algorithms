@@ -173,7 +173,17 @@ export default class Graph{
     const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
       return Array(vertices.length).fill(Infinity);
     });
+     
+    vertices.forEach((vertex, vertexIndex) => {
+      vertex.getNeighbors().forEach((neighbor) => {
+        const neighborIndex = verticesIndices[neighbor.getKey()];
+        adjacencyMatrix[vertexIndex][neighborIndex] = this.findEdge(vertex, neighbor).weight;
+      });
+    });
+     
   }
+   
+   
 }
 
 //https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js
