@@ -181,6 +181,7 @@ export default class Graph{
       });
     });
      
+     return adjacencyMatrix;
   }
    
    
