@@ -25,8 +25,16 @@
 
 ### 무방향 그래프(undirected graph)
 
+간선(edge)에 방향성이 없는 그래프.
+
 ### 방향 그래프(directed graph)
+
+간선(edge)에 방향성이 있는 그래프.
 
 ### 가중치 그래프(weighted graph) 
 
+간선(edge)에 가중치(weight)가 있는 그래프.
+
 ### 부분 그래프(subgraph)
+
+어떤 그래프의 정점과 간선들 중 일부로 만들어진 그래프.
