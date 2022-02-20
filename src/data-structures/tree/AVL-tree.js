@@ -1,6 +1,6 @@
 import BinarySearchTree from "./binary-search-tree";
 
-export default class AVLtree extends BinarySearchTree{
+export default class AVLTree extends BinarySearchTree{
   
   insert(value){
     super.insert(value);
@@ -114,3 +114,5 @@ export default class AVLtree extends BinarySearchTree{
   }
 
 }
+
+// https://github.com/trekhleb/javascript-algorithms/blob/9bb60fa72f9d146e931b4634764dff7aebc7c1a2/src/data-structures/tree/avl-tree/AvlTree.js#L60
