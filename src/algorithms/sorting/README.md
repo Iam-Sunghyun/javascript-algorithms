@@ -7,8 +7,8 @@
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
  7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
- 8. [기수 정렬 (radix sort)](#8-기수-정렬-radix-sort-미완)
- 9. [계수 정렬 (counting sort)](#9-계수-정렬-counting-sort-미완)
+ 8. [기수 정렬 (radix sort) (미완)](#8-기수-정렬-radix-sort-미완)
+ 9. [계수 정렬 (counting sort) (미완)](#9-계수-정렬-counting-sort-미완)
 
 
  ## 1. 버블 정렬 (bubble sort)
