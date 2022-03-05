@@ -11,7 +11,19 @@ function hanoiTowerRecursive({
     const disc = fromPole.pop();
     toPole.push(disc);
   }else{
-    
+    // 디스크가 더 있는 경우 재귀로 이동시킴
+
+    hanoiTowerRecursive({
+      numberOfDiscs: numberOfDiscs - 1,
+      fromPole,
+      withPole: toPole,
+      toPole: withPole,
+      moveCallback,
+    });
     
   }
 }
+
+
+
+// https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/uncategorized/hanoi-tower/hanoiTower.js
