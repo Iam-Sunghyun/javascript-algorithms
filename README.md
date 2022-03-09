@@ -15,6 +15,7 @@
  1. [수학 (Math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
  6. [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
  7. [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
+ 8. [기타 (others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
 
 
 
