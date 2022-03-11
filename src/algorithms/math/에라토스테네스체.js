@@ -9,7 +9,7 @@ function primeNumCount(num) {
   }
   return arr;
 }
-
+// test #1
 let arr1 = primeNumCount(100);
 
 for(let i = 0; i < arr1.length; i++){
@@ -18,6 +18,7 @@ for(let i = 0; i < arr1.length; i++){
   }
 }
 console.log('===================')
+
 
 // #2
 function primeNumCount2(num) {
@@ -35,6 +36,8 @@ function primeNumCount2(num) {
   arr.splice(0,2,false,false);
   return arr;
 }
+
+// test #2
 let arr = primeNumCount2(100);
 for(let i = 0; i < arr.length; i++){
   if(!arr1[i]){
