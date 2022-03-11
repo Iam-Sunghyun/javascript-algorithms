@@ -1,4 +1,4 @@
-// ㅅrial Division -> 소수 판별법(primality test)중 하나로 직접 나누기, 시험 분할 정도로 해석되는 듯
+// trial Division -> 소수 판별법(primality test)중 하나로 직접 나누기, 시험 분할 정도로 해석되는 듯
 /**
  * @param {number} number
  * @return {boolean}
