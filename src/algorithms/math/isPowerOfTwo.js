@@ -1,4 +1,8 @@
-// 2의 거듭제곱 판별
+/**
+ * 2의 거듭제곱 판별
+ * @param {number} num
+ * @return {boolean} 
+ */
 export default function isPowerOfTwo(num){
  
   if (num < 1) {
