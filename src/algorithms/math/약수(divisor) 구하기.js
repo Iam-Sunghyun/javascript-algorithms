@@ -1,3 +1,9 @@
+/**
+ * 약수 구하기
+ * 
+ * @param {number} num
+ * @return {number[]} divisor
+ */
 function getDivisor(num) {
 
   let divisor = [];
@@ -9,5 +15,6 @@ function getDivisor(num) {
   return divisor;
 }
 
+// test
 let a = getDivisor(100);
 console.log(a);
