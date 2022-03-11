@@ -1,3 +1,7 @@
+/**
+ * 소수 판별
+ * @param {number} num
+ */
 function isPrimeNum(num) {
   for(let i = 2; i <= Math.floor(num**0.5); i++){
     if(num % i === 0){
