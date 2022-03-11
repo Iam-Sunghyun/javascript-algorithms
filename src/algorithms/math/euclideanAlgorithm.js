@@ -3,7 +3,7 @@
  *
  * @param {number} originalA
  * @param {number} originalb
- * return {number}
+ * @return {number}
  */
 
 export default function euclideanAlgorithm(originalA, originalB) {
