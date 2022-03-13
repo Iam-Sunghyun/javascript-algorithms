@@ -1,5 +1,5 @@
 /**
- * 
+ * 최대 공약수(Greatest Common Divisor) 구하기 (반복)
  *
  *
  *
