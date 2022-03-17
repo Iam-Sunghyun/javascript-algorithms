@@ -1,6 +1,7 @@
 import euclideanAlgorithm from './euclideanAlgorithm.js';
 
 /**
+ * 유클리드 호제법 사용 LCM
  * @param {number} a
  * @param {number} b
  * @return {number}
