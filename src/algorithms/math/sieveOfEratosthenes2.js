@@ -5,7 +5,7 @@
  */
 export default function sieveOfEratosthenes(Number) {
   const isPrime = new Array(Number + 1).fill(true);
-  prime.splice(0,2,false,false);
+  isPrime.splice(0,2,false,false);
   
   const prime = [];
   
