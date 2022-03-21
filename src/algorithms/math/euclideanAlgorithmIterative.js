@@ -12,5 +12,12 @@ export default function euclideanAlgorithmIterative(A, B) {
   while(b !== 0){
     [a , b] = [b , a % b];
   }
+  
+  /*
+   while (a && b && a !== b) {
+    [a, b] = a > b ? [a - b, b] : [a, b - a];
+  }
+  */
+  
   return a;
 }
