@@ -9,7 +9,8 @@ export default function euclideanAlgorithmIterative(A, B) {
   const a = Math.abs(A);
   const b = Math.abs(B);
   
-  while(b !== 0){
+  // a, b가 같거나 0인 경우 
+  while(a && b && a !== b){
     [a , b] = [b , a % b];
   }
   
