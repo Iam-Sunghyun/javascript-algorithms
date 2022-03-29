@@ -10,7 +10,16 @@ export default class HashTable {
    this.buckets = Array(hashTableSize).fill(null).map(() => new LinkedList());
   }
  
+ 
   hash(key){
+   
+   let hash = 0;
+   
+   for(let i = 0; i < key.length; i++){
+     hash += key.charCodeAt(i);
+   };
+   
+   return hash % bucket;
   }
  
   set(key, value) {
