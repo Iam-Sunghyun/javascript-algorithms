@@ -15,15 +15,15 @@ export default class HashTable {
    
    let hash = 0;
    
-   for(let i = 0; i < key.length; i++){
-     hash += key.charCodeAt(i);
-   };
+   const hash = Array.prototype.reduce.call(key, (accumulator, currentValue) => accumulator += currentValue.charCodeAt(), 0); 
+           // = Array.from(key).reduce((accumulator, currentValue) => accumulator += currentValue.charCodeAt(), 0);
    
-   return hash % bucket;
+   return hash % buckets.length;
   }
  
+ 
   set(key, value) {
-  
+   
   }
  
   delete(key) {
