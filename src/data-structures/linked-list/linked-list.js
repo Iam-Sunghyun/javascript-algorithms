@@ -100,7 +100,19 @@ export default class LinkedList{
       return current.data;
     }
   }
+  
+  toArray() {
+    const nodes = [];
 
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+
+    return nodes;
+  }
+  
   printList(){
     let current = this.head;
     for(let i = 0; i < this.size ; i++){
@@ -118,7 +130,8 @@ export default class LinkedList{
   }
 }
 
-let linkedList = new LinkedList();
+/*
+const linkedList = new LinkedList();
 linkedList.insertHead(10);
 linkedList.insertHead(20);
 linkedList.append(30);
@@ -128,3 +141,4 @@ linkedList.getNode(-1);
 linkedList.deleteAt(1);
 linkedList.printList();
 console.log(linkedList);
+*/
