@@ -46,7 +46,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + **맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용**.
 + 각 단계 마다 맨 앞 요소를 제외한 리스트에서 반복적으로 실행한다.
 + 버블 정렬과 마찬가지로 구현이 **간단하지만 비효율적**이다.
-+ 자료 이동 횟수가 미리 결정된다는 장점이 있다. (교환 횟수가 적다)
++ 자료 이동 횟수가 미리 결정된다는 장점이 있다. (교환 횟수가 적다, 하지만 모든 요소를 비교해야 하므로 성능 안좋음.)
 
 ### 선택 정렬 코드 (javascript)
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/selection-sort.js)
