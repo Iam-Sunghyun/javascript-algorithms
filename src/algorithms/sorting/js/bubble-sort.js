@@ -6,22 +6,21 @@ function swap(arr, a, b)
   [arr[a],arr[b]] = [arr[b],arr[a]];                  
 }
  
-function bubbleSort( arr, n)
-{
-let i, j, changed;
-for (i = 0; i < n-1; i++)
-{
+function bubbleSort( arr, n){
+  
+  let i, j, changed;
+  
+  for (i = 0; i < n-1; i++){
     changed = false;
-    for (j = 0; j < n-i-1; j++)
-    {
-        if (arr[j] > arr[j+1])
-        {
+    
+    for (j = 0; j < n-i-1; j++){
+      if (arr[j] > arr[j+1]){
         swap(arr,j,j+1);
         changed = true;
-        }     
+      }     
     }
     if(!changed) break;
-}
+  }
 }
  
 function printArray(arr, size)
@@ -44,5 +43,3 @@ function printArray(arr, size)
     bubbleSort(arr, n);
     document.write("Sorted array: \n");
     printArray(arr, n);
- 
- 
