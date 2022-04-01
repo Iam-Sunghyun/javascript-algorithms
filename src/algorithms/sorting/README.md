@@ -14,11 +14,11 @@
  ## 1. 버블 정렬 (bubble sort)
  
 + **인접한 2개의 요소를 비교**하여 크기가 순서대로 되어 있지 않으면 서로 교환하여 정렬하는 알고리즘.
-+ 이러한 **비교-교환** 과정은 리스트 시작부터 끝까지 진행 한다.
++ 이러한 **비교-교환 과정은 리스트 시작부터 끝까지 진행 한다.**
 + 비교-교환 과정이 한번 완료되면 가장 큰 값이 리스트 맨 오른쪽 끝으로 이동 된다. (오름차순)
-+ 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다. (정렬 완료 됐다는 의미)
++ 이 과정이 **더 이상 교환이 일어나지 않을 때 까지 수행** 된다.
 + 마치 물속에서 거품이 보글보글 떠오르는 것과 유사하여 버블 정렬이라 부른다.
-+ 구현이 간단하지만 **비효율적**이다.
++ 구현이 **간단하지만 비효율적**이다.
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/bubble-sort.gif" width="300" height="150">    
 
@@ -43,9 +43,9 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
  ## 2. 선택 정렬 (selection sort)
  
-+ 맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용.
-+ 각 단계 마다 맨 앞 요소를 제외한  리스트에서 반복적으로 실행한다.
-+ 버블 정렬과 마찬가지로 구현이 **간단**하지만 **비효율적**이다.
++ **맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용**.
++ 각 단계 마다 맨 앞 요소를 제외한 리스트에서 반복적으로 실행한다.
++ 버블 정렬과 마찬가지로 구현이 **간단하지만 비효율적**이다.
 + 자료 이동 횟수가 미리 결정된다는 장점이 있다. (교환 횟수가 적다)
 
 ### 선택 정렬 코드 (javascript)
@@ -70,10 +70,10 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
  ## 3. 삽입 정렬 (insertion sort)
  
-+ 새로 들어오는 요소의 값을 삽입되어있는 데이터들과 비교하여 적절한 자리를 찾아가는 정렬 방법.
++ 새로운 요소의 값을 삽입 되어있는 데이터들과 비교하여 적절한 자리를 찾아가는 정렬 방법.
 + 손 안에 있는 카드 패 정렬과 유사한 방법.
-   + 손 안에 정렬된 카드가 있고, 새로운 카드를 한 장씩 더 받을 때 마다 그 카드를 올바른 자리에 넣는 것.
-   + 삽입 후엔 정렬된 상태가 되어 있어야 하고 새로 받는 모든 카드에 대해 수행한다!
+   + 손 안에 정렬된 카드가 있고, 새로운 카드를 한 장씩 더 받을 때 마다 그 카드를 올바른 자리에 넣는다.
+   + 삽입 후엔 정렬된 상태가 되어있어야 하고 새로 받는 모든 카드에 대해 수행한다!
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/insertion-sort.gif" width="300" height="150"> 
 
@@ -82,8 +82,8 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
   [파일 참조](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/insertion-sort.js)
 
 ### 삽입 정렬 분석
-+ **어느정도 정렬 되어 있는 경우** 매우 빠르다
-+ 자료가 **역**으로 정렬 되어 있는 경우 **최악의 효율**을 보여준다.
++ **어느정도 정렬 되어 있는 경우 매우 빠르다.**
++ 자료가 **역으로 정렬 되어 있는 경우 최악의 효율(O(n2))**을 보여준다.
 + 비교적 많은 요소 이동이 필요하기 때문에 레코드 양이 많고 크기가 클 경우 적합하지 않다.
 
 ### 삽입 정렬 복잡도
@@ -102,7 +102,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 ## 4. 셸 정렬 (shell sort)
 
 + 가장 오래된 정렬 알고리즘 중 하나로, 1959년 'Donald L. Shell'이 **삽입 정렬의 성질을 이용, 보완하여 만든 알고리즘**.
-+ 삽입 정렬이 **어느정도 정렬된 배열에 대해서는 매우 효율적인 것**에 착안하여 만들었다.     
++ 삽입 정렬이 **어느정도 정렬된 배열에 대해서는 매우 효율적인 것에 착안**하여 만들었다.     
 + 삽입 정렬의 문제점? 
    + 요소들이 삽입될 때, 이웃한 위치로만 이동.
    + 삽입되어야 할 위치가 현재 위치에서 매우 먼 곳이라면 많은 이동을 해야만 한다.
@@ -123,7 +123,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
    + 초기 간격은 배열 크기의 **절반으로 시작**한다.
    + 생성된 부분 리스트의 개수는 k(gap)와 같다.
 + 큰 간격으로 시작해서 **각 단계마다 간격 k를 절반으로 줄인다.** 
-   + 간격이 짝수이면 1을 더하여 **홀수**로 하는 것이 좋은 것으로 알려져 있다. 
+   + 간격(gap)은 **홀수**로 하는 것이 효율적인 것으로 알려져 있다.(짝수의 경우 +1) 
 + 단계가 진행 될수록 하나의 부분 리스트에 속하는 요소의 개수는 증가하고 전체 부분 리스트의 수는 감소한다.
 + 마지막 단계 즉, k = 1이 될 때까지 반복한다. 
 
@@ -201,7 +201,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + 위 그림처럼 정렬되어 있는 데이터의 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번의 비교가 이루어진다. 결론적으로 </br>
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="500" height="40">
 
-+ **평균 O(nlogn)인 다른 정렬(힙,합병)과 비교했을 때 가장 빠르다**
++ **평균 O(nlogn)인 다른 정렬(힙, 합병)과 비교했을 때 가장 빠르다.**
    + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다. 
  </br>
 
@@ -218,7 +218,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ## 퀵 정렬 개선 Median-Of-3 method
 + 불균등 분할을 방지하기 위해 **리스트의 맨 왼쪽, 오른쪽, 중간, 이 3개의 데이터의 값을 비교하여 중간 값을 피벗으로 선택하는 방법이 많이 사용 된다.**
-+ 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할할 것이라는 보장은 없지만, 최소한 이 값이 전체 값 중 최대 / 최소값에는 해당하지 않기 때문에 평균적으로 O(nlogn)의 시간복잡도를 유지할 수 있게 된다.
++ 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할한다는 보장은 없지만, 최소한 이 값이 전체 값 중 최대/최소값에는 해당하지 않기 때문에 평균적으로 O(nlogn)의 시간복잡도를 유지할 수 있게 된다.
 
 
 ## Reference
@@ -301,43 +301,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 ### 힙 정렬 코드 (javascript)
 [자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap) 참조
 + 최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
-```
-function printArray(arr)
-{
-    let n = arr.length;
-        for (let i = 0; i < n; ++i)
-          process.stdout.write(`${arr[i]}`+ ` `); //nodejs에서 콘솔창에 줄 바꿈 없이 출력하는 법 
-        console.log("\n");
-}
-  
-// 자료구조 힙 참조!!!
-let maxheap = new MaxHeap();
-let arr = [];
 
-for (i = 0; i < 10; i++)
-  arr.push(Math.floor(Math.random() * 100));
-
-let n = arr.length;
-console.log("UnSorted array: ");
-printArray(arr)
-
-for(let i = 0; i < arr.length; i++)
-  maxheap.insert(arr[i]);
-
-for(let i = arr.length - 1; i >= 0; i--)
-  arr[i] = maxheap.delete();
-
-console.log("Sorted array: ");
-printArray(arr)
-
-
-출력
-UnSorted array: 
-77 22 94 54 75 45 80 8 3 37 
-
-Sorted array: 
-3 8 22 37 45 54 75 77 80 94 
-```
 
 ### 힙 정렬 분석
 
