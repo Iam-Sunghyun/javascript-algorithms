@@ -11,7 +11,7 @@
  9. [계수 정렬 (counting sort) (미완)](#9-계수-정렬-counting-sort-미완)
 
 
- ## 1. 버블 정렬 (bubble sort)
+# 1. 버블 정렬 (bubble sort)
  
 + **인접한 2개의 요소를 비교**하여 크기가 순서대로 되어 있지 않으면 서로 교환하여 정렬하는 알고리즘.
 + 이러한 **비교-교환 과정은 리스트 시작부터 끝까지 진행 한다.**
@@ -41,7 +41,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 <br>
 
- ## 2. 선택 정렬 (selection sort)
+ # 2. 선택 정렬 (selection sort)
  
 + **맨 앞의 요소를 선택한 후 나머지 값과 비교해서 가장 작은 값을 맨 앞쪽으로 옮기는 방법을 사용**.
 + 각 단계 마다 맨 앞 요소를 제외한 리스트에서 반복적으로 실행한다.
@@ -68,7 +68,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
  
 <br><br>
 
- ## 3. 삽입 정렬 (insertion sort)
+ # 3. 삽입 정렬 (insertion sort)
  
 + 새로운 요소의 값을 삽입 되어있는 데이터들과 비교하여 적절한 자리를 찾아가는 정렬 방법.
 + 손 안에 있는 카드 패 정렬과 유사한 방법.
@@ -88,6 +88,10 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 삽입 정렬 복잡도
 
++ 역으로 정렬 되어있는 경우!
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/InsertionSort-complexity.png" width="400" height="80"> 
+
+
 이름|최선|평균|최악|메모리|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 삽입 정렬|O(n)|O(n^2)|O(n^2)|O(1)|O||
@@ -99,7 +103,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 <br><br>
 
 
-## 4. 셸 정렬 (shell sort)
+# 4. 셸 정렬 (shell sort)
 
 + 가장 오래된 정렬 알고리즘 중 하나로, 1959년 'Donald L. Shell'이 **삽입 정렬의 성질을 이용, 보완하여 만든 알고리즘**.
 + 삽입 정렬이 **어느정도 정렬된 배열에 대해서는 매우 효율적인 것에 착안**하여 만들었다.     
@@ -170,7 +174,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 <br><br>
 
 
-## 5. 퀵 정렬 (quick sort)
+# 5. 퀵 정렬 (quick sort)
 
 + 평균적으로 **매우 빠른 수행 속도**의 알고리즘. 
 + **분할 정복(divide and conquer)** 사용한다.
@@ -233,7 +237,7 @@ https://hongjw1938.tistory.com/31
 <br><br>
 
 
-## 6. 합병 정렬 (merge sort)
+# 6. 합병 정렬 (merge sort)
 
 + '존 폰 노이만(John von Neumann)'이 1945년에 개발한 알고리즘.
 + 퀵정렬 (Quick Sort) 함께 대표적으로 사용되는 빠른 정렬 알고리즘.
@@ -287,7 +291,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 <br><br>
 
 
-## 7. 힙 정렬 (heap sort)
+# 7. 힙 정렬 (heap sort)
 
 + **최대 힙 트리나 최소 힙 트리를 구성해 정렬을 하는 방법**.
    + 내림차순 정렬을 위해서는 최대 힙을 구성하고 오름차순 정렬을 위해서는 최소 힙을 구성하면 된다.
@@ -324,7 +328,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 <br><br>
 
 
-## 8. 기수 정렬 (radix sort) (미완)
+# 8. 기수 정렬 (radix sort) (미완)
 
 + 지금까지의 정렬 방법들은 모두 값들을 비교하여 정렬한 것과 달리 **어떤 비교 연산도 없이** 데이터를 정렬하는 방법
 + O(nlogn)이라는 이론적 하한선을 깬 정렬 기법. 기수 정렬은 O(kn)의 복잡도를 갖는데 보통 k는 크지 않은 값이다
