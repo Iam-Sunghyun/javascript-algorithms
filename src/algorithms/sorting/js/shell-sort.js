@@ -27,14 +27,6 @@ export default function shellSort(originalArray){
 }
 
 
-function printArray(arr)
-{
-    let n = arr.length;
-        for (let i = 0; i < n; ++i)
-          process.stdout.write(`${arr[i]}`+ ` `); //nodejs에서 콘솔창에 줄 바꿈 없이 출력하는 법 
-        console.log("\n");
-}
-
 // 테스트
 const arr = [];
 for (let i = 0; i < 15; i++){
