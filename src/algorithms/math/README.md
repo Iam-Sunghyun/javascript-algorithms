@@ -9,7 +9,7 @@
 8. [에라토스테네스의 체](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math#%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4-%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98-%EC%B2%B4) - 2부터 N사이에 소수 찾기(N포함)
 
 
-
+<!--
 ## 피보나치 수
 [피보나치 수]() 참조
 
@@ -19,3 +19,4 @@
 
 ## 에라토스테네스의 체
 [에라토스테네스의 체](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/math/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%B2%B4.js) 참조 <br>
+-->
