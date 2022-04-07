@@ -1,21 +1,22 @@
 # 자료구조 (Data structures)
 
- 1. [스택(stack)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/stack)
- 2. [큐(queue)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/queue)
- 3. [우선순위 큐(prority queue)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/priority-queue)
- 4. [연결 리스트(linked list)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/linked-list)
- 5. [힙(heap)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)
- 6. [해시 테이블(hash table)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table)
- 7. [트리(tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree)
- 8. [그래프(graph)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/graph)
- 9. [트라이(trie)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
+* [스택(Stack)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/stack)
+* [큐(Queue)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/queue)
+* [우선순위 큐(Prority queue)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/priority-queue)
+* [연결 리스트(Linked list)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/linked-list)
+* [힙(Heap)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap)
+* [해시 테이블(Hash table)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table)
+* [트리(Tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree)
+* [그래프(Graph)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/graph)
+* [트라이(Trie)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
 
 # 알고리즘 (Algorithms)
 
- 1. [수학 (Math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
- 6. [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
- 7. [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
- 8. [기타 (others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
+* [수학 (Math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
+* [집합 (Sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
+* [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
+* [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
+* [기타 (Others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
 
 
 
