@@ -5,7 +5,9 @@
  */
  export default function sieveOfEratosthenes(num){
   const isPrime = new Array(num + 1).fill(true);
-
+  isPrime[0] = false;
+  isPrime[1] = false;
+  
   for(let i = 2; i <= Math.sqrt(num); i++){
     for(let j = i * i; j <= num; j += i){
       if(!isPrime[j]) continue;
