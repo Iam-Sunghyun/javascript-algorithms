@@ -1,4 +1,4 @@
-# [Algorithm] 탐색 (Search)
+# 탐색 (Search)
 
  1. [순차 탐색 (sequential search), 선형 탐색 (linear search)](#1-순차-탐색-sequential-search-선형-탐색-linear-search)
  2. [이진 탐색 (binary search)](#2-이진-탐색-binary-search)
