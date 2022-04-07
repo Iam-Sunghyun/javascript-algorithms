@@ -1,4 +1,4 @@
-# [Algorithm] 정렬 (Sort)
+# 정렬 (Sort)
 
  1. [버블 정렬 (bubble sort)](#1-버블-정렬-bubble-sort)
  2. [선택 정렬 (selection sort)](#2-선택-정렬-selection-sort)
