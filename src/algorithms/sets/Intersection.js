@@ -1,7 +1,7 @@
 /**
  * 인수로 전달한 이터러블과 교집합을 구하는 메서드
- * @param {*[]} set 이터러블
- * @returns {*{}} result 교집합
+ * @param {iterable} set
+ * @returns {set} result 교집합
  */
  Set.prototype.intersection = function(set){
 
