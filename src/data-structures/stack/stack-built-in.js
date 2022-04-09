@@ -21,7 +21,7 @@ class Stack{
   }
 
   entries(){
-    return [...this.#arr]; // return this.#arr; -> 이럴 경우 얕은 복사 발생해버림. 
+    return [...this.#arr]; 
   }
 
   isEmpty(){
