@@ -1,7 +1,6 @@
 class Stack{
   
   #arr  // private 클래스 멤버 선언
-  
   constructor(array = []){
     if(!Array.isArray(array)){
       throw new TypeError(`${array}가 배열이 아닙니다.`);
@@ -22,7 +21,7 @@ class Stack{
   }
 
   entries(){
-    return this.#arr;
+    return [...this.#arr]; // return this.#arr; -> 이럴 경우 얕은 복사 발생해버림. 
   }
 
   isEmpty(){
