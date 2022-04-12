@@ -7,11 +7,11 @@ class Node{
 }
 
 export default class LinkedList{
-
   constructor(){
     this.head = null;   // 헤드 포인터
     this.size = 0;
   }
+  
   // 맨 앞 삽입
   insertHead(data){
     const node = new Node(data,this.head); // 헤드 노드가 있었다면 기존 헤드는 next로
@@ -19,7 +19,7 @@ export default class LinkedList{
     this.size++;
   }
 
-  // 맨 뒤 삽입
+  // 뒤 삽입
   append(data){ 
     // 헤드 노드가 없다면(빈 연결 리스트)?
     if(!this.head){
@@ -62,6 +62,7 @@ export default class LinkedList{
     this.size++;
   }
 
+  
   deleteAt(index){
     if(index < 0 || index > this.size-1){
       return '허용 인덱스가 아닙니다';
@@ -83,6 +84,7 @@ export default class LinkedList{
     }
   }
 
+  // 특정 인덱스 노드 구하기
   getNode(index){
     let current = this.head;
     if(index < 0 || index > this.size - 1){
@@ -101,6 +103,14 @@ export default class LinkedList{
     }
   }
   
+  // 인수로 전달한 배열 -> 연결 리스트
+  fromArray(values) {
+    values.forEach((value) => this.append(value));
+
+    return this;
+  }
+  
+  // 연결 리스트 -? 배열
   toArray() {
     const nodes = [];
 
