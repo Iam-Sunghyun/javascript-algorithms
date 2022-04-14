@@ -25,31 +25,48 @@ export default class HashTable {
     const keyHash = this.hash(key);
     this.keys[key] = keyHash;
     const bucketsLinkedList = this.buckets[keyHash];
-    const node = bucketsLinkedList.head;
+    let node = bucketsLinkedList.head;
 
-    // 인덱스에 값 없으면 삽입
+  
+    /* 충돌 처리로 체이닝을 구현해보았음*/
+    // 버킷의 해시키(keyHash) 인덱스에 노드가 없으면 추가
     if(!node){
       bucketsLinkedList.append({key, data});
-    
-    // 있으면 갱신
+     
     }else{
-      node.data.data = data;
+    // 노드가 있다면 key값이 같은 노드가 있는지 검사, 있다면 data 갱신
+      while(node !== null){
+       
+        if(node.data.key === key){
+          node.data.data = data;
+          return;
+        }
+       
+        node = node.next;
+      }
+    // key값이 같은 노드가 없으면 새로운 노드 추가
+      bucketsLinkedList.append({key, data});
     }
 
   }
+ 
+ 
  
   delete(key) {
   
   }
  
+ 
   get(key) {
    
   }
 
+ 
   has(key) {
     
   }
 
+ 
   getKeys() {
   
   }
