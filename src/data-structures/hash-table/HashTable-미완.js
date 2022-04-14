@@ -12,9 +12,7 @@ export default class HashTable {
  
  
   hash(key){
-   
-   let hash = 0;
-   
+     
    const hash = Array.prototype.reduce.call(key, (accumulator, currentValue) => accumulator += currentValue.charCodeAt(), 0); 
            // = Array.from(key).reduce((accumulator, currentValue) => accumulator += currentValue.charCodeAt(), 0);
    
@@ -22,8 +20,22 @@ export default class HashTable {
   }
  
  
-  set(key, value) {
-   
+  set(key, data){
+    // keyHash -> 정수인 것 기억
+    const keyHash = this.hash(key);
+    this.keys[key] = keyHash;
+    const bucketsLinkedList = this.buckets[keyHash];
+    const node = bucketsLinkedList.head;
+
+    // 인덱스에 값 없으면 삽입
+    if(!node){
+      bucketsLinkedList.append({key, data});
+    
+    // 있으면 갱신
+    }else{
+      node.data.data = data;
+    }
+
   }
  
   delete(key) {
