@@ -1,7 +1,7 @@
 /**
  * 2021 카카오 채용연계형 인턴십 문제
- * @param {String} s 
- * @returns {Number} answer
+ * @param {String} s 숫자의 일부 자릿수가 영단어로 바뀌어졌거나, 혹은 바뀌지 않고 그대로인 문자열
+ * @returns {Number} answer s가 의미하는 원래 숫자
  */
 function solution(s) {
   let answer = s;
