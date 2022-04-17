@@ -16,7 +16,4 @@
 * [집합 (Sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
 * [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
 * [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
-* [기타 (Others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
-
-
-
+* [알고리즘 풀이 및 기타 (Others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
