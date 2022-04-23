@@ -64,10 +64,10 @@ function solution(numbers, hand) {
 }
 
 /**
- * 오른손, 왼손 각각 눌러야 될 키와 거리
+ * 오른손, 왼손과 눌러야 될 키와 거리를 구하는 메서드
  * @param {number[]} rLocation 오른손 좌표
  * @param {number[]} lLocation 왼손 좌표
- * @returns {object} result 눌러야 될 키와 오른손, 왼손과의 거리
+ * @returns {object} result 눌러야 될 키와 오른손, 왼손과의 거리를 값으로 갖는 객체
  */
 function getDistance(rLocation, lLocation, key){
     
