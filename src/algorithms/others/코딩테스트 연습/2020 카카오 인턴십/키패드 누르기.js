@@ -70,15 +70,10 @@ function solution(numbers, hand) {
  * @returns {object} result 눌러야 될 키와 오른손, 왼손과의 거리를 값으로 갖는 객체
  */
 function getDistance(rLocation, lLocation, key){
-    
-  // 원본 변경 방지
-  const right = [...rLocation];
-  const left = [...lLocation];
-  const targetKey = [...key];
-
-  const result = targetKey.reduce((prev, curr, index) =>{
-    prev.rightDistance += Math.abs(curr - right[index]);
-    prev.leftDistance += Math.abs(curr - left[index]);
+  
+  const result = key.reduce((prev, curr, index) =>{
+    prev.rightDistance += Math.abs(curr - rLocation[index]);
+    prev.leftDistance += Math.abs(curr - lLocation[index]);
 
     return prev
 
