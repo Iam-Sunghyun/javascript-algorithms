@@ -1,5 +1,5 @@
 /**
- * 2021 카카오 채용연계형 인턴십 문제
+ * 2021 카카오 채용연계형 인턴십 문제 (https://programmers.co.kr/learn/courses/30/lessons/81301)
  * @param {String} s 숫자의 일부 자릿수가 영단어로 바뀌어졌거나, 혹은 바뀌지 않고 그대로인 문자열
  * @returns {Number} answer s가 의미하는 원래 숫자
  */
