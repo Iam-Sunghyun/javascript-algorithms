@@ -1,5 +1,5 @@
 /**
- * 2022 KAKAO BLIND RECRUITMENT 문제
+ * 2022 KAKAO BLIND RECRUITMENT 문제 (https://programmers.co.kr/learn/courses/30/lessons/92334)
  * @param {String[]} id_list 이용자의 ID가 담긴 문자열 배열 
  * @param {String[]} report 각 이용자가 신고한 이용자의 ID 정보가 담긴 문자열 배열
  * @param {Number} k 정지 기준이 되는 신고 횟수
