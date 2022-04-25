@@ -1,5 +1,5 @@
 /**
- * 2020 카카오 인턴십 문제
+ * 2020 카카오 인턴십 문제 (https://programmers.co.kr/learn/courses/30/lessons/67256)
  * @param {number[]} numbers 순서대로 누를 번호가 담긴 배열
  * @param {string} hand 왼손잡이인지 오른손잡이인 지를 나타내는 문자열
  * @returns {string} answer 누르는 손가락 순서 배열
