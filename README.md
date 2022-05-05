@@ -8,7 +8,7 @@
 * [해시 테이블(Hash table)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table)
 * [트리(Tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree)
 * [그래프(Graph)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/graph)
-* [트라이(Trie)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
+* [트라이(Trie)(미완)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
 
 # 알고리즘 (Algorithms)
 
