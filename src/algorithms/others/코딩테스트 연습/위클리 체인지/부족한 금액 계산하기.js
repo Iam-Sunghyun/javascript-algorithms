@@ -1,9 +1,9 @@
 /**
  * 위클리 챌린지 (https://programmers.co.kr/learn/courses/30/lessons/82612)
- * @param {*} price 
- * @param {*} money 
- * @param {*} count 
- * @returns 
+ * @param {number} price 
+ * @param {number} money 
+ * @param {number} count 
+ * @returns {number}
  */
 function solution(price, money, count) {
   var answer = 0;
