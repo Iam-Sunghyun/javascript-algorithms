@@ -11,7 +11,6 @@ hasCards.sort((a, b) => a - b);
 // hascards = -10 2 3 6 10
 // givenCards = 10, 9, -5, 2, 3, 4, 5, -10
 
-
 for(let i = 0; i < M; i++){
   if(binarySearch(hasCards, givenCards[i])){
     answer += '1 ';
@@ -36,7 +35,7 @@ function binarySearch(arr, value){
     }else if(value > arr[mid]){
       start = mid + 1;
     }
-    console.log(start, mid, end)
+  
   }
 
 }
