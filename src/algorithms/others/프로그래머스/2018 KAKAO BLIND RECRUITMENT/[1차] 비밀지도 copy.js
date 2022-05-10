@@ -1,9 +1,9 @@
 /**
  * 2018 KAKAO BLIND RECRUITMENT (https://programmers.co.kr/learn/courses/30/lessons/17681)
- * @param {*} n 
- * @param {*} arr1 
- * @param {*} arr2 
- * @returns 
+ * @param {number} n 
+ * @param {number[]} arr1 
+ * @param {number[]} arr2 
+ * @returns {string[]}
  */
  function solution(n, arr1, arr2) {
   const map1 = [];
