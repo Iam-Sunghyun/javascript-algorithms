@@ -11,7 +11,6 @@
   const answer = [];
 
   // 주먹구구식으로 구현한 방법..
-
   for(let i = 0; i < n; i++){
     let crypto1 = arr1[i].toString(2)
     let crypto2 = arr2[i].toString(2)
