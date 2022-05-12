@@ -1,5 +1,5 @@
 /**
- * (https://programmers.co.kr/learn/courses/30/lessons/86051)
+ * 연습 문제 (https://programmers.co.kr/learn/courses/30/lessons/86051)
  * @param {number[]} numbers 
  * @returns {number} answer
  */
