@@ -9,11 +9,8 @@ function solution(s){
   const letterP = s.match(/[Pp]/g);
   const letterY = s.match(/[Yy]/g);
   
-  if(letterP === null && letterY === null){
-    return true
-  }else if(letterP === null || letterY === null){
-    return false;
-  }
+  if(letterP === null && letterY === null)return true
+  else if(letterP === null || letterY === null)return false;
   return letterP.length === letterY.length ? true : false;
 }
 
