@@ -19,5 +19,3 @@ console.log(solution('PyY')); // false
 console.log(solution('rkeotj')); // false
 console.log(solution('')); // false
 console.log(solution('y')); // false
-
-
