@@ -10,7 +10,6 @@ const fibonacci = function(maxIndex){
   // maxIndex번 값까지 구하는 피보나치 이터러블 객체 반환 (이터러블이면서 이터레이터인 객체)
   return { 
     [Symbol.iterator](){return this;},     
-      
     next(){
         [pre, cur] = [cur, pre + cur];
         count += 1;
@@ -24,4 +23,3 @@ const fibonacci = function(maxIndex){
 for(const item of fibonacci(10)){
   console.log(item);
 };
-console.log(fibonacci.Symbol.iterator());
