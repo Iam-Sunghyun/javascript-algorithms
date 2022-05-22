@@ -1,5 +1,5 @@
 /**
- * 
+ * 프로그래머스 월간 코드 챌린지 시즌2
  * @param {number[]} absolutes 
  * @param {string[]} signs 
  * @returns {number} answer

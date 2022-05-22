@@ -1,5 +1,5 @@
 /**
- * (https://programmers.co.kr/learn/courses/30/lessons/70128)
+ * 프로그래머스 월간 코드 챌린지 시즌1 (https://programmers.co.kr/learn/courses/30/lessons/70128)
  * @param {*} a 
  * @param {*} b 
  * @returns 

@@ -1,5 +1,5 @@
 /**
- * 월간 코드 챌린지 시즌 3 (https://programmers.co.kr/learn/courses/30/lessons/87389)
+ * 프로그래머스 월간 코드 챌린지 시즌3 (https://programmers.co.kr/learn/courses/30/lessons/87389)
  * @param {number} n 
  * @returns 
  */
