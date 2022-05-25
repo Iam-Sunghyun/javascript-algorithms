@@ -217,7 +217,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-퀵 정렬|O(nlog(n))|O(nlog(n))|O(n<sup>2</sup>)|O(lon(n))|X|불균등 분할일 경우 공간 복잡도 O(n)|
+퀵 정렬|O(nlog(n))|O(nlog(n))|O(n<sup>2</sup>)|O(log(n))|X|불균등 분할일 경우 공간 복잡도 O(n)|
 
 
 ## 퀵 정렬 개선 Median-Of-3 method
