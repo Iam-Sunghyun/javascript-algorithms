@@ -30,7 +30,7 @@
 
 ### 버블 정렬 복잡도
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 버블 정렬|O(n)|O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|O||
 + 정렬되어 있는 데이터의 경우 최선 
@@ -56,7 +56,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 선택 정렬 복잡도
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 선택 정렬|O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|X||
 
@@ -92,7 +92,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/InsertionSort-complexity.png" width="400" height="80"> 
 
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 삽입 정렬|O(n)|O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|O||
 
@@ -161,7 +161,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 셸 정렬 복잡도
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 셸 정렬|O(nlog(n)), n<sup>1.25</sup>|O(n<sup>1.5</sup>)|O(n<sup>2</sup>), O(n(log(n))<sup>2</sup>|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
 
@@ -215,9 +215,9 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 + **최악의 경우(불균등 분할) O(n2) 복잡도를 갖는다.**
 </br>
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-퀵 정렬|O(nlog(n))|O(nlog(n))|O(n<sup>2</sup>)|O(n)|X|구현 방법에 따라 O(log(n)), O(1)의 메모리를 사용하는 듯|
+퀵 정렬|O(nlog(n))|O(nlog(n))|O(n<sup>2</sup>)|O(lon(n))|X|불균등 분할일 경우 공간 복잡도 O(n)|
 
 
 ## 퀵 정렬 개선 Median-Of-3 method
@@ -276,7 +276,7 @@ https://hongjw1938.tistory.com/31
 합병 정렬은 재귀 호출 구조로 되어있다. 입력 배열의 크기가 2^3이라 가정 할 때 분할되는 부분 배열의 크기는 입력 배열의 1/2씩 줄어듦으로 3번의 재귀 호출이 발생하게 된다. 따라서 입력 배열의 크기가 k=2^n 일 때 logn번의 재귀 호출이 발생하게 되는 것을 알 수 있다.    
 하지만 합병 정렬이 실제로 정렬 연산을 수행하는 시점은 분할이 아닌 합병 단계이다. 합병 단계는 분할과 마찬가지로 logn번 수행하게 되며 각 단계마다 최대 n번의 비교 연산 + 2n번의 이동 연산이 수행되므로 T(n) = nlogn(비교 연산) + 2nlogn(이동 연산) = 3nlogn -> O(nlogn) 
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 합병 정렬|O(nlog(n))|O(nlog(n))|O(nlog(n))|O(n)|O| |
 
@@ -317,7 +317,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 
 + 최대 힙 구성은 최악의 경우 삽입 삭제 연산 모두 힙 트리 루트 노드 까지 이동해야 하므로 O(logn)이 소요된다. 크기가 n인 데이터로 힙 트리를 구성 한다고 생각 해봤을 때, n번의 삽입과 각 삽입 시 최대 O(logn)만큼의 이동이 발생하게 되어 O(nlogn)의 복잡도가 소요 된다. </br>
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 힙 정렬|O(nlog(n))|O(nlog(n))|O(nlog(n))|O(1)|O||
 
@@ -355,7 +355,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 기수 정렬 복잡도
 
-이름|최선|평균|최악|메모리|안정|비고
+이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
 기수 정렬|O(n\*k)|O(n\*k)|O(n\*k)|O(n+k)|O| |
 
