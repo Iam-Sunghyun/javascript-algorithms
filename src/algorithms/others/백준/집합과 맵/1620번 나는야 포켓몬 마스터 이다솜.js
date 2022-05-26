@@ -1,6 +1,7 @@
-// 집합과 맵 1620번 https://www.acmicpc.net/problem/1620
+// 백준 1620번 집합과 맵 https://www.acmicpc.net/problem/1620
 // 백준 nodejs(linux 기반)와 내 컴퓨터 nodejs(window 기반)의 입력이 다르게 들어와서 고생함
 // 이 문제 이후로 백준 문제는 jdoodle 이란 리눅스 기반 nodejs 실행 환경으로 테스트 해볼 것!
+// 코드는 백준 기준 vscode로 실행하면 이상하게 나옴
 const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt'
 const input = require('fs').readFileSync(filePath).toString().trim().split(/\s/);
 
