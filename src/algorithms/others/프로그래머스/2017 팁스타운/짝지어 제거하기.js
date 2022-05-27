@@ -1,19 +1,22 @@
 /**
- * 첫번째 코드 - 정답은 맞았으나 효율성 테스트 실패
+ * 2번째 수정코드 - 처음 코드보다 약 2~11배 속도 줄였지만 여전히 효율성 테스트 실패
  * 2017 팁스타운 레벨2 https://programmers.co.kr/learn/courses/30/lessons/12973
  * @param {string[]} s 
  * @returns {number}
  */
-function solution(s){
+ function solution(s){
   const str = [...s];
-  for(let i = 0; i < str.length; i++){
-    if(str[i] === str[i + 1]){
-      // splice()는 속도면에서 비효율적
-       str.splice(i, 2);
-       i = -1;
+  const stack = [];
+  while(true){
+    // 효율성 실패의 원인 shift()
+    stack.push(str.shift())
+    if(stack[stack.length -1] === stack[stack.length - 2]){
+      stack.pop();
+      stack.pop();
     }
+    if(str.length === 0 && stack.length !== 0) return 0;
+    if(str.length === 0 && stack.length === 0) return 1;
   }
-  return str.length ? 0 : 1; 
 }
 
 console.log(solution('baabaa')); // 1
