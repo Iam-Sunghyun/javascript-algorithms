@@ -1,7 +1,7 @@
 /**
- * (https://programmers.co.kr/learn/courses/30/lessons/42840)
- * @param {*} answers 
- * @returns 
+ * 완전 탐색 레벨1 (https://programmers.co.kr/learn/courses/30/lessons/42840)
+ * @param {number[]} answers 
+ * @returns {number[]}
  */
 function solution(answers) {
   const answer = [0,0,0]
@@ -34,5 +34,5 @@ function solution(answers) {
   return result;
 }
 
-console.log(solution([1,2,3,4,5]));
-console.log(solution([1,3,2,4,2]));
+console.log(solution([1,2,3,4,5])); // [1]
+console.log(solution([1,3,2,4,2])); // [1,2,3]
