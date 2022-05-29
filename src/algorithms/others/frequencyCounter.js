@@ -24,6 +24,7 @@ function same(arr1, arr2){
 function improvedSame(arr1, arr2){
   if(arr1.length !== arr2.length) return false;
 
+  // 배열의 요소를 키로, 요소 개수를 값으로 갖는 객체 생성
   const arrObj1 = arr1.reduce((acc, val) => {
     acc[val] = ++acc[val] || 1;
     return acc;
@@ -35,12 +36,12 @@ function improvedSame(arr1, arr2){
   } , {});
 
   for(const item in arrObj1){
-    if(arrObj2.hasOwnProperty(item ** 2) && arrObj2[item**2] > 0){
-      arrObj2[item**2] -= 1;
-    }else return false;
+    // arrObj2에 arrObj1의 프로퍼티**2 한 프로퍼티가 없거나, 개수가 다른 경우 false 
+    if(!arrObj2.hasOwnProperty(item ** 2) || arrObj2[item**2] !== arrObj1[item]){
+      return false;
+    }
   }
   return true;
-
 }
 
 // 시간 체크용 함수
@@ -52,12 +53,12 @@ function checkPerformance(f, n){
     b.push(i**2);
   }
   const t1 = performance.now();
-  console.log(f(a, b));
-  const t2 = performance.now()
+  f(a, b);
+  const t2 = performance.now();
   console.log((t2 - t1) / 1000);
 }
 
-checkPerformance(same, 1000000);
-checkPerformance(improvedSame, 1000000); // 100만개 기준 약 9배 빠름
+checkPerformance(same, 100000);
+checkPerformance(improvedSame, 100000); // 10만개 기준 약 9배 빠름
 
-console.log(improvedSame([1,2,3,1], [1,4,9,1]));
+console.log(improvedSame([1,2,3,11], [1,4,9,1])); // false;
