@@ -8,15 +8,11 @@ for(let i = 1; i < input.length; i++ ){
     if(isPrimeNum(number))answer++;
 
 }
-
+// 소수 판별 함수
 function isPrimeNum(num) {
-    
   if(num <= 1) return false;
-
   if(num <= 3) return true;
-
   if(num % 2 === 0) return false;
-  
   for(let i = 3; i <= Math.floor(num**0.5); i += 2){
     if(num % i === 0) return false;
   }  
