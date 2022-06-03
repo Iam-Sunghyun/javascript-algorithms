@@ -1,14 +1,14 @@
 // recursion
 function binarySearch(arr,low,high,key) {
   
-  if(low > high) return 'no key value';
+  if(low >= high) return 'no key value';
 
   mid = Math.floor((high + low)/2);
   if(key === arr[mid])
     return 'key index is ' + mid;
-  if(key >= arr[mid])
+  if(key > arr[mid])
     binarySearch(arr,mid+1,high,key);
-  if(key <= arr[mid])
+  if(key < arr[mid])
     binarySearch(arr,low,mid-1,key);
 
 }
