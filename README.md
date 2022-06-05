@@ -12,8 +12,10 @@
 
 # 알고리즘 (Algorithms)
 
-* [수학 (Math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
-* [집합 (Sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
-* [정렬 (Sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
-* [탐색 (Searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
-* [알고리즘 풀이 및 기타 (Others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
+* [수학 (math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
+* [집합 (sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
+* [정렬 (sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
+* [탐색 (searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
+* [기타 (others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
+* [알고리즘 풀이 (algorithms-solving)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/algorithms-solving)
+
