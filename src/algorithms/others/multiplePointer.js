@@ -8,8 +8,8 @@
  * 공간복잡도도 효율적이다
  * 
  * 오름차순 정렬된 정수 배열을 매개변수로 받아 두 요소의 합이 target값과 일치하는 첫번째 쌍을 찾아내는 함수
- * 두 포인터가 모두 시작지점에서 끝을 향해 이동한다
- * 1. 간단한, 단순한 방법 O(n^2)
+ * 1. 2중 for문을 사용한 단순한 방법 O(n^2)
+ * 간단하지만 효율이 좋지 않은 방법
  * @param {number[]} arr 
  * @returns {number[]}
  */
@@ -26,7 +26,7 @@ function sumZero(arr, target){
 }
 console.log(sumZero([-4,-3,-2,-1,0,1,2,5], 0)); // [-2, 2]
 
-// 2. 개선된 방법 O(n)
+// 2. 투 포인터를 이용한 개선된 방법 O(n)
 // 두 포인터가 양 끝 지점에서 시작하여 중앙쪽으로 이동한다
 function pointerSumZero(arr, target){
   let left = 0;
