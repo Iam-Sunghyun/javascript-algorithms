@@ -1,4 +1,4 @@
-// 백준 1644번 투 포인터 https://www.acmicpc.net/status?user_id=sunghyun1160&problem_id=1644&from_mine=1
+// 백준 1644번 투 포인터 https://www.acmicpc.net/problem/1644
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(/\s/);
 
 function solution(num){
