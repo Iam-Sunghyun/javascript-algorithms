@@ -1,4 +1,4 @@
-# 자료구조 (Data structures)
+## 자료구조 (Data structures)
 
 * [스택(Stack)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/stack)
 * [큐(Queue)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/queue)
@@ -10,7 +10,7 @@
 * [그래프(Graph)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/graph)
 * [트라이(Trie)(미완)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
 
-# 알고리즘 (Algorithms)
+## 알고리즘 (Algorithms)
 
 * [수학 (math)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/math)
 * [집합 (sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
