@@ -1,5 +1,5 @@
 /**
- * 두 문자열이 서로 아나그램인지 확인하는 함수
+ * - 두 문자열이 서로 아나그램인지 확인하는 함수
  * @param {string} str1 
  * @param {string} str2
  * @returns {boolean} 
