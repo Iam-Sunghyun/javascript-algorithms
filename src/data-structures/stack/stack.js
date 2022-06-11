@@ -1,4 +1,4 @@
-class Stack{
+export default class Stack{
   constructor(size){
     this.top = -1;
     this.arr = new Array(size);
@@ -47,7 +47,7 @@ class Stack{
     }
   }
 }
-
+/**
 let st = new Stack(5);
 
 st.push(10);
@@ -61,3 +61,4 @@ console.log(st.peek());
 console.log(st.pop());
 console.log(st.size());
 st.printStack();
+*/

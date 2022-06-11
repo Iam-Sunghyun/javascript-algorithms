@@ -1,4 +1,4 @@
-class Stack{
+export default class Stack{
   
   #arr  // private 클래스 멤버 선언
   constructor(array = []){

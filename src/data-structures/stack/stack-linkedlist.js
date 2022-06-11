@@ -5,7 +5,7 @@ class Node{
   }
 }
 
-class LinkedStack{
+export default class LinkedStack{
   constructor(){
     this.top = null;
     this.size = 0;
