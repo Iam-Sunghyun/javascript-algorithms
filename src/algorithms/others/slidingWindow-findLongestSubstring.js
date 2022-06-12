@@ -14,7 +14,7 @@ function findLongestSubstring(str){
     if (seen[char]) {
       start = Math.max(start, seen[char]);
     }
-  
+    // 현재 값도 카운트 해주기 위해 부분 배열 시작 인덱스 + 1
     longest = Math.max(longest, i - start + 1);
     // 인덱스 저장
     seen[char] = i + 1;
