@@ -1,6 +1,5 @@
 /**
  * 최대 공약수(Greatest Common Divisor) 구하기 (재귀)
- *
  * @param {number} originalA
  * @param {number} originalb
  * @return {number}

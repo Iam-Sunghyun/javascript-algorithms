@@ -1,5 +1,4 @@
 /**
- *
  * @param {number} num
  * @return {number[]} isPrime
  */

@@ -1,6 +1,5 @@
 /**
  * 약수 구하기
- * 
  * @param {number} num
  * @return {number[]} divisor
  */
