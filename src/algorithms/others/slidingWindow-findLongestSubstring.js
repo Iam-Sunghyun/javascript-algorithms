@@ -1,14 +1,14 @@
 /**
  * 슬라이딩 윈도우(sliding window) 예제
  * - 인수로 전달받은 문자열에서 고유값들로 이루어진 가장 긴 문자열을 반환하는 함수
- * @param {strung} str 
+ * @param {strung} str
  * @returns {number}
  */
-function findLongestSubstring(str){
+function findLongestSubstring(str) {
   let longest = 0;
   let seen = {};
   let start = 0;
- 
+
   for (let i = 0; i < str.length; i++) {
     let char = str[i];
     if (seen[char]) {
@@ -24,4 +24,3 @@ function findLongestSubstring(str){
 
 //console.log(findLongestSubstring('bbbbbb')); // 1
 console.log(findLongestSubstring('rithmschool')); // 7
-
