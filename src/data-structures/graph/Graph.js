@@ -1,5 +1,5 @@
-export default class Graph{
-   /**
+export default class Graph {
+  /**
    * @param {boolean} isDirected
    */
   constructor(isDirected = false) {
@@ -7,8 +7,8 @@ export default class Graph{
     this.edges = {};
     this.isDirected = isDirected;
   }
-   
-     /**
+
+  /**
    * @param {GraphVertex} newVertex
    * @returns {Graph}
    */
@@ -17,7 +17,7 @@ export default class Graph{
 
     return this;
   }
-   
+
   /**
    * @param {string} vertexKey
    * @returns GraphVertex
@@ -33,26 +33,26 @@ export default class Graph{
   getNeighbors(vertex) {
     return vertex.getNeighbors();
   }
-   
+
   /**
    * @return {GraphVertex[]}
    */
   getAllVertices() {
     return Object.values(this.vertices);
   }
-   
+
   /**
    * @return {GraphEdge[]}
    */
   getAllEdges() {
     return Object.values(this.edges);
   }
-   
+
   /**
    * @param {GraphEdge} edge
    * @returns {Graph}
    */
-   addEdge(edge) {
+  addEdge(edge) {
     // 시작, 종료 정점 탐색
     let startVertex = this.getVertexByKey(edge.startVertex.getKey());
     let endVertex = this.getVertexByKey(edge.endVertex.getKey());
@@ -62,20 +62,20 @@ export default class Graph{
       this.addVertex(edge.startVertex);
       startVertex = this.getVertexByKey(edge.startVertex.getKey());
     }
-      
+
     // 종료 정점 없으면 삽입
     if (!endVertex) {
       this.addVertex(edge.endVertex);
       endVertex = this.getVertexByKey(edge.endVertex.getKey());
     }
-      
+
     // 간선이 이미 있는지 체크
     if (this.edges[edge.getKey()]) {
-      throw new Error('Edge has already been added before');
+      throw new Error("Edge has already been added before");
     } else {
       this.edges[edge.getKey()] = edge;
     }
-     
+
     // 정점에 간선 추가
     if (this.isDirected) {
       // 방향 그래프라면, 시작 정점에만 간선 추가
@@ -85,10 +85,10 @@ export default class Graph{
       startVertex.addEdge(edge);
       endVertex.addEdge(edge);
     }
-    return this;   
-   }
-   
-   /**
+    return this;
+  }
+
+  /**
    * @param {GraphEdge} edge
    */
   deleteEdge(edge) {
@@ -96,18 +96,17 @@ export default class Graph{
     if (this.edges[edge.getKey()]) {
       delete this.edges[edge.getKey()];
     } else {
-      throw new Error('Edge not found in graph');
+      throw new Error("Edge not found in graph");
     }
-     
+
     // 시작정점을 찾아 간선 삭제
     const startVertex = this.getVertexByKey(edge.startVertex.getKey());
     const endVertex = this.getVertexByKey(edge.endVertex.getKey());
 
     startVertex.deleteEdge(edge);
     endVertex.deleteEdge(edge);
-     
   }
-     
+
   /**
    * @param {GraphVertex} startVertex
    * @param {GraphVertex} endVertex
@@ -121,7 +120,7 @@ export default class Graph{
     }
     return vertex.findEdge(endVertex);
   }
-   
+
   /**
    * @return {number}
    */
@@ -130,9 +129,9 @@ export default class Graph{
       return weight + graphEdge.weight;
     }, 0);
   }
-   
+
   /**
-   * Reverse all the edges in directed graph.
+   * 방향 그래프에서 모든 간선의 방향 반전
    * @return {Graph}
    */
   reverse() {
@@ -150,11 +149,12 @@ export default class Graph{
 
     return this;
   }
-   
+
   /**
    * @return {object}
    */
-  getVerticesIndices() {  //정점의 차수 getter
+  getVerticesIndices() {
+    //정점의 차수 getter
     const verticesIndices = {};
     this.getAllVertices().forEach((vertex, index) => {
       verticesIndices[vertex.getKey()] = index;
@@ -162,7 +162,7 @@ export default class Graph{
 
     return verticesIndices;
   }
-   
+
   /**
    * @return {*[][]}
    */
@@ -170,21 +170,21 @@ export default class Graph{
     const vertices = this.getAllVertices();
     const verticesIndices = this.getVerticesIndices();
 
-    const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
-      return Array(vertices.length).fill(Infinity);
-    });
-     
+    const adjacencyMatrix = Array(vertices.length)
+      .fill(null)
+      .map(() => {
+        return Array(vertices.length).fill(Infinity);
+      });
+
     vertices.forEach((vertex, vertexIndex) => {
       vertex.getNeighbors().forEach((neighbor) => {
         const neighborIndex = verticesIndices[neighbor.getKey()];
         adjacencyMatrix[vertexIndex][neighborIndex] = this.findEdge(vertex, neighbor).weight;
       });
     });
-     
-     return adjacencyMatrix;
+
+    return adjacencyMatrix;
   }
-   
-   
 }
 
 //https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/graph/Graph.js

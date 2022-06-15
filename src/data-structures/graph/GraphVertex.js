@@ -1,13 +1,12 @@
-import LinkedList from '../linked-list/linked-list.js';
+import LinkedList from "../linked-list/linked-list.js";
 
 export default class GraphVertex {
-  
   /**
    * @param {*} value
    */
   constructor(value) {
     if (value === undefined) {
-      throw new Error('Graph vertex must have a value');
+      throw new Error("Graph vertex must have a value");
     }
 
     /**
@@ -22,8 +21,6 @@ export default class GraphVertex {
       return edgeA.getKey() < edgeB.getKey() ? -1 : 1;
     };
 
-    // Normally you would store string value like vertex name.
-    // But generally it may be any object as well
     this.value = value;
     this.edges = new LinkedList(edgeComparator);
   }
@@ -38,7 +35,7 @@ export default class GraphVertex {
     return this;
   }
 
- /**
+  /**
    * @param {GraphEdge} edge
    */
   deleteEdge(edge) {
@@ -51,13 +48,13 @@ export default class GraphVertex {
   getNeighbors() {
     const edges = this.edges.toArray();
 
-    /** @param {LinkedListNode} node */
+    /**
+     * @param {LinkedListNode} node
+     */
     const neighborsConverter = (node) => {
       return node.value.startVertex === this ? node.value.endVertex : node.value.startVertex;
     };
 
-    // Return either start or end vertex.
-    // For undirected graphs it is possible that current vertex will be the end one.
     return edges.map(neighborsConverter);
   }
 
@@ -74,7 +71,7 @@ export default class GraphVertex {
   getDegree() {
     return this.edges.toArray().length;
   }
-  
+
   /**
    * @param {GraphEdge} requiredEdge
    * @returns {boolean}
@@ -86,8 +83,8 @@ export default class GraphVertex {
 
     return !!edgeNode;
   }
-  
-   /**
+
+  /**
    * @param {GraphVertex} vertex
    * @returns {boolean}
    */
@@ -98,8 +95,8 @@ export default class GraphVertex {
 
     return !!vertexNode;
   }
-  
-   /**
+
+  /**
    * @param {GraphVertex} vertex
    * @returns {(GraphEdge|null)}
    */
@@ -112,7 +109,7 @@ export default class GraphVertex {
 
     return edge ? edge.value : null;
   }
-  
+
   /**
    * @returns {string}
    */
@@ -128,5 +125,5 @@ export default class GraphVertex {
 
     return this;
   }
-
+}
 // https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph

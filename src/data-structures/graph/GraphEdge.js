@@ -1,5 +1,4 @@
 export default class GraphEdge {
-  
   /**
    * @param {GraphVertex} startVertex
    * @param {GraphVertex} endVertex
@@ -10,7 +9,7 @@ export default class GraphEdge {
     this.endVertex = endVertex;
     this.weight = weight;
   }
-  
+
   /**
    * @return {string}
    */
@@ -20,7 +19,7 @@ export default class GraphEdge {
 
     return `${startVertexKey}_${endVertexKey}`;
   }
-  
+
   /**
    * @return {GraphEdge}
    */
@@ -31,5 +30,4 @@ export default class GraphEdge {
 
     return this;
   }
-  
 }
