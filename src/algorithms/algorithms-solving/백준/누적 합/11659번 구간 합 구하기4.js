@@ -1,5 +1,5 @@
-// 백준 11659번 문자열 https://www.acmicpc.net/problem/11659
-// - 함수로 다시 짜본 코드
+// 백준 11659번 누적 합(구간 합) https://www.acmicpc.net/problem/11659
+// - 함수로 다시 짜본 코드 
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 const N = input[1].split(' ').map(Number);
 const M = input.slice(2);
