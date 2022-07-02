@@ -1,6 +1,5 @@
 /**
- * 
- * @param {*} str 
+ * 반 정도 해결 상태..
  */
 function solution(str) {
   const strCodeObj = {};
@@ -26,5 +25,5 @@ function solution(str) {
   return answer + cursor;
 }
 
-//console.log(solution("JEROEN")); // 56
+console.log(solution("JEROEN")); // 56
 console.log(solution("JAZ")); // 23
