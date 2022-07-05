@@ -1,36 +1,36 @@
-class Queue{
-  #queue // private 클래스 멤버
-  constructor(array = []){
-    if(!Array.isArray(array)){
+class Queue {
+  #queue; // private 클래스 멤버
+  constructor(array = []) {
+    if (!Array.isArray(array)) {
       throw new TypeError(`${array}는 배열이 아닙니다.`);
     }
     this.#queue = array;
   }
 
-  enqueue(data){
+  enqueue(data) {
     this.#queue.push(data);
   }
 
-  dequeue(){
+  dequeue() {
     return this.#queue.shift();
   }
 
-  isEmpty(){
+  isEmpty() {
     this.#queue.length ? true : false;
   }
 
-  peek(){
+  peek() {
     return this.#queue[0];
   }
 
-  entries(){
+  entries() {
     return [...this.#queue];
   }
 
-  size(){
+  size() {
     return this.#queue.length;
   }
- 
+
 }
 
 const q = new Queue();
@@ -41,8 +41,6 @@ q.enqueue(4);
 
 console.log(q.dequeue());
 console.log(q.dequeue());
-console.log(q.entries())
+console.log(q.entries());
 console.log(q.dequeue());
-console.log(q)
-
-
+console.log(q);

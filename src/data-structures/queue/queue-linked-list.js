@@ -1,71 +1,70 @@
-class Node{
-  constructor(data,next = null){
+class Node {
+  constructor(data, next = null) {
     this.data = data;
     this.next = next;
   }
 }
 
-class Queue{
-  constructor(){
+class LinkedQueue {
+  constructor() {
     this.front = null;
     this.rear = null;
   }
-  
-  enqueue(data){
+
+  enqueue(data) {
     const node = new Node(data);
-    if(!this.front){
+    if (!this.front) {
       this.front = node;
       this.rear = node;
-      return;
+      return true;
     }
     this.rear.next = node;
     this.rear = node;
   }
 
-  dequeue(){
-    if(!this.front){
-      console.log('큐가 비어있습니다.')
-      return;
+  dequeue() {
+    if (!this.front) {
+      console.log('큐가 비어있습니다.');
+      return false;
     }
-    let front = this.front.data;
+    const front = this.front.data;
     this.front = this.front.next;
     console.log(`삭제 값은 ${front} 입니다`);
     return front;
   }
 
-  peek(){
+  peek() {
     console.log(`front 데이터: ${this.front.data}`);
     return this.front.data;
   }
 
-  isEmpty(){
-    if(this.front === null && this.rear === null)
-      return true;
+  isEmpty() {
+    if (this.front === null && this.rear === null) return true;
     return false;
   }
 
-  printList(){
+  entries() {
+    const queue = [];
     let current = this.front;
-    let i = 0;
-    while(current){
-      console.log(`${i}번 데이터: ${current.data}`);
+    while (current) {
+      queue.push(current.data);
       current = current.next;
-      i++;
     }
+    return queue;
   }
 }
 
-let q = new Queue();
+let q = new LinkedQueue();
 q.enqueue(1);
 q.enqueue(2);
 q.enqueue(3);
 q.enqueue(4);
 q.enqueue(5);
-q.printList()
-console.log('=======')
+console.log(q.entries());
+console.log('=======');
 q.dequeue();
 q.dequeue();
-q.printList();
+console.log(q.entries());
 q.peek();
 console.log(q);
 
