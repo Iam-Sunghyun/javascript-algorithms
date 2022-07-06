@@ -37,12 +37,16 @@
 
 [선형 큐-배열](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue.js) 참조 - 이 선형 큐는 front, rear없이 자바스크립트의 내장 메서드로 구현한 것이므로 위에서 말한 요소를 이동시켜줘야 하는 부분을 직접 구현할 필요는 없다.
 
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/circular-queue.png" width="350" height="200"> 
+
+
 ### 선형 큐 장/단점
 
-|||
-|:---:|:---:|
-|**장점**|구현이 간단하다.|
-|**단점**|큐가 비어있으면서 rear이 맨 뒤를 가리킬 때 모든 요소를 앞당겨줘야 한다.|
+
+||**장점**|**단점**|
+|:---:|:---:|:---:|
+|**선형 큐**|구현이 간단하다.|front, rear가 계속 증가하기만 한다. 언젠가 배열의 끝에 도달하게 되면 큐가 비어 있더라도 포화로 간주되어 삽입할 수 없게 된다. 그럴때 마다 요소를 앞당겨 줘야 하는데 큐의 크기가 크면 클수록 번거롭고 비효율적이다.|
+
 
 <br>
 
@@ -65,10 +69,10 @@
    
 [큐-원형 큐](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-circular.js) 참조
 
-|||
-|:---:|:---:|
-|**장점**|선형 큐에서 요소를 이동시켜줘야 했던 문제가 없다.|
-|**단점**|큐의 크기가 한정되어 있다.|
+||**장점**|**단점**|
+|:---:|:---:|:---:|
+|**원형 큐**|선형 큐에서 요소를 이동시켜줘야 했던 문제가 없다.|큐의 크기가 한정되어 있다.|
+
 
 <br>
 
@@ -76,8 +80,10 @@
 
 말 그대로 선형 큐를 연결 리스트를 이용해 구현 한 것.
 
-크기가 한정돼있지 않고 선형 큐에서 있었던 요소를 이동시켜줘야하는 문제도 없다.
-    
+크기가 한정돼있지 않고 선형 큐에서 있었던 요소를 이동시켜 줘야하는 문제도 없다.
+
+또한 head, tail이 front, rear를 구현한다.
+
 [큐-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-linked-list.js) 참조
 
 ## 큐(queue)의 활용
@@ -92,3 +98,10 @@
 ## Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue
+<br>
+
+### 이미지 출처
+
+https://www.google.com/search?q=%EC%84%A0%ED%98%95+%ED%81%90+%EC%9A%94%EC%86%8C+%EC%9D%B4%EB%8F%99&source=lmns&bih=775&biw=1536&hl=ko&sa=X&ved=2ahUKEwjZ3s_h5eP4AhWuS_UHHSFADfYQ_AUoAHoECAEQAA <br>
+
+https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)<br>
