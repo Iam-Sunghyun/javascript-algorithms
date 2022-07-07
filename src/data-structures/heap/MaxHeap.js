@@ -36,7 +36,7 @@ class MaxHeap{
 
     // 업 힙(up-heap)
     while(current > 1){         // 부모 노드가 루트 노드 일 때까지 
-      if (this.maxheap[current] > this.maxheap[this.parenIndext(current)] && this.parentIndex(current) >= 1){
+      if (this.maxheap[current] > this.maxheap[this.parenIndex(current)] && this.parentIndex(current) >= 1){
         this.swap(this.parentIndex(current) , current);                    // ↑ 이건 while문 조건이 currentIndex > 1이라 없어도 될 듯.
         current = this.parentIndex(current);
       }else break;
