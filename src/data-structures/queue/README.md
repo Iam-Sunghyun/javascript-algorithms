@@ -37,8 +37,6 @@
 
 [선형 큐-배열](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue.js) 참조 - 이 선형 큐는 front, rear없이 자바스크립트의 내장 메서드로 구현한 것이므로 위에서 말한 요소를 이동시켜줘야 하는 부분을 직접 구현할 필요는 없다.
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/circular-queue.png" width="350" height="200"> 
-
 
 ### 선형 큐 장/단점
 
@@ -52,13 +50,14 @@
 
 ## 원형 큐(Circular queue)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/circular-queue.png" width="450" height="300"> 
-
 1차원 배열이지만 원형으로 연결되어 있다고 가정하여 구현한 큐로 선형 큐의 문제점을 개선한 버전이다.
 
-원형 큐에서는 front, rear의 시작 위치가 어디든 상관 없다(동일하기만 하면).
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/circular-queue.png" width="500" height="350"> 
 
-포화, 공백 상태를 구분하기 위해 한 자리는 반드시 비워둬야 한다. 그렇지 않으면 아래(a), (b)그림처럼 포화 상태와 공백 상태 모두 front === rear로 구분할 수 없게 된다.
+
+원형 큐에서는 front, rear의 시작 위치가 동일하기만 하다면 어디든 상관 없으며 포화, 공백 상태를 구분하기 위해 한 자리는 반드시 비워둬야 한다. 
+
+그렇지 않으면 아래(a), (b)그림처럼 포화 상태와 공백 상태 모두 front === rear로 구분할 수 없게 된다.
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/img/circular-queue-error.png" width="500" height="200"> 
 
@@ -80,9 +79,7 @@
 
 말 그대로 선형 큐를 연결 리스트를 이용해 구현 한 것.
 
-크기가 한정돼있지 않고 선형 큐에서 있었던 요소를 이동시켜 줘야하는 문제도 없다.
-
-또한 head, tail이 front, rear를 구현한다.
+크기가 한정되어있지 않고 선형 큐에서 있었던 요소를 이동시켜 줘야하는 문제 없이 삽입/삭제를 간단하게 할 수 있다.
 
 [큐-연결리스트](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/queue/queue-linked-list.js) 참조
 
