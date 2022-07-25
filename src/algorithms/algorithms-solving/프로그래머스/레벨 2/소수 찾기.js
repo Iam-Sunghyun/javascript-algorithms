@@ -45,26 +45,5 @@ function isPrime(num) {
   }
   return true;
 }
-// console.log(solution('17')); // 3
-// console.log(solution('011')); // 2
-// console.log(solution('123')); // 2
-// console.log(solution('013'))
+
 console.log(solution('232'));
-
-// function solution(numbers) {
-//   const primeSet = new Set();
-//   const numberArr = [...numbers];
-//   const allNumbers = [...numbers];
-
-
-
-
-//   for (let i = 0; i < numberArr.length - 1; i++) {
-//     // if (+numberArr[i] === 0) continue;
-//     for (let j = i + 1; j < numberArr.length; j++) {
-//       console.log(numberArr[i] + numberArr[j]);
-//       allNumbers.push(Number(numberArr[i] + numberArr[j]));
-//     }
-//   }
-//   console.log(allNumbers);
-// }
