@@ -1,3 +1,4 @@
+// 백준 2798번 완전 탐색 https://www.acmicpc.net/problem/2798
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(/\n/);
 const list = input.slice(1)[0].split(' ').map(Number);
 const target = +input[0].split(' ')[1];
