@@ -6,9 +6,9 @@
  4. [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
  5. [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
  6. [합병 정렬 (merge sort)](#6-합병-정렬-merge-sort)
- 7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
- 8. [기수 정렬 (radix sort) (미완)](#8-기수-정렬-radix-sort-미완)
- 9. [계수 정렬 (counting sort) (미완)](#9-계수-정렬-counting-sort-미완)
+ 7. [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort) - 수정 필요
+ <!-- 8. [기수 정렬 (radix sort) (미완)](#8-기수-정렬-radix-sort-미완)
+ 9. [계수 정렬 (counting sort) (미완)](#9-계수-정렬-counting-sort-미완) -->
 
 
 # 1. 버블 정렬 (bubble sort)
@@ -163,7 +163,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-셸 정렬|O(nlog(n)), n<sup>1.25</sup>|O(n<sup>1.5</sup>)|O(n<sup>2</sup>), O(n(log(n))<sup>2</sup>|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간 복잡도 분석이 까다로운 편|
+셸 정렬|O(nlog(n)), n<sup>1.25</sup>|O(n<sup>1.5</sup>)|O(n<sup>2</sup>), O(n(log(n))<sup>2</sup>|O(1)|X| gap 크기에 따라 평균 복잡도 다르며 시간복잡도 분석이 까다로운 편|
 
 ## Reference
  https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html
@@ -177,15 +177,17 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 # 5. 퀵 정렬 (quick sort)
 
 + 평균적으로 **매우 빠른 수행 속도**의 알고리즘. 
-+ **분할 정복(divide and conquer)** 사용한다.
++ **분할 정복(divide and conquer)** 을 사용한다.
 + 합병 정렬과 달리 피벗의 위치에 따라 리스트가 균등하게 분할되지 않을 수 있다. 
-
++ **평균 O(nlogn)인 다른 정렬(힙, 합병)과 비교했을 때 가장 빠르다.**
+   + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다. 
+  
 ### 퀵 정렬 알고리즘 요약
-1. 리스트의 한 요소를 **피벗(pivot)** 으로 선택한다. (보통 첫번째 요소 선택)
-2. 피벗보다 작은 요소들은 피벗 왼쪽으로, 큰 값들은 피벗 오른쪽으로 모두 옮긴다.
-   + low(코드에선left)는 피벗보다 큰 값, high(right)는 피벗보다 작은 값이 나올 때까지 탐색 후 서로 교환해준다.
-3. 재귀를 이용해 피벗을 제외한 나머지 왼쪽, 오른쪽 부분 리스트에 대해서도 새롭게 피벗을 정하고 정렬한다.
-4. 부분 리스트들이 더 이상 분할 할 수 없을때까지 반복한다.
+1. 리스트의 한 요소를 **피벗(pivot)** 으로 선택한다(보통 첫 번째, 마지막 요소 선택).
+2. 피벗을 제외한 나머지 배열에서, 요소를 가리킬 두개의 변수(low, high)를 이용해 양 끝에서 값을 탐색하는데, 왼쪽 끝의 `low`는 피벗보다 값이 큰 경우 멈추고, 오른쪽 끝의 `high`는 피벗보다 큰 값에서 멈춘 후 두 값을 교환해준다(피벗보다 작은 요소들은 피벗 왼쪽으로, 큰 값들은 피벗 오른쪽으로 모두 옮기기 위한 과정).
+3. 2번 과정을 `low`와 `high`가 어긋날 때까지 반복하고(배열 모든 요소), 어긋난 경우 `high`와 피벗을 교환해준다.
+4. 재귀를 이용해 피벗을 제외한 나머지 왼쪽, 오른쪽 부분 배열에 대해서도 동일하게 위 과정을 수행한다.
+5. 부분 배열들이 더 이상 분할 할 수 없을 때까지(부분 배열 크기가 1보다 작아질 때까지) 반복한다.
 
 ### 퀵 정렬 예제     
      
@@ -195,46 +197,51 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 ### 퀵 정렬 코드 (javascript)
 
- [퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
+[퀵 정렬](https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/js/quick-sort.js) 참조
 
-## 퀵 정렬 분석
+## 퀵 정렬 복잡도
+
+
+## 최선의 경우
+
+<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-002.png" width="550" height="300">
+
++ 퀵 정렬에서 배열의 분할이 항상 배열의 중간에서 이루어진다고 가정했을 때(피벗이 배열의 중간  값 근처일 때) log<sub>2</sub>n번 일어난다. 
++ 각 단계마다 배열 대부분의 요소를 비교해야 하므로 요소의 비교는 평균 n번 정도 일어난다. 
++ 결론적으로 최선의 경우 퀵 정렬은 **log<sub>2</sub>n번의 분할**과 분할 마다 대략 **n번의 비교 연산**을 수행하기 때문에 총 n * log<sub>2</sub>n번 실행하여 **O(nlog<sub>2</sub>n)** 이 된다(요소의 이동 횟수는 비교 횟수보다 적으므로 무시한다). 
+
+## 최악의 경우
 
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case.JPG" width="650" height="300">
 
-+ **이미 정렬되어 있는 데이터의 경우(오름차순, 내림차순 둘 다) 부분 리스트가 불균등하게 나누어져 최악의 효율 O(n2)을 보여 준다.** </br>
-+ 위 그림처럼 정렬되어 있는 데이터의 경우 불균등 분할로 인해 n번의 비교 단계가 발생하고 각 단계마다 n, n-1, n-2 ... 3, 2번의 비교가 이루어진다. 결론적으로 </br>
++ 위 그림처럼 **이미 정렬되어 있는 데이터의 경우(오름차순, 내림차순 둘 다), 혹은 배열의 요소가 모두 같은 값인 경우** 배열의 맨 앞, 맨 뒤 요소를 피벗으로 선택하게 되면 자연스럽게 피벗 값이 최소 or 최대 값이 되어버린다. 
++ 이런 경우 배열의 피벗이 움직이지 않고 제자리 그대로 있게 되고 부분 배열이 불균등하게 나누어져 **n - 1번의 분할이 발생**하게 된다.
++ 각 분할마다 분할된 부분 배열의 길이 만큼의 비교가 이루어지게되어 최악의 시간복잡도 **O(n<sup>2</sup>)** 을 띄게 된다. 이것을 공식으로 나타낸 것은 아래와 같다.<br>
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/algorithms/sorting/img/quick-sort-worst-case-complexity.png" width="500" height="40">
 
-+ **평균 O(nlogn)인 다른 정렬(힙, 합병)과 비교했을 때 가장 빠르다.**
-   + 불필요한 데이터 이동을 줄이고 먼 거리의 데이터를 교환할 뿐 아니라, 한번 결정된 피벗들이 다음 연산에서 제외되는 등의 이유인 것으로 보인다. 
- </br>
+<br>
 
-### 퀵 정렬 복잡도
-+ **퀵 정렬에서 리스트 분할이 항상 리스트의 가운데에서 이루어진다고 가정하면 logn번 수행 된다**. 각 단계마다 리스트 대부분의 레코드를 비교해야 하므로 평균 n번의 비교가 이루어진다. 결국 퀵 정렬은 비교 연산을 총 nlogn번 실행하여 **O(nlogn)** 이 된다.
-레코드의 이동 횟수는 비교 횟수보다 적으므로 무시할 수 있다. 
-+ **최악의 경우(불균등 분할) O(n2) 복잡도를 갖는다.**
-</br>
 
 이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
-퀵 정렬|O(nlog(n))|O(nlog(n))|O(n<sup>2</sup>)|O(log(n))|X|불균등 분할일 경우 공간 복잡도 O(n)|
+퀵 정렬|O(nlog<sub>2</sub>n)|O(nlog<sub>2</sub>n)|O(n<sup>2</sup>)|O(log<sub>2</sub>n)|X|**퀵 정렬의 공간복잡도는 추가로 배열을 생성하거나 하는 건 없고(제자리 정렬), 재귀 호출로 인해 콜 스택에 푸시되는 스택 공간을 말한다. 따라서 최선의 경우는 중첩 재귀 호출이 최대 O(log<sub>2</sub>n) 의 스택 공간을 사용하고, 불균등 분할의 경우(최악의 경우) 부분 배열의 크기가 1이 될 때까지 중첩 재귀 호출이 n-1번 발생하여 최대 O(n)의 스택 공간을 사용한다.**|
 
 
 ## 퀵 정렬 개선 Median-Of-3 method
 + 불균등 분할을 방지하기 위해 **리스트의 맨 왼쪽, 오른쪽, 중간, 이 3개의 데이터의 값을 비교하여 중간 값을 피벗으로 선택하는 방법이 많이 사용 된다.**
-+ 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할한다는 보장은 없지만, 최소한 이 값이 전체 값 중 최대/최소값에는 해당하지 않기 때문에 평균적으로 O(nlogn)의 시간복잡도를 유지할 수 있게 된다.
++ 이 값이 Pivot으로 사용되어 전체 배열을 균등하게 분할한다는 보장은 없지만, 최소한 이 값이 전체 값 중 최대/최소 값에는 해당하지 않기 때문에 평균적으로 O(nlog<sub>2</sub>n)의 시간복잡도를 유지할 수 있게 된다.
 
 
 ## Reference
 
 https://github.com/trekhleb/javascript-algorithms </br>
-https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC
+https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC </br>
 https://hongjw1938.tistory.com/31
 
 
 
 
-<br><br>
+<br>
 
 
 # 6. 합병 정렬 (merge sort)
@@ -309,13 +316,13 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 
 ### 힙 정렬 분석
 
-+ 시간 복잡도가 효율적이다.
++ 시간복잡도가 효율적이다.
 + **불안정 정렬**이다.
 
 
 ### 힙 정렬 복잡도
 
-+ 최대 힙 구성은 최악의 경우 삽입 삭제 연산 모두 힙 트리 루트 노드 까지 이동해야 하므로 O(logn)이 소요된다. 크기가 n인 데이터로 힙 트리를 구성 한다고 생각 해봤을 때, n번의 삽입과 각 삽입 시 최대 O(logn)만큼의 이동이 발생하게 되어 O(nlogn)의 복잡도가 소요 된다. </br>
++ 최대 힙 구성은 최악의 경우 삽입 삭제 연산 모두 힙 트리 루트 노드 까지 이동해야 하므로 O(logn)이 소요된다. 크기가 n인 데이터로 힙 트리를 구성 한다고 생각 해봤을 때, n번의 삽입과 각 삽입 시 최대 O(logn)만큼의 이동이 발생하게 되어 O(nlogn)의 복잡도가 소요 된다. </>
 
 이름|최선|평균|최악|메모리(보조공간)|안정|비고
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -328,7 +335,7 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 <br><br>
 
 
-# 8. 기수 정렬 (radix sort) (미완)
+<!-- # 8. 기수 정렬 (radix sort) (미완)
 
 + 지금까지의 정렬 방법들은 모두 값들을 비교하여 정렬한 것과 달리 **어떤 비교 연산도 없이** 데이터를 정렬하는 방법
 + O(nlogn)이라는 이론적 하한선을 깬 정렬 기법. 기수 정렬은 O(kn)의 복잡도를 갖는데 보통 k는 크지 않은 값이다
@@ -366,4 +373,4 @@ https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sor
 
 
 
-<br>
+<br> -->
