@@ -1,8 +1,7 @@
 /**
  * 프로그래머스 **레벨 2**
  * 완전탐색 https://programmers.co.kr/learn/courses/30/lessons/42839
- * @param {string} numbers 
- * @returns {number}
+ * 풀이 참고 https://velog.io/@im_hass_/Level2.-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B0
  */
 function solution(num) {
   const set = new Set();                    
@@ -13,9 +12,8 @@ function solution(num) {
 
   return [...set].length;
 }
-// https://velog.io/@im_hass_/Level2.-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B0
+
 /**
- * 
  * @param {set} set 결과 저장용 Set
  * @param {string} char dfs level에 따른 숫자 값
  * @param {string} numbers 나머지 숫자

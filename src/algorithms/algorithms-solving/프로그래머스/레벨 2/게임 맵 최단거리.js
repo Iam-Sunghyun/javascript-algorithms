@@ -1,8 +1,7 @@
 /**
  * 프로그래머스 **레벨 2**
  * DFS/BFS https://school.programmers.co.kr/learn/courses/30/lessons/1844
- * @param {number[][]} maps 
- * @returns {number}
+ * 풀이 참고 https://school.programmers.co.kr/questions/23794
  */
 function solution(maps) {
   const queue = [[0, 0, 0]];
@@ -38,14 +37,11 @@ function solution(maps) {
   return -1;
 }
 
-
-
 // console.log(solution([[1, 0, 1, 1, 1],
 //                       [1, 0, 1, 0, 1],
 //                       [1, 0, 1, 1, 1],
 //                       [1, 1, 1, 0, 1],
 //                       [0, 0, 0, 0, 1]]));
-
 
 console.log(solution([[1, 1, 1, 1, 1],
                       [1, 1, 1, 1, 1],
