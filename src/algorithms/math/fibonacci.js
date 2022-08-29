@@ -1,5 +1,5 @@
 /**
- * 피보나치 수 배열 구하는 함수
+ * 피보나치 수 동적 프로그래밍(상향식)
  * @param {number} n 
  * @return {number[]} fibSequence
  */
@@ -29,3 +29,5 @@ export default function fibonacci(n) {
 
   return fibSequence;
 }
+
+console.log(fibonacci(5))
