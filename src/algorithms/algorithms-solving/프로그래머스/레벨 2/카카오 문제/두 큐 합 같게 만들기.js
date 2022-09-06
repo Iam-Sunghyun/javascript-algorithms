@@ -12,7 +12,7 @@ function solution(queue1, queue2) {
   let j = queue1.length;
 
   // 대상 값과 비교해서 합이 큰 배열의 맨 앞 요소를 pop하여 나머지 배열에 push 반복
-  while (count <= queue.length) {
+  while (count <= queue.length * 2) {
     if (sum1 === target) return count;
 
     if (sum1 > target) {
