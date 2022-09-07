@@ -1,3 +1,7 @@
+/** 
+ * 프로그래머스 레벨 2
+ * 연습문제 https://school.programmers.co.kr/learn/courses/30/lessons/12945
+*/
 function solution(n) {
   const pibonacci = new Array(n).fill(0);
   pibonacci[0] = 0;
