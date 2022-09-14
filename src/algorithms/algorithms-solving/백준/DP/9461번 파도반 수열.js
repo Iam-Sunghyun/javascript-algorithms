@@ -1,6 +1,4 @@
-/**
- * 백준 9461번 DP https://www.acmicpc.net/submit/9461
- */
+// 백준 9461번 DP https://www.acmicpc.net/submit/9461
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(/\s/);
 const nums = input.slice(1).map(Number);
 function solution(num) {

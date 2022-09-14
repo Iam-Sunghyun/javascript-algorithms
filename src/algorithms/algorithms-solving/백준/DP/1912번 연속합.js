@@ -1,5 +1,4 @@
 // 백준 1912번 연속합 https://www.acmicpc.net/problem/1912
-// 동적프로그래밍 문제 
 // 풀이 참고 https://guiyum.tistory.com/16
 const input = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/);
 const nums = input.slice(1).map(Number);
