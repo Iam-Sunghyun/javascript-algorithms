@@ -73,9 +73,9 @@ _hash(key) {
 
 # 충돌에 따른 오버플로 처리 방법
 
-## 열린 주소법(Open Addressing Method)
+## 열린 주소법(Open Addressing Method, 개방 주소법)
 
-### 1. 선형 조사법(linear probing)
+### 1. 선형 조사법(linear probing, 선형 탐사법)
 + 충돌이 발생하면 해시 테이블의 다른 위치를 찾아 데이터를 저장한다.
 + 해시 함수로 구한 버킷에 빈 슬롯이 없으면 그 다음 버킷에서 빈 슬롯이 있는지 조사(probing)한다.
    + 만약 ht[k]에서 충돌이 발생했다면, ht[k+1]부터 마지막 버킷까지 비어있는 곳을 조사한다.
@@ -93,7 +93,7 @@ _hash(key) {
 
 ## 닫힌 주소법(closed Addressing Method)
 
-### 2. 체이닝(chainning)
+### 2. 체이닝(chainning, seperate channing)
 + 해시 테이블의 하나의 위치에서 여러 개의 데이터를 저장할 수 있도록 해시 테이블의 구조를 변경한다.
 + 여러 가지 방법이 있겠으나, 연결 리스트로 구현하는 적절할 것이다!
 + 크기가 한정 된 버킷을 효율적으로 사용할 수 있다.
