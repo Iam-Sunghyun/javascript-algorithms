@@ -13,12 +13,12 @@ function quickSort(arr, start, end) {
   // 모든 요소를 비교하교 right, left가 어긋날 때 까지
   while (right >= left) {
 
-    // left가 end보다 작거나 같고, left 위치의 요소가 피벗보다 작다면 left + 1
+    // left가 end보다 작거나 같고, left 위치의 요소가 피벗보다 작거나 같다면 left + 1
     while (left <= end && arr[left] <= arr[pivot]) {
       left++;
     }
-    // right가 start 보다 크고, right 위치의 요소가 피벗보다 크다면 right - 1
-    while (right > start && arr[right] >= arr[pivot]) {
+    // right가 start보다 크고, right 위치의 요소가 피벗보다 크다면 right - 1
+    while (right > start && arr[right] > arr[pivot]) {
       right--;
     }
     // 모든 요소를 비교했다면 right과 피벗 교환
@@ -28,6 +28,7 @@ function quickSort(arr, start, end) {
     } else {
       swap(arr, left, right);
     }
+    console.log(arr, left, right)
   }
   // 재귀
   quickSort(arr, start, right - 1);
@@ -35,13 +36,12 @@ function quickSort(arr, start, end) {
 }
 
 const arr = [
-  13, 34, 92, 22, 80,
-  67, 92, 52, 21, 86
+  2,2,3,2,4,5,6,7,8,2
 ]
 // for (let i = 0; i < 10; i++) {
 //   arr.push(Math.floor(Math.random() * 100));
 // }
 
-console.log(arr);
+
 quickSort(arr, 0, arr.length - 1);
-console.log(arr);
+
