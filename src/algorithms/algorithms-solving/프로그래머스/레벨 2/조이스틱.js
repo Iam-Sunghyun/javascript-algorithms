@@ -1,6 +1,3 @@
-/**
- * 반 정도 해결 상태..
- */
 function solution(str) {
   const strCodeObj = {};
   let startIndex = 14; // 아래에서 만들 객체에서 A
@@ -16,12 +13,12 @@ function solution(str) {
     strCodeObj[String.fromCharCode(64 + i)] = 13 + i;
   }
 
-  
   [...str].forEach(char => {
     if(char !== 'A'){
       answer = answer + Math.abs(strCodeObj[char] - startIndex);
     }
   });
+
   return answer + cursor;
 }
 
