@@ -1,29 +1,21 @@
 // 백준 9012번 스택 https://www.acmicpc.net/problem/9012
-const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n").slice(1);
+const filePath = process.platform === 'linux' ? '/dev/stdin' : '../'+ __dirname + '/input.txt';
+let input = require("fs").readFileSync(filePath).toString().split('\n');
 
-function solution(a) {
+function solution(str) {
   const answer = [];
-  const tmp = [];
 
-  for (let i = 0; i < a.length; i++) {
-    let check = 0;
-    if (a[i].length % 2 !== 0) {
-      answer.push("NO");
-      continue;
-    }
+  for (const x of str) {
+    let count = 0;
 
-    for (let j = 0; j < a[i].length; j++) {
-      if (a[i][j] === "(") {
-        tmp.push(a[i][j]);
-        check++;
-      } else {
-        tmp.pop();
-        check--;
-      }
+    for (const i of x) {
+      count += (i === '(' ? 1 : -1);
+      if (count < 0) break;
     }
-    answer.push(check === 0 ? "YES" : "NO");
+    answer.push(count !== 0 ? 'NO' : 'YES');
   }
-  return answer;
+  return answer.join('\n');
 }
+
 
 console.log(solution(input));
