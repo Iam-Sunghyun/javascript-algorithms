@@ -1,48 +1,43 @@
-const filePath = process.platform === 'linux' ? '/dev/stdin' : 'C:/Users/Administrator/Desktop/javascript-algorithms/javascript-algorithms/input.txt';
-const input = require("fs").readFileSync(filePath).toString().split('\n');
+// 백준 4949번 스택 https://www.acmicpc.net/problem/4949
+const filePath = process.platform === "linux" ? "/dev/stdin" : "C:/Users/Administrator/Desktop/javascript-algorithms/javascript-algorithms/input.txt";
+const input = require("fs").readFileSync(filePath).toString().split("\n");
 const arr = input.slice(0, input.length - 1);
 
 function solution(str) {
   const answer = [];
-  for(let i of str){
-      const count = [0, 0, 0];
-      i = i.match(/[\[\(\[\{\}\]\)\]]/g);
-      if(!i) {
-          answer.push('yes');
-          continue;
+
+  for (let i of str) {
+    const stack = [];
+    i = i.match(/[\[\(\[\{\}\]\)\]]/g);
+
+    // 괄호가 없는 경우 yes
+    if (!i) {
+      answer.push("yes");
+      continue;
+    }
+
+    // 괄호가 홀수 개인 경우 no
+    if (i.length % 2 === 1) {
+      answer.push("no");
+      continue;
+    }
+
+    for (let j of i) {
+      if (j === '(' || j === '[') {
+        stack.push(j);
+        continue;
       }
-      if(i.length % 2 === 1) {
-          answer.push('no');
-          continue;
+      if (stack.length !== 0) {
+        let tmp = stack.pop();
+        if (j === ')' && tmp === '(') continue;
+        if (j === ']' && tmp === '[') continue;
       }
-      for(let j of i){
-          
-          switch (j){
-              case '(':
-                  count[0] += 1;
-                  break;
-              case '{':
-                  count[1] += 1;
-                  break;
-              case '[':
-                  count[2] += 1;
-                  break;
-                  
-              case ')':
-                  count[0] -= 1;
-                  break;
-              case '}':
-                  count[1] -= 1;
-                  break;
-              case ']':
-                  count[2] -= 1;
-                  break;
-          }
-         if(count[0] < 0 || count[1] < 0 || count[2] < 0) break;
-      }
-      answer.push((count[0] !== 0 || count[1] !== 0 || count[2] !== 0) ? 'no' : 'yes');
+      stack.push(j);
+      break;
+    }
+    answer.push(stack.length !== 0 ? "no" : "yes");
   }
-    return answer.join('\n');
+  return answer.join("\n");
 }
 
 console.log(solution(arr));
