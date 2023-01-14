@@ -1,3 +1,16 @@
+<h2>목차</h2>
+
+- [그래프(graph)](#그래프graph)
+  - [그래프 용어(term)](#그래프-용어term)
+- [트리와 그래프 차이?](#트리와-그래프-차이)
+- [그래프 추상자료형(ADT)](#그래프-추상자료형adt)
+- [그래프의 종류](#그래프의-종류)
+  - [무방향 그래프(undirected graph)](#무방향-그래프undirected-graph)
+  - [방향 그래프(directed graph)](#방향-그래프directed-graph)
+  - [가중치 그래프(weighted graph)](#가중치-그래프weighted-graph)
+  - [부분 그래프(subgraph)](#부분-그래프subgraph)
+  
+  
 # 그래프(graph)
 + **복잡하게 연결되어 있는 관계(네트워크)를 표현하는 비선형 자료구조**. 그래프와 관련된 문제를 연구하는 학문을 **그래프 이론(graph theory)** 이라고 한다.
 + **정점(vertex) 과 간선(edge) 의 집합으로 구성되고**, 수학적으로는 G = (V,E)와 같이 표현한다. 
@@ -29,21 +42,23 @@ https://hongcoding.tistory.com/78
 
 # 그래프의 종류
 
-### 무방향 그래프(undirected graph)
+## 무방향 그래프(undirected graph)
 
 + 간선(edge)에 방향성이 없는 그래프. 하나의 간선은 양방향으로 갈 수 있는 길을 의미한다.
 
-### 방향 그래프(directed graph)
+## 방향 그래프(directed graph)
 
 + 간선(edge)에 방향성이 있는 그래프. 즉 하나의 간선은 한쪽 방향으로만 갈 수 있다.
 
-### 가중치 그래프(weighted graph) 
+## 가중치 그래프(weighted graph) 
 
 + 간선(edge)에 가중치(weight)가 있는 그래프. 네트워크(network)라고도 부른다. 
 + 가중치를 통해 다양한 연결 정보를 표현할 수 있으므로 도시와 도시를 연결하는 도로 길이, 회로 소자의 용량, 통신망 사용료 등 응용 분야가 광범위하다!
 
    
-### 부분 그래프(subgraph)
+## 부분 그래프(subgraph)
 
 + 어떤 그래프의 정점과 간선들 중 일부로 만들어진 그래프. 즉 어떤 그래프 G를 구성하는 정점 V(G)과 간선 집합 E(G)의 부분 집합으로 이루어진 그래프를 말한다.
+
+<!-- 보완 필요 -->
 

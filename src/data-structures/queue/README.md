@@ -1,3 +1,15 @@
+<h2>목차</h2>
+
+- [큐(Queue)](#큐queue)
+  - [큐의 종류](#큐의-종류)
+  - [큐 연산/구현](#큐-연산구현)
+  - [배열로 구현한 선형 큐(Linear queue)](#배열로-구현한-선형-큐linear-queue)
+    - [선형 큐 장/단점](#선형-큐-장단점)
+  - [원형 큐(Circular queue)](#원형-큐circular-queue)
+  - [연결 리스트로 구현한 큐](#연결-리스트로-구현한-큐)
+  - [큐(queue)의 활용](#큐queue의-활용)
+  - [Reference](#reference)
+
 # 큐(Queue)
 
 가장 먼저 들어온 데이터가 가장 먼저 나가는 **선입선출(FIFO: First-In First-Out)형태**의 자료구조로 일반적인 대기열을 생각하면 된다.
@@ -95,10 +107,5 @@
 ## Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue
-<br>
 
-### 이미지 출처
-
-https://www.google.com/search?q=%EC%84%A0%ED%98%95+%ED%81%90+%EC%9A%94%EC%86%8C+%EC%9D%B4%EB%8F%99&source=lmns&bih=775&biw=1536&hl=ko&sa=X&ved=2ahUKEwjZ3s_h5eP4AhWuS_UHHSFADfYQ_AUoAHoECAEQAA <br>
-
-https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)<br>
+https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)

@@ -1,4 +1,23 @@
+<h2>목차</h2>
 
+- [해시 테이블 (hash table)](#해시-테이블-hash-table)
+- [해시 테이블 (hash table) 구조](#해시-테이블-hash-table-구조)
+    - [충돌이 발생하면?](#충돌이-발생하면)
+- [해시 함수 (hash function)](#해시-함수-hash-function)
+  - [1. 제산 함수 (division method)](#1-제산-함수-division-method)
+  - [2. 폴딩 함수 (digit folding method, 자릿수 접기)](#2-폴딩-함수-digit-folding-method-자릿수-접기)
+    - [탐색키가 정수가 아닌 경우?](#탐색키가-정수가-아닌-경우)
+- [충돌에 따른 오버플로 처리 방법](#충돌에-따른-오버플로-처리-방법)
+  - [열린 주소법(Open Addressing Method, 개방 주소법)](#열린-주소법open-addressing-method-개방-주소법)
+    - [1. 선형 조사법(linear probing, 선형 탐사법)](#1-선형-조사법linear-probing-선형-탐사법)
+    - [선형 조사법(linear probing)에 의한 해시 구현](#선형-조사법linear-probing에-의한-해시-구현)
+  - [닫힌 주소법(closed Addressing Method)](#닫힌-주소법closed-addressing-method)
+    - [2. 체이닝(chainning, seperate channing)](#2-체이닝chainning-seperate-channing)
+  - [해싱 장/단점](#해싱-장단점)
+    - [장점](#장점)
+    - [단점](#단점)
+  - [해싱 복잡도](#해싱-복잡도)
+  - [Reference](#reference)
 
  # 해시 테이블 (hash table)
 
@@ -95,7 +114,7 @@ _hash(key) {
 
 ### 2. 체이닝(chainning, seperate channing)
 + 해시 테이블의 하나의 위치에서 여러 개의 데이터를 저장할 수 있도록 해시 테이블의 구조를 변경한다.
-+ 여러 가지 방법이 있겠으나, 연결 리스트로 구현하는 적절할 것이다!
++ 여러 가지 방법이 있겠으나, 연결 리스트로 구현하는 것이 적절할 것이다!
 + 크기가 한정 된 버킷을 효율적으로 사용할 수 있다.
 <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/hash-table/img/chaining.png" width="400" height="300">    
 
@@ -131,6 +150,8 @@ O(n)|O(n)|O(n)|
 ## Reference
 
 https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/
+
 https://velog.io/@taeha7b/datastructure-hashtable
+
 https://ko.wikipedia.org/wiki/%ED%95%B4%EC%8B%9C_%ED%95%A8%EC%88%98
 

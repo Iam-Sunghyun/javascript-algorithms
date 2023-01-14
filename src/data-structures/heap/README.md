@@ -1,3 +1,17 @@
+<h2>목차</h2>
+
+- [힙 (heap)](#힙-heap)
+- [힙 (heap) 종류](#힙-heap-종류)
+  - [최대 힙(max heap)](#최대-힙max-heap)
+  - [최소 힙(min heap)](#최소-힙min-heap)
+- [힙의 표현](#힙의-표현)
+  - [노드 표현](#노드-표현)
+- [힙의 연산](#힙의-연산)
+  - [삽입](#삽입)
+  - [삭제](#삭제)
+  - [힙 연산 시간 복잡도](#힙-연산-시간-복잡도)
+  - [Reference](#reference)
+
 # 힙 (heap)
 
 힙(heap)은 **완전 이진 트리의 일종**으로 **우선순위 큐를 위해 만들어진 자료구조**로
@@ -114,4 +128,5 @@ O(nlogn)|O(logn)|O(logn)|
 ## Reference
 
 https://daimhada.tistory.com/108
+
 https://www.geeksforgeeks.org/heap-data-structure/
