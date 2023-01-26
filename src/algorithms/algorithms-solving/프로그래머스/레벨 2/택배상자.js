@@ -1,4 +1,7 @@
-// https://school.programmers.co.kr/learn/courses/30/lessons/131704
+/**
+ * 프로그래머스 **레벨 2**
+ * 연습문제 https://school.programmers.co.kr/learn/courses/30/lessons/131704
+ */
 function solution(order) {
   const mainRail = new Array(order.length + 1).fill(0);
   const subRail = [];
