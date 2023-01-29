@@ -8,7 +8,7 @@
 * [해시 테이블(Hash table)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/hash-table)
 * [트리(Tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/tree)
 * [그래프(Graph)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/graph)
-* [트라이(Trie)(미완)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie)
+<!-- * [트라이(Trie)(미완)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/trie) -->
 
 ## 알고리즘 (Algorithms)
 
@@ -16,6 +16,9 @@
 * [집합 (sets)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sets)
 * [정렬 (sorting)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/sorting)
 * [탐색 (searching)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/searching)
+* [재귀 (recursion)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/recursion)
+* [트리 (tree)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/tree)
+* [동적 프로그래밍 (dinamic programming)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/dinamic-programming)
 * [기타 (others)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/others)
 * [알고리즘 풀이 (algorithms-solving)](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/algorithms/algorithms-solving)
 
