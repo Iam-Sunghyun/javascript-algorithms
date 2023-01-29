@@ -1,5 +1,6 @@
 import LinkedList from '../linked-list/linked-list.js';
 
+// 보완 필요
 
 const defaultHashTableSize = 32;
 
@@ -49,7 +50,7 @@ export default class HashTable {
     }
 
   }
- 
+
  
  
   delete(key) {
