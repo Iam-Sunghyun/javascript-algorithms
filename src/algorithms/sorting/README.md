@@ -1,12 +1,12 @@
 <h2>목차</h2>
 
-- [버블 정렬 (bubble sort)](#1-버블-정렬-bubble-sort)
-- [선택 정렬 (selection sort)](#2-선택-정렬-selection-sort)
-- [삽입 정렬 (insertion sort)](#3-삽입-정렬-insertion-sort)
-- [셸 정렬 (shell sort)](#4-셸-정렬-shell-sort)
-- [퀵 정렬 (quick sort)](#5-퀵-정렬-quick-sort)
-- [합병 정렬 (merge sort, 병합 정렬)](#6-합병-정렬-merge-sort-병합-정렬)
-- [힙 정렬 (heap sort)](#7-힙-정렬-heap-sort)
+- [버블 정렬 (bubble sort)](#버블-정렬-bubble-sort)
+- [선택 정렬 (selection sort)](#선택-정렬-selection-sort)
+- [삽입 정렬 (insertion sort)](#삽입-정렬-insertion-sort)
+- [셸 정렬 (shell sort)](#셸-정렬-shell-sort)
+- [퀵 정렬 (quick sort)](#퀵-정렬-quick-sort)
+- [합병 정렬 (merge sort, 병합 정렬)](#합병-정렬-merge-sort-병합-정렬)
+- [힙 정렬 (heap sort)](#힙-정렬-heap-sort)
 
 
 # 버블 정렬 (bubble sort)
@@ -300,23 +300,28 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 
 ## 힙 정렬 알고리즘 요약
 
-1. n개의 요소를 힙에 삽입한다. (insert()로 힙 트리로 만든다)
-2. n번에 걸쳐 삭제 연산하여 얻은 값을 배열에 저장한다. delete()
+1. n개의 요소로 힙 트리를 구성한다.
+2. n번에 걸쳐 삭제 연산하여 얻은 값을 배열에 저장한다.
 
 ## 힙 정렬 코드 (javascript)
 
 [자료구조 힙](https://github.com/Iam-Sunghyun/javascript-algorithms/tree/main/src/data-structures/heap) 참조
 
-- 최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
+최대 힙의 경우 삭제 연산 후 오름차순 정렬을 위해 배열의 뒷 부분부터 저장한 것 유의!
 
-## 힙 정렬 분석
+## 힙 정렬 분석 및 복잡도
 
 - 시간복잡도가 효율적이다.
 - **불안정 정렬**이다.
 
-## 힙 정렬 복잡도
+최대 힙 구성은 최악의 경우 삽입/삭제 연산 모두 힙 트리 루트노드까지 이동해야 하므로 O(logn)이 소요된다. 
 
-- 최대 힙 구성은 최악의 경우 삽입 삭제 연산 모두 힙 트리 루트 노드 까지 이동해야 하므로 O(logn)이 소요된다. 크기가 n인 데이터로 힙 트리를 구성 한다고 생각 해봤을 때, n번의 삽입과 각 삽입 시 최대 O(logn)만큼의 이동이 발생하게 되어 O(nlogn)의 복잡도가 소요 된다. </>
+-> 크기가 n인 데이터로 힙 트리를 구성 한다고 가정해봤을 때, n번의 삽입과 각 삽입 시 힙 재구성으로 인해 최대 O(logn)만큼의 이동이 발생하게 되어 O(nlogn)의 복잡도가 소요 된다. 
+
+추가로 완성된 힙 트리에서 요소를 삭제, 힙 재구성을 반복하는데 또 O(logn)이 소요된다.
+
+따라서 O(nlogn + nlogn) -> O(nlogn)이 된다.
+<br/>
 
 |  이름   |    최선    |    평균    |    최악    | 메모리(보조공간) | 안정 | 비고 |
 | :-----: | :--------: | :--------: | :--------: | :--------------: | :--: | :--: |
@@ -325,6 +330,8 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=k97b1114&log
 ## Reference
 
 https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort
+
+https://www.geeksforgeeks.org/heap-sort/
 
 <br>
 
