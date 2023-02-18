@@ -1,6 +1,6 @@
 /**
- * 최소한의 동전으로 거스름 돈을 계산하는 방법
- * @param {nums[]} [0] 동전 개수, [1] 동전 종류, [2] 거스름 돈
+ * 최소한의 동전으로 거스름 돈을 계산하는 방법. 중복순열과 거의 동일
+ * @param {nums[][]} [0] 동전 개수, [1] 동전 종류, [2] 거스름 돈
  * @returns {number} 거스름 동전 최소 개수
  */
 function solution(nums) {
@@ -8,6 +8,7 @@ function solution(nums) {
   const change = nums[2];
   let answer = Number.MAX_SAFE_INTEGER;
 
+  // lv은 재귀 깊이이자 동전 개수를 의미
   function DFS(lv, sum) {
     // 거스름 돈이 충족됐다면 더 작은 값 answer에 저장
     if (sum === change) {
