@@ -5,7 +5,7 @@
  */
 function solution(n) {
   const memory = [];
-  memory[0] = 0;
+  memory[0] = 1;
   memory[1] = 1;
 
   function fib(n) {

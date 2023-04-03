@@ -19,8 +19,8 @@ function solution(n, r) {
     // nCr = n-1Cr-1 + n-1Cr
     return memo[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);
   }
-
-  return DFS(n, r);
+  DFS(n, r)
+  return memo;
 }
 
-console.log(solution(5, 3));
+console.log(solution(4, 3));
