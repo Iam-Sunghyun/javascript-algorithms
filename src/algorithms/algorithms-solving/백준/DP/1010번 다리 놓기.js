@@ -1,5 +1,5 @@
 // DP 1010번 실버3 https://www.acmicpc.net/problem/1010
-// 조합(combination) 문제
+// 조합(combination) 문제 -> nCm = n-1Cm-1 + n-1Cm 이용
 const input = require('fs')
   .readFileSync('/dev/stdin')
   .toString()
