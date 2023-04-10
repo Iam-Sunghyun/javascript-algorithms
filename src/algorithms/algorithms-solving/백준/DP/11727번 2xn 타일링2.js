@@ -7,10 +7,10 @@ function solution(n) {
   answer[1] = 3;
 
   for (let i = 2; i < n; i++) {
-    answer[i] = answer[i - 2] * 2 + answer[i - 1];
+    answer[i] = (answer[i - 2] * 2 + answer[i - 1]) % 10007;
   }
 
-  return answer.at(-1) % 10007;
+  return answer[n - 1];
 }
 
 console.log(solution(input));
