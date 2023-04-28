@@ -1,4 +1,4 @@
-// 백준 실버2 https://www.acmicpc.net/problem/1260
+// 백준 그래프 탐색 실버2 https://www.acmicpc.net/problem/1260
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(n => n.split(' ').map(Number));
 
 function solution(input) {

@@ -1,4 +1,4 @@
-// 백준 실버3 https://www.acmicpc.net/problem/2606
+// 백준 그래프 탐색 실버3 https://www.acmicpc.net/problem/2606
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(n => n.split(' ').map(Number));
 
 // DFS
