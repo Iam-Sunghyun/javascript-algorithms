@@ -1,4 +1,4 @@
-// 백준 10974번 순열 https://www.acmicpc.net/submit/10974
+// 백준 10974번 순열 https://www.acmicpc.net/problem/10974
 const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 function solution(number) {

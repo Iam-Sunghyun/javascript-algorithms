@@ -1,4 +1,4 @@
-// 백준 실버1 https://www.acmicpc.net/problem/2667
+// 백준 그래프 탐색 실버1 https://www.acmicpc.net/problem/2667
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
 function solution(input) {
