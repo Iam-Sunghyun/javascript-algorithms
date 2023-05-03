@@ -1,51 +1,49 @@
-const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(n => n.split(' ')).slice(1);
+// 백준 그래프 탐색 실버2 https://www.acmicpc.net/problem/11725
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(n => n.split(' ').map(Number));
 
-function solution(input) {
-    const tree = Array.from(new Array(input.length + 2), () => []);
-    const parentList = new Array(input.length + 2).fill(0);
-    const visitCheck = new Array(input.length + 2).fill(false);
-    
-    // console.log([tree, parentList, input])
-    // 인접 리스트로 연결된 노드 저장
-    for(const [node1, node2] of input){
-        tree[node1].push(node2);
-    }
-    
-    // 노드 순회
-    for(const i in tree){
-        
-        // i번 노드에 연결된 노드가 있다면
-        if(tree[i].length !== 0){
-        
-            // i번 노드와 연결된 노드 모두 방문
-            for(const j of tree[i]){
-                
-                // i번 노드와 연결된 노드 중 1(루트노드)이 있다면 i번 노드의 부모를 루트노드로 설정 후 break
-                if(j === '1') {
-                    parentList[i] = '1';
-                    break;
-                }
-                
-                // 혹은 i번 노드의 부모가 1(루트노드)로 이미 설정되어 있었다면 j번 노드는 i번 노드의 자식으로 저장하고 break
-                if(parentList[i] === '1'){
-                    parentList[j] = i;
-                    break;
-                }
-                
-                // 둘 다 아니라면 서로를 부모로 등록(parentList에 기록)
-                [parentList[i], parentList[j]] = [j, i];
-            }
+function solution(input, N) {
 
+  const graph = Array.from({ length: N + 1 }, () => []);
+  const check = new Array(N + 1).fill(false);
+  const answer = new Array(N).fill(0);
+  
+  // 인접 리스트 생성
+  for (let i = 0; i < N - 1; i++) {
+    graph[input[i][0]].push(input[i][1]);
+    graph[input[i][1]].push(input[i][0]);
+  }
+
+  // BFS
+  function BFS() {
+    const queue = [1];
+    let parent;
+
+    while (queue.length > 0) {
+      const tmp = [];
+      while (queue.length > 0) {
+        const node = queue.shift();
+        parent = node;
+        for (let i = 0; i < graph[node].length; i++) {
+          if (check[graph[node][i]] === false) {
+            answer[graph[node][i]] = parent;
+            tmp.push(graph[node][i]);
+            check[graph[node][i]] = true;
+          }
         }
+      }
+      for (let i = 0; i < tmp.length; i++) {
+        queue.push(tmp[i]);
+      }
+      parent += 1;
     }
-    
-    // `tree: [${tree}] \n input: [${input}] \n visitCheck: [${visitCheck}]`;
-    // [tree, parentList, input];
-    return [tree, parentList];
-    
+  }
+
+  BFS();
+
+  return answer.slice(2).join('\n');
 }
 
-console.log(solution(input));
+console.log(solution(input.slice(1), +input[0][0]));
 
 
 // 반례 1
