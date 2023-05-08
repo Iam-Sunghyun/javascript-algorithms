@@ -24,11 +24,11 @@ function quickSort(arr, start, end) {
     // 모든 요소를 비교했다면 right과 피벗 교환
     if (left > right) {
       swap(arr, pivot, right);
-    // 아니면 left, right 요소 교환
+      // 아니면 left, right 요소 교환
     } else {
       swap(arr, left, right);
     }
-    console.log(arr, left, right)
+    // console.log(arr, left, right);
   }
   // 재귀
   quickSort(arr, start, right - 1);
@@ -36,12 +36,9 @@ function quickSort(arr, start, end) {
 }
 
 const arr = [
-  2,2,3,2,4,5,6,7,8,2
-]
-// for (let i = 0; i < 10; i++) {
-//   arr.push(Math.floor(Math.random() * 100));
-// }
+  2, 2, 3, 2, 4, 5, 6, 7, 8, 2
+];
 
-
+console.log(arr);
 quickSort(arr, 0, arr.length - 1);
-
+console.log(arr);
