@@ -15,7 +15,7 @@ function solution(nums) {
       answer = Math.min(answer, lv);
       return;
     }
-    // 동전 개수가 앞서 확인한 최소 경우보다 많다면 재귀 취소
+    // 동전 개수가 앞서 확인한 최소 경우보다 많거나, 거스름 돈 합이 초과되면 재귀 취소
     if (sum > change || lv >= answer) return;
 
     for (let i = 0; i < coins.length; i++) {
