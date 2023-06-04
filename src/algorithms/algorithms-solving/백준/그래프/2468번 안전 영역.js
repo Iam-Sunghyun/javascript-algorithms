@@ -27,7 +27,7 @@ function solution(input) {
     }
   }
 
-  // 최저 높이 부터 최대 높이-1까지 수위를 설정하여 DFS로 지도 전체를 확인
+  // 최저 높이 부터 최대 높이 미만까지 값을 수위로 설정하여 DFS로 지도 전체를 확인
   const answerList = [];
   for (let i = min; i < max; i++) {
     const check = Array.from({ length: N }, () => new Array(N).fill(false));
@@ -40,7 +40,7 @@ function solution(input) {
         }
       }
     }
-    // 수위가 i인 경우 안전지대 개수 계산하여 answerList에 삽입 
+    // 수위가 i일 떄 안전지대 개수 answerList에 삽입 
     answerList.push(answer);
   }
 
