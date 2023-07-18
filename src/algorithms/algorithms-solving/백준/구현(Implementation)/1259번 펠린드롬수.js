@@ -1,35 +1,9 @@
-// 백준 구현 브론즈1 https://www.acmicpc.net/problem/1259
-function isPalindrome(num) {
-  const str = String(num);
-  const len = str.length;
+// 백준 구현 https://www.acmicpc.net/problem/1259
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+const answer = [];
 
-  for (let i = 0; i < len / 2; i++) {
-    if (str[i] !== str[len - 1 - i]) {
-      return false;
-    }
-  }
-
-  return true;
+for(let i = 0; i < input.length - 1; i++){
+    input[i] === [...input[i]].reverse().join('') ? answer.push('yes') : answer.push('no');
 }
 
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.on('line', (line) => {
-  const number = parseInt(line);
-
-  if (number === 0) {
-    rl.close();
-    return;
-  }
-
-  if (isPalindrome(number)) {
-    console.log('yes');
-  } else {
-    console.log('no');
-  }
-});
+console.log(answer.join('\n'));
