@@ -1,4 +1,4 @@
-// 백준 구현 https://www.acmicpc.net/problem/17413
+// 백준 실버3 구현 https://www.acmicpc.net/problem/17413
 const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 function solution(input) {
