@@ -2,73 +2,30 @@
  * 프로그래머스 레벨 2
  * 연습문제 https://school.programmers.co.kr/learn/courses/30/lessons/12949
  */
-/**
- * 프로그래머스 레벨 2
- * 연습문제 https://school.programmers.co.kr/learn/courses/30/lessons/12949
- */
- function solution(arr1, arr2) {
-  const answer = new Array(arr1.length).fill(new Array(arr2[0].length).fill(0));
+function solution(arr1, arr2) {
 
-  for (let i = 0; i < arr2[0].length; i++) {
-    for (let j = 0; j < arr1.length; j++) {
-      let acc = 0;
-      for (let k = 0; k < arr1[j].length; k++) {
-        // console.log(answer, [arr1[j][k] ,arr2[k][i]], j, i)
-        acc += (arr1[j][k] * arr2[k][i]);
-        
+  const answer = Array.from({ length: arr1.length }, () => new Array(arr2[0].length).fill(0));
+
+  for (let k = 0; k < arr2[0].length; k++) {
+    for (let i = 0; i < arr1.length; i++) {
+      let tmp = 0;
+      for (let j = 0; j < arr1[0].length; j++) {
+        tmp += arr1[i][j] * arr2[j][k];
       }
-      answer[j][i] = acc
+      answer[i][k] = tmp;
     }
   }
-
   return answer;
 }
 
+
 console.log(
   solution(
-    [
-      [1, 4],
-      [3, 2],
-      [4, 1],
-    ],
-    [
-      [3, 3],
-      [3, 3],
-    ]
+    [[2, 3, 2], [4, 2, 4], [3, 1, 4]],
+    [[5, 4, 3], [2, 4, 1], [3, 1, 1]]
   )
-); //	[[15, 15], [15, 15], [15, 15]]
+);
 
-// console.log(
-//   solution(
-//     [
-//       [1, 2, 3],
-//       [4, 5, 6],
-//       [7, 8, 9],
-//     ],
-//     [
-//       [1, 2],
-//       [3, 4],
-//       [5, 6]
-//     ]
-//   )
-// ); //	[[15, 15], [15, 15], [15, 15]]
+console.log(solution([[1, 4], [3, 2], [4, 1]], [[3, 3], [3, 3]]));
 
-
-// 틀린 코드
-// function solution(arr1, arr2) {
-//   const answer = new Array(arr1.length).fill(new Array(arr2[0].length).fill(0));
-
-//   for (let i = 0; i < arr2[0].length; i++) {
-//     for (let j = 0; j < arr1.length; j++) {
-      
-//       for (let k = 0; k < arr1[j].length; k++) {
-//         // console.log(answer, [arr1[j][k] ,arr2[k][i]], j, i)
-//         answer[j][i] += (arr1[j][k] * arr2[k][i]);
-        
-//       }
-      
-//     }
-//   }
-
-//   return answer;
-// }
+console.log(solution([[2, 3, 2], [4, 2, 4], [3, 1, 4]], [[5, 4], [2, 4], [3, 1]]));
