@@ -31,13 +31,14 @@
 
 # 트리(tree)란?
 
-- **계층적인 구조(hierarchical structure)** 의 자료구조
+- 회로(cycle)가 없이 연결된 무방향 그래프를 트리라고 한다.
+- **계층적인 구조(hierarchical structure)** 의 비선형 자료구조
 - 나무를 거꾸로 엎어 놓은 듯한 모양을 하고 있어서 트리라고 부른다!
 - 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
 ## 트리의 용어(terms)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/tree-terms.png" width="650" height="350">
+<img src="../tree/img/tree-terms.png" width="650" height="350">
 
 - 트리는 한개 이상의 **노드(node)** 로 구성되며 노드를 연결 하는 선을 **간선(edge)** 이라고 한다.
 - 가장 높은 곳의 노드를 **루트(root) 노드**라 하며 나머지 노드들을 **서브 트리(subtree)** 라고 한다.
@@ -54,7 +55,7 @@
 
 # 이진 트리(binary tree)
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binaryTree.JPG" width="320" height="250">
+<img src="../tree/img/binaryTree.JPG" width="320" height="250">
 
 - **모든 노드가 2개의 서브 트리를 갖고(서브 트리는 모두 이진 트리이며, 공집합일 수 있음), 모든 노드의 차수가 2이하인 트리(자식 노드가 2개 이하)**.
 - **전체 트리와 서브 트리의 구조는 동일하다.**
@@ -86,7 +87,7 @@
 - 각 노드를 **레벨(level)순으로 검사하는 방법**. 같은 레벨에선 왼쪽부터 오른쪽으로 순회 한다.
 - 큐(queue)를 이용하여 순회 한다.
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/level-order-travelsal.png" width="500" height="320">
+<img src="../tree/img/level-order-travelsal.png" width="500" height="320">
 
 ### 노드 개수 구하기
 
@@ -155,7 +156,7 @@ countLeaf(node = this){
 - **왼쪽서브 트리 키들은 루트 노드 키보다 작고, 오른쪽 서브 트리 키들은 루트 노드 키보다 크다.**
 - 왼쪽, 오른쪽 서브 트리도 이진 탐색 트리이다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binarySearchTree.png" width="500" height="250">
+<img src="../tree/img/binarySearchTree.png" width="500" height="250">
 
 ## 이진 탐색 트리 연산/구현
 
@@ -176,7 +177,7 @@ countLeaf(node = this){
 - 일치하지 않는 경우 비교 결과에 따라 왼쪽, 오른쪽 서브 트리로 이동해 탐색을 반복적으로 실행한다.
 - 탐색에 실패한 위치가 삽입될 위치이다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/insert_search.png" width="500" height="250">
+<img src="../tree/img/insert_search.png" width="500" height="250">
 
 ## 삭제(delete) 연산
 
@@ -191,7 +192,7 @@ countLeaf(node = this){
 - 먼저 삭제할 노드의 **후계자 노드**를 찾는다. -> 후계자 노드는 삭제하려는 값과 가장 비슷한 노드가 되어야 이진 탐색 트리의 성질을 유지할 수 있다.
 - 삭제하려는 노드의 **왼쪽 서브 트리에서 가장 큰 값**, 혹은 **오른쪽 서브 트리에서 가장 작은 값**이 해당 노드의 값과 가장 비슷하다!
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/binary-search-tree-delete1.jpg" width="550" height="350">
+<img src="../tree/img/binary-search-tree-delete1.jpg" width="550" height="350">
 
 ## 이진 탐색 트리의 성능
 
@@ -217,7 +218,7 @@ countLeaf(node = this){
 - 균형 인수는 **(왼쪽 서브트리 높이 - 오른쪽 서브 트리의 높이)** 로 정의되며 **모든 노드의 균형 인수가 ±1이면 AVL 트리이다.**
 - AVL 트리의 탐색 연산은 일반 이진 탐색 트리와 동일하다! **균형이 깨질 수 있는 연산은 삽입과 삭제 연산**이다.
 
-<img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/AVLtree.png" width="550" height="300">
+<img src="../tree/img/AVLtree.png" width="550" height="300">
 
 ## 삽입 연산
 
