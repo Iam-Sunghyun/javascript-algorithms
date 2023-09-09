@@ -12,29 +12,25 @@ export default class BinaryTreeNode{
 
   setLeft(node){
        
-     if(this.left){
+    if(this.left !== null){
       this.left.parent = null;
     }
 
     this.left = node; 
-
-    if(this.left){
-      node.parent = this;
-    }
+    node.parent = this;
+    
     return this;
   }
 
   setRight(node){
    
-    if(this.right){
+    if(this.right !== null){
       this.right.parent = null;
     }
 
     this.right = node; 
+    node.parent = this;
 
-    if(this.right){
-      node.parent = this;
-    }
     return this;
   }
 
@@ -48,13 +44,13 @@ export default class BinaryTreeNode{
       return;
     }
 
-    if(targetNode === this.left && this.left){
+    if(targetNode === this.left){
       this.left.parent = null;
       this.left = newNode;
       newNode.parent = this;
       return;
     }
-    if(targetNode === this.right && this.right){
+    if(targetNode === this.right){
       this.right.parent = null;
       this.right = newNode;
       newNode.parent = this;
@@ -64,15 +60,14 @@ export default class BinaryTreeNode{
   }
 
   removeChild(node){
-    if(node === this.left){
+    if (node === this.left) {
       this.left = null;
-      return;
-    }
-    if(node === this.right){
+    } else if (node === this.right) {
       this.right = null;
-      return;
+    } else {
+      console.log('잘못된 입력입니다.');
     }
-    console.log('잘못된 입력입니다.');
+    node.parent = null;
   }
 
   getRoot(){
@@ -90,6 +85,7 @@ export default class BinaryTreeNode{
     process.stdout.write(node.value + ' ');
     this.preOrder(node.left);
     this.preOrder(node.right);
+    return '전위 순회 완료'
   }
 
   // L -> V -> R
@@ -98,7 +94,7 @@ export default class BinaryTreeNode{
     this.inOrder(node.left);
     process.stdout.write(node.value + ' ');
     this.inOrder(node.right);
-    
+    return '중위 순회 완료'
   }
 
   // L -> R -> V
@@ -107,6 +103,7 @@ export default class BinaryTreeNode{
     this.postOrder(node.left);
     this.postOrder(node.right);
     process.stdout.write(node.value + ' ');
+    return '후위 순회 완료'
   }
 
   levelOrder(){
@@ -127,10 +124,9 @@ export default class BinaryTreeNode{
     return 1 + node.countNode(node.left) + node.countNode(node.right);
   }
 
-  countLeaf(node = this){
-    if(!node) return 0;
-    if(!node.left && !node.right) return 1;
-    return node.countLeaf(node.left) + node.countLeaf(node.right);
+  countLeaf(){
+    if(!this.left && !this.right) return 1;
+    return (this.left?.countLeaf() || 0) + (this.right?.countLeaf() || 0);
   }
 
   getHeight(node = this){
@@ -139,7 +135,7 @@ export default class BinaryTreeNode{
   }
 
   isNode(node){
-    return (node.constructor !== BinaryTreeNode) ? true : false;
+    return (node.constructor === BinaryTreeNode) ? true : false;
   }
   
   balanceFactor() {
@@ -177,4 +173,4 @@ console.log(root.countLeaf());
 
 console.log(root.getHeight());
 
-tree4.getroot();
+
