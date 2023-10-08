@@ -24,3 +24,24 @@ function binomialCoefficient(n, k) {
 const [n, k] = input.split(" ").map(Number);
 const result = binomialCoefficient(n, k);
 console.log(result);
+
+// 풀이 2
+function solution(N, K) {
+
+  const check = Array.from({ length: N + 1 }, () => new Array(K + 1).fill(-1));
+  function combination(n, k) {
+    if (n === k || k === 0) {
+      return 1;
+    }
+    if (check[n][k] !== -1) return check[n][k];
+    check[n][k] = combination(n - 1, k - 1) + combination(n - 1, k);
+
+    return check[n][k] % 10007;
+  }
+
+  combination(N, K);
+
+  return (check[N][K]) === -1 ? 1 : check[N][K] % 10007;
+}
+
+console.log(solution(input[0], input[1]));
