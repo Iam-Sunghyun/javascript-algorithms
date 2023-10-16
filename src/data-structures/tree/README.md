@@ -36,6 +36,10 @@
 - 나무를 거꾸로 엎어 놓은 듯한 모양을 하고 있어서 트리라고 부른다!
 - 조직도, 디렉토리 구조, 인공 지능의 의사 결정 트리 등 다양하게 사용된다.
 
+```
+단순 경로(simple path) 와 사이클(cycle) : 경로 중에서 반복되는 간선이 없는 경로를 '단순 경로' 라고 하며 단순 경로의 시작 정점과 종료 정점이 같다면 이러한 경로를 '사이클' 이라고 한다. 
+```
+
 ## 트리의 용어(terms)
 
 <img src="../tree/img/tree-terms.png" width="650" height="350">
@@ -239,20 +243,22 @@ countLeaf(node = this){
 ## 단순 회전(single rotation)
 
 - **LL 회전** : A부터 N까지 경로상의 노드들을 오른쪽으로 회전시킨다.
-  <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateLL.png" width="550" height="300">
+  <img src="../tree/img/rotateLL.png" width="550" height="300">
 
 - **RR 회전** : A부터 N까지 경로상의 노드들을 왼쪽으로 회전시킨다.
-  <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateRR.png" width="550" height="300">
+  <img src="../tree/img/rotateRR.png" width="550" height="300">
 
 ## 이중 회전(double rotation)
 
 - **LR 회전** : A부터 N까지 경로상의 노드들을 왼쪽->오른쪽으로 회전시킨다. (RR회전 -> LL회전)
-  <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateLR.JPG" width="630" height="280">
+  <img src="../tree/img/rotateLR.JPG" width="630" height="280">
 
 - **RL 회전** : A부터 N까지 경로상의 노드들을 오른쪽->왼쪽 회전시킨다. (LL회전 -> RR회전)
-  <img src="https://github.com/Iam-Sunghyun/javascript-algorithms/blob/main/src/data-structures/tree/img/rotateRL.png" width="630" height="280">
+  <img src="../tree/img/rotateRL.png" width="630" height="280">
 
 <br>
+
+<!-- 삭제 연산 -->
 
 # Red-Black 트리
 
