@@ -9,40 +9,40 @@
  * @returns {number} 
  */
 function binarySearch(arr, low, high, key) {
-  if(low >= high) return 'no key value';
+  if (low >= high) return 'no key value';
   let mid = Math.floor((high + low) / 2);
 
-  if(key === arr[mid]){
+  if (key === arr[mid]) {
     return 'key index is ' + mid;
   }
-  if(key > arr[mid]){
-    return binarySearch(arr, mid+1, high, key);
+  if (key > arr[mid]) {
+    return binarySearch(arr, mid + 1, high, key);
   }
-  if(key < arr[mid]){
-    return binarySearch(arr, low, mid-1, key);
+  if (key < arr[mid]) {
+    return binarySearch(arr, low, mid - 1, key);
   }
 }
 
 // 반복문을 이용한 방법
 function binarySearch2(arr, key) {
-  let start = 0;
-  let end = arr.length-1;
+  let [start, end] = [0, arr.length - 1];
 
-  while(end >= start){
-    const mid = Math.floor((start + end)/2);
-    if(arr[mid] === key)
+  while (end >= start) {
+    const mid = Math.floor((start + end) / 2);
+    if (arr[mid] === key) {
       return 'key index is ' + mid;
-
-    if(arr[mid] > key)
+    }
+    if (arr[mid] > key) {
       start = mid + 1;
-
-    if(arr[mid] < key)
+    }
+    if (arr[mid] < key) {
       end = mid - 1;
+    }
   }
   return 'no key value';
 }
 
-const arr = [1,2,3,4,5,6,7,8,9,10]
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(binarySearch(arr, 0, arr.length-1, 0));
+console.log(binarySearch(arr, 0, arr.length - 1, 0));
 console.log(binarySearch2(arr, 5));

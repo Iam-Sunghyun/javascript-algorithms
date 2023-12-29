@@ -1,26 +1,24 @@
-function solution(arr, n, r) {
+function combination(arr, r) {
+  const answer = [];
+  const tmp = new Array(r).fill(0);
 
-  const answer = [];      
-  const tmp = new Array(r).fill(0); // 조합 기록용
-
-  // lv -> 뽑은 요소 수, index 남은 요소 시작 인덱스
-  function combination(lv, index) {
+  // lv = DFS 깊이(뽑은 개수), start = 배열 시작 index
+  function DFS(lv, start) {
     if (lv === r) {
       answer.push([...tmp]);
       return;
     }
-    for (let i = index + 1; i < arr.length; i++) {
-      tmp[lv + 1] = arr[i];
-      combination(lv + 1, i);
+
+    for (let i = start; i < arr.length; i++){
+      tmp[lv] = arr[i];
+      DFS(lv + 1, i + 1);
     }
   }
 
-  for (let i = 0; i < n - r; i++) {
-    tmp[i] = arr[i];
-    combination(0, i);
-  }
+  DFS(0, 0);
 
   return answer;
 }
 
-console.log(solution([1, 2, 3, 4, 5], 5, 3));
+// console.log(combination([1, 2, 3, 4, 5], 3));
+console.log(combination([1, 2, 3], 2));
