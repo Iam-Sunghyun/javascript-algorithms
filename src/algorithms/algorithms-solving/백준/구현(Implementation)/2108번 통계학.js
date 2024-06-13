@@ -74,3 +74,49 @@ function solution(input) {
 }
 
 console.log(solution(input.slice(1)));
+
+
+// 풀이 #3 거의 동일
+function solution(numbers) {
+  
+    const answer = [];
+    
+    // 평균
+    const sum = numbers.reduce((acc, n) => acc + n , 0);
+    // 반올림 메서드로 Number.prototype.toFixed() 사용시 문자열로 반환되기 때문에 -0이 출력될 수 있다
+    answer.push(Math.round((sum / numbers.length)));
+    
+    // 중앙값
+    numbers.sort((a, b) => a - b);
+    answer.push(numbers[Math.floor(numbers.length / 2)]);
+    
+    // 최빈값
+    const check = {};
+    numbers.forEach(n => check[n] ? check[n] += 1 : check[n] = 1);
+    
+    let mode = -Infinity
+    const checkArray = Object.entries(check);
+    const tmp = [];
+    let modeArray = [];
+    checkArray.forEach(n => mode = Math.max(n[1], mode));
+    
+    for(const [number, count] of checkArray){
+        if(count === mode){
+            tmp.push(number);
+        }
+    }   
+    
+    modeArray = tmp.map(Number).sort((a, b) => a - b);
+    if(modeArray.length > 1){
+        answer.push(modeArray[1]);
+    }else{
+        answer.push(modeArray[0]);
+    }
+    
+    // 범위
+    answer.push(numbers.at(-1) - numbers[0]);
+  
+    return answer.join('\n')
+}
+
+console.log(solution(input.slice(1)))

@@ -1,19 +1,15 @@
-// 백준 구현 브론즈4 https://www.acmicpc.net/problem/10808
-const readline = require('readline');
+// 백준 구현 https://www.acmicpc.net/problem/10808
+const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+function solution(word) {
 
-rl.on('line', (line) => {
-  const count = new Array(26).fill(0);
+  const alphabetArray = new Array(26).fill(0);
 
-  for (let i = 0; i < line.length; i++) {
-    const index = line.charCodeAt(i) - 97;
-    count[index]++;
+  for (const spell of word) {
+    alphabetArray[spell.charCodeAt() - 97] += 1;
   }
 
-  const result = count.join(' ');
-  console.log(result);
-});
+  return alphabetArray.join(' ');
+}
+
+console.log(solution(input));
