@@ -60,3 +60,48 @@ function solution(maps, spare) {
 }
 
 console.log(solution(input.slice(1), input[0][2]));
+
+// #2
+function solution(B, map) {
+
+  let max = -Infinity;
+  let min = +Infinity;
+  for (let i = 0; i < map.length; i++) {
+    for (let j = 0; j < map[i].length; j++) {
+      max = Math.max(max, map[i][j]);
+      min = Math.min(min, map[i][j]);
+    }
+  }
+
+  const results = [];
+  for (let height = min; height <= max; height++) {
+    let tmp = 0;
+    let count = 0;
+    for (let j = 0; j < map.length; j++) {
+      for (let k = 0; k < map[j].length; k++) {
+        const result = height - map[j][k];
+        count += -result;
+        if (result < 0) {
+          tmp += (2 * Math.abs(result));
+        } else if (result > 0) {
+          tmp += result;
+        } else {
+          continue;
+        }
+      }
+    }
+    if ((B + count) >= 0) {
+      results.push([tmp, height, count]);
+    }
+  }
+
+  results.sort((a, b) => a[0] - b[0]);
+  const answer = results.filter((n, i, arr) => n[0] === arr[0][0]);
+  answer.sort((a, b) => b[1] - a[1]);
+
+  return [answer[0][0], answer[0][1]].join(' ');
+
+}
+
+console.log(solution(input[0][0], input[0][1], input[0][2], input.slice(1)));
+
