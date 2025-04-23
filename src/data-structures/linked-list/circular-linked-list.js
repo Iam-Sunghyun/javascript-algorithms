@@ -7,7 +7,7 @@ class Node {
 }
 class CircularLinkedList {
   constructor() {
-    this.head = null;   // 헤드 포인터
+    this.head = null; // 헤드 포인터
     this.tail = null;
     this.size = 0;
   }
@@ -15,7 +15,7 @@ class CircularLinkedList {
   // 맨 앞 삽입
   insertHead(data) {
     if (data === undefined) {
-      console.log('데이터를 입력하세요');
+      console.log("데이터를 입력하세요");
       return false;
     }
     const node = new Node(data, this.head); // 헤드 노드가 있었다면 기존 헤드는 next로
@@ -46,7 +46,7 @@ class CircularLinkedList {
   // 특정 위치 삽입
   insertAt(data, index) {
     if (index < 0 || index > this.size || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
     if (index === 0) {
@@ -72,10 +72,11 @@ class CircularLinkedList {
 
   deleteAt(index) {
     if (index < 0 || index > this.size - 1 || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
-    if (index === 0) {  // 삭제할 노드가 헤드라면
+    if (index === 0) {
+      // 삭제할 노드가 헤드라면
       this.head = this.head.next;
       this.size--;
       return true;
@@ -86,7 +87,8 @@ class CircularLinkedList {
       previous = current;
       current = previous.next;
     }
-    if (current.data === this.tail.data) {  // 삭제할 노드가 tail이라면
+    if (current.data === this.tail.data) {
+      // 삭제할 노드가 tail이라면
       this.tail = previous;
     }
     let node = current;
@@ -124,7 +126,7 @@ class CircularLinkedList {
       }
       current = current.next;
     }
-    console.log('데이터가 없습니다.');
+    console.log("데이터가 없습니다.");
     return false;
   }
 
@@ -150,10 +152,10 @@ linkedList.insertHead(10);
 linkedList.insertHead(20);
 linkedList.insertHead(30);
 linkedList.printList();
-console.log('===========');
+console.log("===========");
 linkedList.deleteAt(2);
 linkedList.insertHead(50);
 linkedList.getNodeByIndex(2);
-console.log('===========');
+console.log("===========");
 linkedList.printList();
 console.log(linkedList.tail);

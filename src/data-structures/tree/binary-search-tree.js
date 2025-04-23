@@ -1,37 +1,35 @@
 import BinarySearchTreeNode from "./binary-search-tree-node.js";
 
-export default class BinarySearchTree{
-
-  constructor(){
+export default class BinarySearchTree {
+  constructor() {
     this.root = new BinarySearchTreeNode(null);
   }
 
-  insert(value){
+  insert(value) {
     return this.root.insert(value);
   }
 
-  search(value){
+  search(value) {
     return this.root.search(value);
   }
 
-  delete(value){
+  delete(value) {
     return this.root.delete(value);
   }
 
-  preOrder(){
+  preOrder() {
     this.root.preOrder();
   }
-  inOrder(){
+  inOrder() {
     this.root.inOrder();
   }
-  postOrder(){
+  postOrder() {
     this.root.postOrder();
   }
-  levelOrder(){
+  levelOrder() {
     this.root.levelOrder();
   }
 }
-
 
 const BST = new BinarySearchTree();
 
@@ -43,6 +41,5 @@ BST.insert(28);
 
 BST.inOrder();
 BST.delete(18);
-console.log('=========')
+console.log("=========");
 console.log(BST.search(28));
-

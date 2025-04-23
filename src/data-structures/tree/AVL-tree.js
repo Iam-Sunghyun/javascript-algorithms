@@ -1,18 +1,17 @@
 import BinarySearchTree from "./binary-search-tree";
 
-export default class AVLTree extends BinarySearchTree{
-  
-  insert(value){
+export default class AVLTree extends BinarySearchTree {
+  insert(value) {
     super.insert(value);
 
     let current = this.root.search(value);
-    while(current){
+    while (current) {
       this.balance(current);
       current = current.parent;
     }
   }
-  
-  delete(){
+
+  delete() {
     // Do standard BST removal.
     super.delete(value);
 
@@ -20,7 +19,7 @@ export default class AVLTree extends BinarySearchTree{
     this.balance(this.root);
   }
 
-  balance(node){
+  balance(node) {
     // If balance factor is not OK then try to balance the node.
     if (node.balanceFactor() > 1) {
       // Left rotation.
@@ -43,48 +42,47 @@ export default class AVLTree extends BinarySearchTree{
     }
   }
 
-  rotateLL(root){
+  rotateLL(root) {
     const rootLeft = root.left;
     root.setLeft(null);
 
-    if(root.parent){
+    if (root.parent) {
       root.parent.left = rootLeft;
-    }else if(root = this.root){
+    } else if ((root = this.root)) {
       this.root = rootLeft;
     }
-    
-    if(rootLeft.right){
+
+    if (rootLeft.right) {
       root.setLeft(rootLeft.right);
     }
     rootLeft.setRight(root);
-   
   }
 
-  rotateRR(root){
+  rotateRR(root) {
     const rootRight = root.right;
     root.setright(null);
 
-    if(root.parent){
+    if (root.parent) {
       root.parent.right = rootRight;
-    }else if(root = this.root){
+    } else if ((root = this.root)) {
       this.root = rootRight;
     }
-    
-    if(rootRight.left){
+
+    if (rootRight.left) {
       root.setRight(rootRight.left);
     }
     rootRight.setLeft(root);
     return rootRight;
   }
-  
-  rotateRL(root){
+
+  rotateRL(root) {
     const rootRight = root.right;
     root.setRight(null);
 
     const rightLeft = rootRight.left;
     rootRight.setLeft(null);
 
-    if(rightLeft.right){
+    if (rightLeft.right) {
       rootRight.setLeft(rightLeft.right);
       rightLeft.setRight(null);
     }
@@ -95,14 +93,14 @@ export default class AVLTree extends BinarySearchTree{
     this.rotateRR(root);
   }
 
-  rotateLR(root){
+  rotateLR(root) {
     const rootLeft = root.left;
     root.setLeft(null);
 
     const leftRight = rootLeft.right;
     rootLeft.setRight(null);
 
-    if(leftRight.left){
+    if (leftRight.left) {
       rootLeft.setRight(leftRight.left);
       leftRight.setLeft(null);
     }
@@ -112,7 +110,6 @@ export default class AVLTree extends BinarySearchTree{
 
     this.rotateLL(root);
   }
-
 }
 
 // https://github.com/trekhleb/javascript-algorithms/blob/9bb60fa72f9d146e931b4634764dff7aebc7c1a2/src/data-structures/tree/avl-tree/AvlTree.js#L60

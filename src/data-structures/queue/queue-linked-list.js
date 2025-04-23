@@ -1,3 +1,4 @@
+// 연결리스트 큐의 요소가 될 노드 클래스
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -5,6 +6,7 @@ class Node {
   }
 }
 
+// 연결리스트 큐
 class LinkedQueue {
   constructor() {
     this.front = null;
@@ -24,7 +26,7 @@ class LinkedQueue {
 
   dequeue() {
     if (!this.front) {
-      console.log('큐가 비어있습니다.');
+      console.log("큐가 비어있습니다.");
       return false;
     }
     const front = this.front.data;
@@ -61,12 +63,9 @@ q.enqueue(3);
 q.enqueue(4);
 q.enqueue(5);
 console.log(q.entries());
-console.log('=======');
+console.log("=======");
 q.dequeue();
 q.dequeue();
 console.log(q.entries());
 q.peek();
 console.log(q);
-
-
-

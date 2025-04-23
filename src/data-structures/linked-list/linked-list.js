@@ -8,14 +8,14 @@ class Node {
 
 export default class LinkedList {
   constructor() {
-    this.head = null;   // 헤드 포인터
+    this.head = null; // 헤드 포인터
     this.size = 0;
   }
 
   // 맨 앞 삽입
   insertHead(data) {
     if (data === undefined) {
-      console.log('데이터를 입력하세요');
+      console.log("데이터를 입력하세요");
       return false;
     }
     const node = new Node(data, this.head); // 헤드 노드가 있었다면 기존 헤드는 next로
@@ -32,7 +32,7 @@ export default class LinkedList {
       return true;
     }
     if (data === undefined) {
-      console.log('데이터를 입력하세요');
+      console.log("데이터를 입력하세요");
       return false;
     }
     const node = new Node(data);
@@ -48,11 +48,11 @@ export default class LinkedList {
   // 특정 위치 삽입
   insertAt(data, index) {
     if (index < 0 || index > this.size || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
     if (data === undefined) {
-      console.log('데이터를 입력하세요');
+      console.log("데이터를 입력하세요");
       return false;
     }
     if (index === 0) {
@@ -79,7 +79,7 @@ export default class LinkedList {
   // 인덱스로 노드 삭제하기(노드는 반환됨)
   deleteAt(index) {
     if (index < 0 || index > this.size - 1 || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
     if (index === 0) {
@@ -99,7 +99,6 @@ export default class LinkedList {
     this.size--;
     return node;
   }
-
 
   // 특정 인덱스 노드 참조하기
   getNodeByIndex(index) {
@@ -127,7 +126,7 @@ export default class LinkedList {
       }
       current = current.next;
     }
-    console.log('데이터가 없습니다.');
+    console.log("데이터가 없습니다.");
     return false;
   }
 
@@ -161,7 +160,6 @@ export default class LinkedList {
   returnSize() {
     return this.size;
   }
-
 }
 
 const linkedList = new LinkedList();
@@ -173,4 +171,4 @@ console.log(linkedList.returnSize());
 // console.log(linkedList.deleteAt(2));
 console.log(linkedList.printList());
 console.log(linkedList.getNodeByIndex(3));
-console.log('==============');
+console.log("==============");

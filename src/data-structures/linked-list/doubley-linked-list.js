@@ -8,14 +8,14 @@ class Node {
 }
 class DoubleyLinkedList {
   constructor() {
-    this.head = null;   // 헤드 포인터
+    this.head = null; // 헤드 포인터
     this.size = 0;
   }
 
   // 맨 앞 삽입
   insertHead(data) {
     if (data === undefined) {
-      console.log('데이터를 입력하세요');
+      console.log("데이터를 입력하세요");
       return false;
     }
     if (this.head !== null) {
@@ -52,7 +52,7 @@ class DoubleyLinkedList {
   // 특정 위치 삽입
   insertAt(index, data) {
     if (index < 0 || index > this.size || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
     if (index === 0) {
@@ -80,7 +80,7 @@ class DoubleyLinkedList {
 
   deleteAt(index) {
     if (index < 0 || index > this.size - 1 || index === undefined) {
-      console.log('허용 인덱스가 아닙니다');
+      console.log("허용 인덱스가 아닙니다");
       return false;
     }
     if (index === 0) {
@@ -122,7 +122,7 @@ class DoubleyLinkedList {
       }
       current = current.next;
     }
-    console.log('데이터가 없습니다.');
+    console.log("데이터가 없습니다.");
     return false;
   }
 

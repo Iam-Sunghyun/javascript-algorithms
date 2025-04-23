@@ -6,14 +6,13 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
   }
 
   insert(value) {
-
     if (!this.value) {
       this.value = value;
       return true;
     }
 
     if (value === this.value) {
-      console.log('중복되는 값이 있습니다.');
+      console.log("중복되는 값이 있습니다.");
       return false;
     }
 
@@ -36,7 +35,6 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       this.setRight(node);
       return node;
     }
-
   }
 
   // 재귀 이용 탐색
@@ -69,15 +67,14 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
         node = node.left;
       }
     }
-    console.log('값이 없습니다.');
+    console.log("값이 없습니다.");
     return null;
   }
-
 
   delete(value) {
     let node = this.search(value);
     if (!node) {
-      console.log('해당 값이 없습니다');
+      console.log("해당 값이 없습니다");
       return;
     }
     // 단말 노드의 경우
@@ -109,17 +106,17 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
         nextNode = nextNode.left;
       }
       node.value = nextNode.value;
-      if (node.right !== nextNode) { // 오른쪽 서브 트리의 노드가 하나의 노드가 아닌 경우
+      if (node.right !== nextNode) {
+        // 오른쪽 서브 트리의 노드가 하나의 노드가 아닌 경우
         nextNode.parent.left = nextNode.right;
-
-      } else {  // 삭제 하려는 노드 오른쪽 서브 트리가 노드 하나인 경우
+      } else {
+        // 삭제 하려는 노드 오른쪽 서브 트리가 노드 하나인 경우
         node.right = nextNode.right;
       }
       nextNode = null;
     }
     return true;
   }
-
 }
 
 const root = new BinarySearchTreeNode(35);
@@ -132,6 +129,5 @@ for (let i = 0; i < nodes.length; i++) {
 console.log(root.postOrder());
 root.delete(18);
 root.delete(3);
-
 
 console.log(root.postOrder());
